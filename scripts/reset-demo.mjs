@@ -1,0 +1,13 @@
+import { readFileSync,realpathSync,existsSync,renameSync } from 'node:fs';
+import { resolve,join,sep } from 'node:path';
+import { spawnSync } from 'node:child_process';
+if(process.argv[2]!=='--confirm-reset-local-demo')throw new Error('Explicit reset requires --confirm-reset-local-demo. Stop the demo first. Existing data will be archived, not deleted.');
+if(existsSync('.cache/demo-supervisor.json'))throw new Error('Stop the owned supervisor before reset');
+const root=realpathSync('.cache'),owner=JSON.parse(readFileSync(join(root,'retained-db-owner.json'),'utf8'));
+const data=realpathSync(owner.data);if(owner.purpose!=='aggregator-retained-demo-pg18'||data!==realpathSync(join(root,'pg18-retained-demo'))||!data.startsWith(root+sep)||owner.port!==55441)throw new Error('Unknown reset target');
+const bin=process.env.PG_BIN||(process.platform==='win32'?'C:/Program Files/PostgreSQL/18/bin':'/usr/lib/postgresql/18/bin');const exe=name=>join(bin,name+(process.platform==='win32'?'.exe':''));
+const control=spawnSync(exe('pg_controldata'),['-D',data],{encoding:'utf8',windowsHide:true});if(control.status!==0||control.stdout.match(/Database system identifier:\s+(\d+)/)?.[1]!==owner.systemIdentifier)throw new Error('Ownership verification failed');
+if(spawnSync(exe('pg_ctl'),['-D',data,'status'],{stdio:'ignore',windowsHide:true}).status===0)throw new Error('Database is running; stop it before reset');
+const suffix=Date.now(),destination=resolve(root,'pg18-retired-demo-'+suffix);if(!destination.startsWith(root+sep))throw new Error('Unsafe archive path');renameSync(data,destination);renameSync(join(root,'retained-db-owner.json'),join(root,'retired-db-owner-'+suffix+'.json'));
+for(const file of ['demo-mail.sqlite','demo-mail.sqlite-wal','demo-mail.sqlite-shm'])if(existsSync(join(root,file)))renameSync(join(root,file),join(root,`${file}.retired-${suffix}`));
+console.log('Verified stopped demo archived. Next demo:start explicitly creates a fresh local profile. Archived accounts/mail remain private in .cache until deliberately removed.');

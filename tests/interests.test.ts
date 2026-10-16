@@ -1,0 +1,6 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { concepts,browse,relevance,validateRules } from '../packages/domain/src/taxonomy.js';
+const team='agg:team:manchester-city-men',league='agg:competition:premier-league',football='agg:topic:football-soccer';
+test('authored taxonomy breadth and exact typed browse path',()=>{assert.equal(concepts.length,396);assert.equal(browse().length,24);assert.ok(browse('agg:topic:sports').some(c=>c.id===football));assert.ok(browse(football).some(c=>c.id===league));assert.ok(browse(league).some(c=>c.id===team));assert.ok(browse(undefined,'Man City').length>=2);});
+test('team and competition matching are separate; mutes override follows',()=>{const rule={target:team,action:'follow' as const};assert.ok(relevance([rule],[team]));assert.equal(relevance([rule],[league]),null);assert.equal(relevance([{...rule,competition:league}],[team]),null);assert.ok(relevance([{...rule,competition:league}],[team,league]));assert.equal(relevance([{target:league,action:'follow'}],[team]),null);assert.equal(relevance([rule,{target:football,action:'mute'}],[team,football]),null);assert.throws(()=>validateRules([{target:'agg:team:unknown',action:'follow'}]));});

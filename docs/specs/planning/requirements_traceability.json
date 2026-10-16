@@ -1,0 +1,861 @@
+[
+  {
+    "feature_id": "F01",
+    "feature": "Editorial home and discovery",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC01"
+    ],
+    "flow": "FL01",
+    "work_packages": [
+      "WP11"
+    ],
+    "acceptance_ids": [
+      "AT-F01-1",
+      "AT-F01-2"
+    ],
+    "entities": [
+      "articles",
+      "article_versions",
+      "topics"
+    ]
+  },
+  {
+    "feature_id": "F02",
+    "feature": "Topic hubs and story trails",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC02"
+    ],
+    "flow": "FL02",
+    "work_packages": [
+      "WP11"
+    ],
+    "acceptance_ids": [
+      "AT-F02-1",
+      "AT-F02-2"
+    ],
+    "entities": [
+      "topics",
+      "article_topics",
+      "story_clusters",
+      "article_relations"
+    ]
+  },
+  {
+    "feature_id": "F03",
+    "feature": "Search and meaningful filters",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC03"
+    ],
+    "flow": "FL03",
+    "work_packages": [
+      "WP11"
+    ],
+    "acceptance_ids": [
+      "AT-F03-1",
+      "AT-F03-2"
+    ],
+    "entities": [
+      "article_versions",
+      "article_sources",
+      "source_items"
+    ]
+  },
+  {
+    "feature_id": "F04",
+    "feature": "One coherent, versioned article",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "work_packages": [
+      "WP12"
+    ],
+    "acceptance_ids": [
+      "AT-F04-1",
+      "AT-F04-2"
+    ],
+    "entities": [
+      "articles",
+      "article_versions",
+      "article_variants",
+      "article_blocks"
+    ]
+  },
+  {
+    "feature_id": "F05",
+    "feature": "Inline citations and mandatory bottom sources",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC04",
+      "SC05"
+    ],
+    "flow": "FL05",
+    "work_packages": [
+      "WP12"
+    ],
+    "acceptance_ids": [
+      "AT-F05-1",
+      "AT-F05-2"
+    ],
+    "entities": [
+      "article_sources",
+      "claim_citations",
+      "article_claims",
+      "evidence_spans"
+    ]
+  },
+  {
+    "feature_id": "F06",
+    "feature": "Video-supported synthesis and timestamp links",
+    "release": "Launch",
+    "phase": "P03",
+    "screens": [
+      "SC04",
+      "SC05",
+      "SC20"
+    ],
+    "flow": "FL06",
+    "work_packages": [
+      "WP07"
+    ],
+    "acceptance_ids": [
+      "AT-F06-1",
+      "AT-F06-2"
+    ],
+    "entities": [
+      "source_items",
+      "source_item_versions",
+      "evidence_spans",
+      "rights_grants"
+    ]
+  },
+  {
+    "feature_id": "F07",
+    "feature": "Agreement, disagreement and source independence",
+    "release": "Launch",
+    "phase": "P04",
+    "screens": [
+      "SC05",
+      "SC19",
+      "SC20"
+    ],
+    "flow": "FL05",
+    "work_packages": [
+      "WP08"
+    ],
+    "acceptance_ids": [
+      "AT-F07-1",
+      "AT-F07-2"
+    ],
+    "entities": [
+      "reporting_origins",
+      "item_origins",
+      "claims",
+      "claim_evidence"
+    ]
+  },
+  {
+    "feature_id": "F08",
+    "feature": "Version history and visible corrections",
+    "release": "Launch",
+    "phase": "P06",
+    "screens": [
+      "SC06",
+      "SC04"
+    ],
+    "flow": "FL10",
+    "work_packages": [
+      "WP15"
+    ],
+    "acceptance_ids": [
+      "AT-F08-1",
+      "AT-F08-2"
+    ],
+    "entities": [
+      "article_versions",
+      "publication_events",
+      "corrections",
+      "takedowns"
+    ]
+  },
+  {
+    "feature_id": "F09",
+    "feature": "Related coverage and sharing",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "work_packages": [
+      "WP12"
+    ],
+    "acceptance_ids": [
+      "AT-F09-1",
+      "AT-F09-2"
+    ],
+    "entities": [
+      "article_relations",
+      "articles"
+    ]
+  },
+  {
+    "feature_id": "F10",
+    "feature": "Reading controls and accessibility",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC04",
+      "SC12"
+    ],
+    "flow": "FL04",
+    "work_packages": [
+      "WP12"
+    ],
+    "acceptance_ids": [
+      "AT-F10-1",
+      "AT-F10-2"
+    ],
+    "entities": [
+      "user_preferences"
+    ]
+  },
+  {
+    "feature_id": "F11",
+    "feature": "Accounts and secure sign-in",
+    "release": "Launch",
+    "phase": "P02",
+    "screens": [
+      "SC09",
+      "SC10",
+      "SC11",
+      "SC12"
+    ],
+    "flow": "FL07",
+    "work_packages": [
+      "WP04"
+    ],
+    "acceptance_ids": [
+      "AT-F11-1",
+      "AT-F11-2"
+    ],
+    "entities": [
+      "users",
+      "auth_identities",
+      "sessions",
+      "auth_challenges"
+    ]
+  },
+  {
+    "feature_id": "F12",
+    "feature": "Saved reading list",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC11",
+      "SC04"
+    ],
+    "flow": "FL08",
+    "work_packages": [
+      "WP13"
+    ],
+    "acceptance_ids": [
+      "AT-F12-1",
+      "AT-F12-2"
+    ],
+    "entities": [
+      "bookmarks",
+      "articles",
+      "article_versions"
+    ]
+  },
+  {
+    "feature_id": "F13",
+    "feature": "Explicit follows and a personal feed",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC01",
+      "SC02",
+      "SC10",
+      "SC12"
+    ],
+    "flow": "FL09",
+    "work_packages": [
+      "WP13"
+    ],
+    "acceptance_ids": [
+      "AT-F13-1",
+      "AT-F13-2"
+    ],
+    "entities": [
+      "topic_follows",
+      "user_preferences"
+    ]
+  },
+  {
+    "feature_id": "F14",
+    "feature": "Opt-in digests and story alerts",
+    "release": "V1",
+    "phase": "P08",
+    "screens": [
+      "SC13"
+    ],
+    "flow": "FL14",
+    "work_packages": [
+      "WP21"
+    ],
+    "acceptance_ids": [
+      "AT-F14-1",
+      "AT-F14-2"
+    ],
+    "entities": [
+      "notification_preferences",
+      "notification_deliveries"
+    ]
+  },
+  {
+    "feature_id": "F15",
+    "feature": "Source directory and methodology",
+    "release": "Launch",
+    "phase": "P03",
+    "screens": [
+      "SC07",
+      "SC08",
+      "SC15"
+    ],
+    "flow": "FL11",
+    "work_packages": [
+      "WP05"
+    ],
+    "acceptance_ids": [
+      "AT-F15-1",
+      "AT-F15-2"
+    ],
+    "entities": [
+      "sources",
+      "source_reviews",
+      "source_ownerships"
+    ]
+  },
+  {
+    "feature_id": "F16",
+    "feature": "Report an issue and request a correction",
+    "release": "Launch",
+    "phase": "P06",
+    "screens": [
+      "SC14",
+      "SC21"
+    ],
+    "flow": "FL10",
+    "work_packages": [
+      "WP15"
+    ],
+    "acceptance_ids": [
+      "AT-F16-1",
+      "AT-F16-2"
+    ],
+    "entities": [
+      "reader_reports",
+      "corrections"
+    ]
+  },
+  {
+    "feature_id": "F17",
+    "feature": "Public discovery, metadata and machine-readable sharing",
+    "release": "Launch",
+    "phase": "P05",
+    "screens": [
+      "SC01",
+      "SC04"
+    ],
+    "flow": "FL01",
+    "work_packages": [
+      "WP13"
+    ],
+    "acceptance_ids": [
+      "AT-F17-1",
+      "AT-F17-2"
+    ],
+    "entities": [
+      "articles",
+      "article_versions",
+      "media_assets"
+    ]
+  },
+  {
+    "feature_id": "F18",
+    "feature": "Source onboarding and credibility governance",
+    "release": "Launch",
+    "phase": "P03",
+    "screens": [
+      "SC17",
+      "SC18"
+    ],
+    "flow": "FL12",
+    "work_packages": [
+      "WP05"
+    ],
+    "acceptance_ids": [
+      "AT-F18-1",
+      "AT-F18-2"
+    ],
+    "entities": [
+      "sources",
+      "source_reviews",
+      "source_endpoints",
+      "source_ownerships"
+    ]
+  },
+  {
+    "feature_id": "F19",
+    "feature": "Permission-aware ingestion",
+    "release": "Launch",
+    "phase": "P03",
+    "screens": [
+      "SC18",
+      "SC22"
+    ],
+    "flow": "FL12",
+    "work_packages": [
+      "WP05"
+    ],
+    "acceptance_ids": [
+      "AT-F19-1",
+      "AT-F19-2"
+    ],
+    "entities": [
+      "rights_grants",
+      "source_items",
+      "source_item_versions",
+      "ingestion_runs"
+    ]
+  },
+  {
+    "feature_id": "F20",
+    "feature": "Documents and permissioned transcripts",
+    "release": "Launch",
+    "phase": "P03",
+    "screens": [
+      "SC18",
+      "SC20"
+    ],
+    "flow": "FL06",
+    "work_packages": [
+      "WP06"
+    ],
+    "acceptance_ids": [
+      "AT-F20-1",
+      "AT-F20-2"
+    ],
+    "entities": [
+      "source_item_versions",
+      "evidence_spans",
+      "media_assets"
+    ]
+  },
+  {
+    "feature_id": "F21",
+    "feature": "Deduplication and event clustering",
+    "release": "Launch",
+    "phase": "P04",
+    "screens": [
+      "SC19"
+    ],
+    "flow": "FL13",
+    "work_packages": [
+      "WP08"
+    ],
+    "acceptance_ids": [
+      "AT-F21-1",
+      "AT-F21-2"
+    ],
+    "entities": [
+      "story_clusters",
+      "cluster_items",
+      "reporting_origins",
+      "item_origins"
+    ]
+  },
+  {
+    "feature_id": "F22",
+    "feature": "Evidence extraction and claim provenance",
+    "release": "Launch",
+    "phase": "P04",
+    "screens": [
+      "SC20",
+      "SC05"
+    ],
+    "flow": "FL13",
+    "work_packages": [
+      "WP09"
+    ],
+    "acceptance_ids": [
+      "AT-F22-1",
+      "AT-F22-2"
+    ],
+    "entities": [
+      "claims",
+      "claim_evidence",
+      "evidence_spans",
+      "article_claims"
+    ]
+  },
+  {
+    "feature_id": "F23",
+    "feature": "Grounded synthesis and quality checks",
+    "release": "Launch",
+    "phase": "P04",
+    "screens": [
+      "SC20"
+    ],
+    "flow": "FL13",
+    "work_packages": [
+      "WP10"
+    ],
+    "acceptance_ids": [
+      "AT-F23-1",
+      "AT-F23-2"
+    ],
+    "entities": [
+      "generation_runs",
+      "validation_results",
+      "article_blocks",
+      "claim_citations"
+    ]
+  },
+  {
+    "feature_id": "F24",
+    "feature": "Editorial workbench and publication",
+    "release": "Launch",
+    "phase": "P06",
+    "screens": [
+      "SC16",
+      "SC20"
+    ],
+    "flow": "FL13",
+    "work_packages": [
+      "WP14"
+    ],
+    "acceptance_ids": [
+      "AT-F24-1",
+      "AT-F24-2"
+    ],
+    "entities": [
+      "review_assignments",
+      "editorial_reviews",
+      "publication_events",
+      "article_versions"
+    ]
+  },
+  {
+    "feature_id": "F25",
+    "feature": "Updates, retractions and rights withdrawal",
+    "release": "Launch",
+    "phase": "P06",
+    "screens": [
+      "SC21",
+      "SC06"
+    ],
+    "flow": "FL10",
+    "work_packages": [
+      "WP15"
+    ],
+    "acceptance_ids": [
+      "AT-F25-1",
+      "AT-F25-2"
+    ],
+    "entities": [
+      "corrections",
+      "takedowns",
+      "retention_tasks",
+      "publication_events"
+    ]
+  },
+  {
+    "feature_id": "F26",
+    "feature": "Operations and cost controls",
+    "release": "Launch",
+    "phase": "P07",
+    "screens": [
+      "SC22",
+      "SC23"
+    ],
+    "flow": "FL15",
+    "work_packages": [
+      "WP16"
+    ],
+    "acceptance_ids": [
+      "AT-F26-1",
+      "AT-F26-2"
+    ],
+    "entities": [
+      "processing_jobs",
+      "ingestion_runs",
+      "generation_runs",
+      "outbox_events",
+      "feature_flags"
+    ]
+  },
+  {
+    "feature_id": "F27",
+    "feature": "Staff roles, permissions and audit",
+    "release": "Launch",
+    "phase": "P02",
+    "screens": [
+      "SC24"
+    ],
+    "flow": "FL16",
+    "work_packages": [
+      "WP04"
+    ],
+    "acceptance_ids": [
+      "AT-F27-1",
+      "AT-F27-2"
+    ],
+    "entities": [
+      "roles",
+      "user_roles",
+      "audit_events"
+    ]
+  },
+  {
+    "feature_id": "F28",
+    "feature": "Privacy, export and retention",
+    "release": "Launch",
+    "phase": "P07",
+    "screens": [
+      "SC12",
+      "SC25"
+    ],
+    "flow": "FL17",
+    "work_packages": [
+      "WP17"
+    ],
+    "acceptance_ids": [
+      "AT-F28-1",
+      "AT-F28-2"
+    ],
+    "entities": [
+      "privacy_requests",
+      "retention_tasks",
+      "consents",
+      "audit_events"
+    ]
+  },
+  {
+    "feature_id": "F29",
+    "feature": "Product and editorial-quality analytics",
+    "release": "Launch",
+    "phase": "P07",
+    "screens": [
+      "SC23"
+    ],
+    "flow": "FL15",
+    "work_packages": [
+      "WP16"
+    ],
+    "acceptance_ids": [
+      "AT-F29-1",
+      "AT-F29-2"
+    ],
+    "entities": [
+      "analytics_events",
+      "validation_results",
+      "reader_reports"
+    ]
+  },
+  {
+    "feature_id": "F30",
+    "feature": "Security and abuse resistance",
+    "release": "Launch",
+    "phase": "P07",
+    "screens": [
+      "SC14",
+      "SC18",
+      "SC22"
+    ],
+    "flow": "FL12",
+    "work_packages": [
+      "WP18"
+    ],
+    "acceptance_ids": [
+      "AT-F30-1",
+      "AT-F30-2"
+    ],
+    "entities": [
+      "audit_events",
+      "processing_jobs",
+      "source_endpoints"
+    ]
+  },
+  {
+    "feature_id": "F31",
+    "feature": "Reliability, performance and inclusive delivery",
+    "release": "Launch",
+    "phase": "P07",
+    "screens": [
+      "SC26"
+    ],
+    "flow": "FL18",
+    "work_packages": [
+      "WP18"
+    ],
+    "acceptance_ids": [
+      "AT-F31-1",
+      "AT-F31-2"
+    ],
+    "entities": [
+      "outbox_events",
+      "retention_tasks",
+      "publication_events"
+    ]
+  },
+  {
+    "feature_id": "F32",
+    "feature": "Reader source suggestions",
+    "release": "V1",
+    "phase": "P08",
+    "screens": [
+      "SC27"
+    ],
+    "flow": "FL19",
+    "work_packages": [
+      "WP21"
+    ],
+    "acceptance_ids": [
+      "AT-F32-1",
+      "AT-F32-2"
+    ],
+    "entities": [
+      "source_suggestions"
+    ]
+  },
+  {
+    "feature_id": "F33",
+    "feature": "Additional languages",
+    "release": "V1",
+    "phase": "P08",
+    "screens": [
+      "SC04",
+      "SC12"
+    ],
+    "flow": "FL04",
+    "work_packages": [
+      "WP22"
+    ],
+    "acceptance_ids": [
+      "AT-F33-1",
+      "AT-F33-2"
+    ],
+    "entities": [
+      "article_variants",
+      "source_item_versions"
+    ]
+  },
+  {
+    "feature_id": "F34",
+    "feature": "Collaborative collections",
+    "release": "V2",
+    "phase": "P09",
+    "screens": [
+      "SC28"
+    ],
+    "flow": "FL08",
+    "work_packages": [
+      "WP23"
+    ],
+    "acceptance_ids": [
+      "AT-F34-1"
+    ],
+    "entities": [
+      "future_collections"
+    ]
+  },
+  {
+    "feature_id": "F35",
+    "feature": "Paid products and sponsorship",
+    "release": "V2",
+    "phase": "P09",
+    "screens": [
+      "SC29"
+    ],
+    "flow": "FL20",
+    "work_packages": [
+      "WP23"
+    ],
+    "acceptance_ids": [
+      "AT-F35-1"
+    ],
+    "entities": [
+      "future_entitlements"
+    ]
+  },
+  {
+    "feature_id": "F36",
+    "feature": "Audio briefings",
+    "release": "V2",
+    "phase": "P09",
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "work_packages": [
+      "WP23"
+    ],
+    "acceptance_ids": [
+      "AT-F36-1"
+    ],
+    "entities": [
+      "future_audio_editions"
+    ]
+  },
+  {
+    "feature_id": "F37",
+    "feature": "Constrained automatic publishing",
+    "release": "V2",
+    "phase": "P09",
+    "screens": [
+      "SC24"
+    ],
+    "flow": "FL13",
+    "work_packages": [
+      "WP23"
+    ],
+    "acceptance_ids": [
+      "AT-F37-1"
+    ],
+    "entities": [
+      "feature_flags",
+      "editorial_reviews"
+    ]
+  },
+  {
+    "feature_id": "F38",
+    "feature": "Ask about this article",
+    "release": "V2",
+    "phase": "P09",
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL05",
+    "work_packages": [
+      "WP23"
+    ],
+    "acceptance_ids": [
+      "AT-F38-1"
+    ],
+    "entities": [
+      "future_article_questions"
+    ]
+  }
+]

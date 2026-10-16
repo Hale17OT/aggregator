@@ -1,0 +1,861 @@
+[
+  {
+    "id": "F01",
+    "name": "Editorial home and discovery",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Show an editor-ranked lead, latest published syntheses, desk navigation and a clear edition timestamp. Cards disclose story state, updated time, reading length and evidence-source count. Default order is editorial significance plus freshness, not predicted outrage. Use explicit Load more with URL-restorable pagination.",
+    "exceptions": "Never label a cached feed as live. A partially failed feed retains usable sections with last successful refresh; no promotional card may masquerade as editorial news.",
+    "acceptance": [
+      "A visitor can open a complete article and its sources without signing in.",
+      "Returning from an article restores the same feed position and filters."
+    ],
+    "screens": [
+      "SC01"
+    ],
+    "flow": "FL01",
+    "phase": "P05",
+    "entities": [
+      "articles",
+      "article_versions",
+      "topics"
+    ]
+  },
+  {
+    "id": "F02",
+    "name": "Topic hubs and story trails",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Provide World, Business, Technology, Science, Climate and Culture desks. Each hub has a concise scope, latest stories and related ongoing-story trails. Editors can tag multiple topics but designate one primary desk. Follow is separate from browsing.",
+    "exceptions": "An empty desk explains that no synthesis is ready; it must not fill space with unreviewed items. Rename redirects preserve old topic URLs.",
+    "acceptance": [
+      "A published article appears under every assigned topic without duplicate cards in one list.",
+      "A multi-event story trail distinguishes dates and links each article."
+    ],
+    "screens": [
+      "SC02"
+    ],
+    "flow": "FL02",
+    "phase": "P05",
+    "entities": [
+      "topics",
+      "article_topics",
+      "story_clusters",
+      "article_relations"
+    ]
+  },
+  {
+    "id": "F03",
+    "name": "Search and meaningful filters",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Search only public published title, deck and article text, with topic, date range and source-type filters. Offer relevance and newest sort; preserve query in the URL. Source-type means a cited evidence source, not an uncited related video. Search results show matching context and current publication state.",
+    "exceptions": "Zero results give a clear-filter action. Typos may receive a suggestion, never a silently substituted query. Retracted text and unpublished drafts must not leak in snippets.",
+    "acceptance": [
+      "A video-evidence filter excludes articles containing only a related video link.",
+      "An unauthorized search never returns drafts, private annotations or raw licensed text."
+    ],
+    "screens": [
+      "SC03"
+    ],
+    "flow": "FL03",
+    "phase": "P05",
+    "entities": [
+      "article_versions",
+      "article_sources",
+      "source_items"
+    ]
+  },
+  {
+    "id": "F04",
+    "name": "One coherent, versioned article",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Publish a neutral headline, explanatory deck, key developments, coherent narrative, context, evidence gaps and bottom bibliography. Standard reading mode targets 650-950 words; Brief targets 150-250. These are editorial guides, not padding quotas. Both are pre-generated, reviewed variants of the same immutable version.",
+    "exceptions": "Switching length changes neither factual stance nor evidence cutoff. Small stories may be shorter. Analysis is labeled separately from reporting; the system does not invent an opinion columnist.",
+    "acceptance": [
+      "Both variants show the same version, cutoff and correction status.",
+      "Every factual statement, including the headline, deck and key points, has reviewed evidence linkage."
+    ],
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "phase": "P05",
+    "entities": [
+      "articles",
+      "article_versions",
+      "article_variants",
+      "article_blocks"
+    ]
+  },
+  {
+    "id": "F05",
+    "name": "Inline citations and mandatory bottom sources",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Place linked citation markers at claim or paragraph boundaries. The end-of-article Sources and evidence section is rendered in full in initial HTML, never hidden behind login, a drawer or an accordion. Each entry names the exact article/document/video, publisher or channel, canonical link, available author, publication time, access-check time and evidence role.",
+    "exceptions": "Missing author/date is explicitly unavailable. Do not invent metadata, use homepages instead of exact items, or claim a linked page was read when it was not. Related links appear in a separately labeled section.",
+    "acceptance": [
+      "Every citation marker resolves to a bibliography entry and every cited item has a safe direct URL.",
+      "With JavaScript disabled, all source links remain visible and operable at the article bottom."
+    ],
+    "screens": [
+      "SC04",
+      "SC05"
+    ],
+    "flow": "FL05",
+    "phase": "P05",
+    "entities": [
+      "article_sources",
+      "claim_citations",
+      "article_claims",
+      "evidence_spans"
+    ]
+  },
+  {
+    "id": "F06",
+    "name": "Video-supported synthesis and timestamp links",
+    "release": "Launch",
+    "role": "Visitor / Editor",
+    "behavior": "Support YouTube links and eligible embeds, plus evidence from independently permissioned publisher transcripts. Name the video and channel, identify transcript provenance and add a timestamp only where reliable segment alignment exists. A related video without permitted evidence remains a watch link, not support for a factual claim.",
+    "exceptions": "No arbitrary public-video transcript promise. API captions, cross-channel API-data synthesis and downstream uses require a reviewed permission path. Video removal preserves an availability notice, not an unauthorized cached copy.",
+    "acceptance": [
+      "A supplied, licensed transcript can support a claim with a validated timestamp.",
+      "An unpermissioned video cannot enter the evidence corpus or be counted as a supporting source."
+    ],
+    "screens": [
+      "SC04",
+      "SC05",
+      "SC20"
+    ],
+    "flow": "FL06",
+    "phase": "P03",
+    "entities": [
+      "source_items",
+      "source_item_versions",
+      "evidence_spans",
+      "rights_grants"
+    ]
+  },
+  {
+    "id": "F07",
+    "name": "Agreement, disagreement and source independence",
+    "release": "Launch",
+    "role": "Visitor / Editor",
+    "behavior": "Offer an evidence view organized by specific claims: corroborated, attributed, disputed or unresolved. Explain concrete differences in dates, units, definitions and reporting. Count independent reporting origins, not URLs; owner relationships and syndication are visible to reviewers. Do not create a numeric truth score.",
+    "exceptions": "Several outlets repeating one wire report count as one origin. Conflicting numbers are attributed with time and scope, not averaged. More viewpoints do not imply equal evidential strength.",
+    "acceptance": [
+      "A three-URL syndication fixture displays one reporting origin.",
+      "A disagreement retains both supported positions with appropriate attribution and uncertainty."
+    ],
+    "screens": [
+      "SC05",
+      "SC19",
+      "SC20"
+    ],
+    "flow": "FL05",
+    "phase": "P04",
+    "entities": [
+      "reporting_origins",
+      "item_origins",
+      "claims",
+      "claim_evidence"
+    ]
+  },
+  {
+    "id": "F08",
+    "name": "Version history and visible corrections",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Display published time, substantive update time, evidence cutoff and revision number separately. A history page explains material changes and corrections. Older safe versions may be viewed with a prominent historical banner; unsafe or rights-withdrawn text is unavailable with an explanatory tombstone.",
+    "exceptions": "Do not silently replace a material fact or refresh timestamps merely for SEO. An already open article offers an update banner rather than replacing text mid-read.",
+    "acceptance": [
+      "Changing an approved fact produces a new version and a public change note.",
+      "A saved old-version URL remains meaningful after a correction or redaction."
+    ],
+    "screens": [
+      "SC06",
+      "SC04"
+    ],
+    "flow": "FL10",
+    "phase": "P06",
+    "entities": [
+      "article_versions",
+      "publication_events",
+      "corrections",
+      "takedowns"
+    ]
+  },
+  {
+    "id": "F09",
+    "name": "Related coverage and sharing",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Recommend up to three contextually related published stories after the complete bibliography. Provide Copy link and native-share fallback, with optional claim-anchor links. An ongoing-story link is explicitly different from another source used in the current article.",
+    "exceptions": "No infinite article scroll or source section displaced by recommendations. Copy failure exposes a selectable URL. Shared links point to public canonical pages, never admin previews.",
+    "acceptance": [
+      "A share link opens the same public article on a fresh session.",
+      "Recommendations appear after all bibliography entries on mobile and desktop."
+    ],
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "phase": "P05",
+    "entities": [
+      "article_relations",
+      "articles"
+    ]
+  },
+  {
+    "id": "F10",
+    "name": "Reading controls and accessibility",
+    "release": "Launch",
+    "role": "Visitor / Member",
+    "behavior": "Support Light, Dark and System themes; small/standard/large reading type; reduced motion; keyboard navigation and readable narrow layouts. Save anonymous presentation preferences locally where available and member preferences to the account. Reading content is never dependent on animation.",
+    "exceptions": "Blocked storage falls back to session defaults. Reduced-motion operating-system preference wins over decorative animation; source anchors move instantly. Sticky controls must not obscure focus.",
+    "acceptance": [
+      "Article, citation and settings flows work at 200% zoom and narrow reflow.",
+      "Reduced-motion mode removes movement without hiding information or actions."
+    ],
+    "screens": [
+      "SC04",
+      "SC12"
+    ],
+    "flow": "FL04",
+    "phase": "P05",
+    "entities": [
+      "user_preferences"
+    ]
+  },
+  {
+    "id": "F11",
+    "name": "Accounts and secure sign-in",
+    "release": "Launch",
+    "role": "Visitor / Member",
+    "behavior": "Offer Google OIDC and email magic-link sign-in without requiring YouTube permissions. Verify email ownership, link identities only after reauthentication, and restore the original save/follow action. Staff use separate authorization and mandatory multifactor authentication.",
+    "exceptions": "Expired/used links can be resent subject to throttling. Email responses do not reveal whether an account exists. Reader sign-in never grants editorial privileges.",
+    "acceptance": [
+      "A saved-action intent survives sign-in and executes once.",
+      "Replayed magic links fail safely and external return URLs are rejected."
+    ],
+    "screens": [
+      "SC09",
+      "SC10",
+      "SC11",
+      "SC12"
+    ],
+    "flow": "FL07",
+    "phase": "P02",
+    "entities": [
+      "users",
+      "auth_identities",
+      "sessions",
+      "auth_challenges"
+    ]
+  },
+  {
+    "id": "F12",
+    "name": "Saved reading list",
+    "release": "Launch",
+    "role": "Member",
+    "behavior": "Save and unsave an article idempotently; show a private list with saved date and current correction/retraction state. Save the first-seen version identifier for context but open the current safe version by default. Basic list sorting is newest-saved or latest-updated.",
+    "exceptions": "Optimistic save rolls back on failure. Deleted or retracted articles remain clearly marked list entries until removed. Saving does not create an offline copy of source materials.",
+    "acceptance": [
+      "Two concurrent save requests produce one bookmark.",
+      "Another user cannot discover, enumerate or modify the list."
+    ],
+    "screens": [
+      "SC11",
+      "SC04"
+    ],
+    "flow": "FL08",
+    "phase": "P05",
+    "entities": [
+      "bookmarks",
+      "articles",
+      "article_versions"
+    ]
+  },
+  {
+    "id": "F13",
+    "name": "Explicit follows and a personal feed",
+    "release": "Launch",
+    "role": "Member",
+    "behavior": "Let members follow topics and choose For you or Editorial home. Personal ranking is deterministic topic matching plus editorial priority and recency. Show why a story appears and provide reset. Default to a balanced editorial feed for new accounts.",
+    "exceptions": "No inferred political, religious, health or other sensitive profile; do not infer interests from private reading history. No-follow state remains useful.",
+    "acceptance": [
+      "Changing follows affects For you without altering published article text.",
+      "Reset deletes follows and returns to the editorial default."
+    ],
+    "screens": [
+      "SC01",
+      "SC02",
+      "SC10",
+      "SC12"
+    ],
+    "flow": "FL09",
+    "phase": "P05",
+    "entities": [
+      "topic_follows",
+      "user_preferences"
+    ]
+  },
+  {
+    "id": "F14",
+    "name": "Opt-in digests and story alerts",
+    "release": "V1",
+    "role": "Member",
+    "behavior": "Provide daily or weekly topic digests and explicit story-update alerts with timezone, quiet hours, frequency caps and one-click unsubscribe. A digest groups published articles and preserves exact version and source links. It is a separate release, not a hidden launch dependency.",
+    "exceptions": "Corrections may merit a clearly identified follow-up; prevent duplicate deliveries. Suppressed, retracted or unsent versions are excluded at send time.",
+    "acceptance": [
+      "Repeated delivery jobs send one message per user, edition and channel.",
+      "Unsubscribe immediately suppresses queued nonessential messages."
+    ],
+    "screens": [
+      "SC13"
+    ],
+    "flow": "FL14",
+    "phase": "P08",
+    "entities": [
+      "notification_preferences",
+      "notification_deliveries"
+    ]
+  },
+  {
+    "id": "F15",
+    "name": "Source directory and methodology",
+    "release": "Launch",
+    "role": "Visitor",
+    "behavior": "Publish a directory of approved source organizations and channels, topic scope, ownership disclosures where verified, selection rationale, limitations and last review date. Explain evidence-source versus related-link status, AI assistance and human review. Inclusion is not a blanket accuracy guarantee.",
+    "exceptions": "No unverified prestige badges or paid rankings. Suspensions affect future sourcing while historical attribution remains accurate where retention is permitted.",
+    "acceptance": [
+      "Every active evidence source has a reviewed profile and rights record.",
+      "A visitor can understand how sources and independent origins are counted."
+    ],
+    "screens": [
+      "SC07",
+      "SC08",
+      "SC15"
+    ],
+    "flow": "FL11",
+    "phase": "P03",
+    "entities": [
+      "sources",
+      "source_reviews",
+      "source_ownerships"
+    ]
+  },
+  {
+    "id": "F16",
+    "name": "Report an issue and request a correction",
+    "release": "Launch",
+    "role": "Visitor / Member",
+    "behavior": "Allow an article/version/claim-specific report for factual error, misleading synthesis, broken attribution, harmful content or rights concern. Optional contact email, evidence URL and short explanation; acknowledge receipt with a non-enumerable tracking token. Staff triage by severity.",
+    "exceptions": "Rate-limit abuse without preventing urgent rights reports. No promise of anonymous secrecy if contact details are provided. Never expose reporter email in public correction notes.",
+    "acceptance": [
+      "A report retains the exact version and claim the visitor saw.",
+      "A resolved correction links its private report to a public, non-identifying change note."
+    ],
+    "screens": [
+      "SC14",
+      "SC21"
+    ],
+    "flow": "FL10",
+    "phase": "P06",
+    "entities": [
+      "reader_reports",
+      "corrections"
+    ]
+  },
+  {
+    "id": "F17",
+    "name": "Public discovery, metadata and machine-readable sharing",
+    "release": "Launch",
+    "role": "Visitor / Operator",
+    "behavior": "Serve complete public article HTML, stable canonicals, sitemaps and original social previews. Structured metadata must reflect the visible article, genuine byline and material timestamps. Drafts, internal source bodies, filtered search variants and previews are not indexable.",
+    "exceptions": "Do not imitate source-publisher authorship or reuse unlicensed news imagery. A source link is direct; outbound measurement must not break it.",
+    "acceptance": [
+      "The social preview identifies The Aggregator, not a source outlet.",
+      "A crawler without JavaScript reads the article and its full bibliography."
+    ],
+    "screens": [
+      "SC01",
+      "SC04"
+    ],
+    "flow": "FL01",
+    "phase": "P05",
+    "entities": [
+      "articles",
+      "article_versions",
+      "media_assets"
+    ]
+  },
+  {
+    "id": "F18",
+    "name": "Source onboarding and credibility governance",
+    "release": "Launch",
+    "role": "Source curator / Rights reviewer",
+    "behavior": "Verify exact domain/channel identity; assess corrections, named responsibility, original reporting, topic expertise, conflicts and ownership. Approve per topic and access method. Review every 90 days or sooner after a material incident. Record reasoned decisions rather than an opaque reputation score.",
+    "exceptions": "A famous organization still needs item-level verification. A publisher-owned channel is not automatically an independent corroborator. Rights approval and editorial approval are separate decisions.",
+    "acceptance": [
+      "An expired or suspended approval blocks new evidence intake.",
+      "A changed channel identity triggers review rather than silent reassignment."
+    ],
+    "screens": [
+      "SC17",
+      "SC18"
+    ],
+    "flow": "FL12",
+    "phase": "P03",
+    "entities": [
+      "sources",
+      "source_reviews",
+      "source_endpoints",
+      "source_ownerships"
+    ]
+  },
+  {
+    "id": "F19",
+    "name": "Permission-aware ingestion",
+    "release": "Launch",
+    "role": "Operator",
+    "behavior": "Discover via approved RSS/Atom, licensed APIs, approved publisher pages and licensed document inputs. Apply independent permissions for discovery, fetch, retention, model processing, excerpt display, synthesis and media. Retain immutable provenance and source-provided dates separately from retrieval time.",
+    "exceptions": "RSS availability, robots access, a subscription or citation alone does not establish reuse rights. Denied items become metadata-only or rejected; never bypass authentication or a paywall.",
+    "acceptance": [
+      "No body reaches a model without an active, scoped processing and synthesis grant.",
+      "An adapter failure cannot create a publishable empty article."
+    ],
+    "screens": [
+      "SC18",
+      "SC22"
+    ],
+    "flow": "FL12",
+    "phase": "P03",
+    "entities": [
+      "rights_grants",
+      "source_items",
+      "source_item_versions",
+      "ingestion_runs"
+    ]
+  },
+  {
+    "id": "F20",
+    "name": "Documents and permissioned transcripts",
+    "release": "Launch",
+    "role": "Editor / Operator",
+    "behavior": "Accept authorized text/PDF documents and publisher-supplied transcripts with original location, issuer, license, language, checksum and page/segment locators. Separate original content from extraction and translation outputs. Review extraction quality before evidence use.",
+    "exceptions": "Scanned or corrupt documents require review or rejection; unsupported OCR cannot silently create facts. Transcripts lacking time alignment receive video links without fabricated timestamps.",
+    "acceptance": [
+      "A PDF claim retains the original page locator.",
+      "A speaker change or unreadable number is surfaced as a review issue."
+    ],
+    "screens": [
+      "SC18",
+      "SC20"
+    ],
+    "flow": "FL06",
+    "phase": "P03",
+    "entities": [
+      "source_item_versions",
+      "evidence_spans",
+      "media_assets"
+    ]
+  },
+  {
+    "id": "F21",
+    "name": "Deduplication and event clustering",
+    "release": "Launch",
+    "role": "Editor / Operator",
+    "behavior": "Normalize URLs conservatively; deduplicate exact content separately from event clustering. Group reports by entity, event, location and time, retaining revisions and independent reporting origins. Editors can split and merge clusters with an audit trail and stale-draft invalidation.",
+    "exceptions": "Same entity does not imply same event; recycled old stories remain dated. Similarity thresholds are calibrated against a labeled set, not presented as universal truths.",
+    "acceptance": [
+      "A recurring-announcement fixture does not merge different dates into one event.",
+      "A cluster merge preserves all source histories and marks existing drafts for revalidation."
+    ],
+    "screens": [
+      "SC19"
+    ],
+    "flow": "FL13",
+    "phase": "P04",
+    "entities": [
+      "story_clusters",
+      "cluster_items",
+      "reporting_origins",
+      "item_origins"
+    ]
+  },
+  {
+    "id": "F22",
+    "name": "Evidence extraction and claim provenance",
+    "release": "Launch",
+    "role": "Editor",
+    "behavior": "Create atomic claims with subject, proposition, date/time, units, attribution and risk. Link to exact source versions and evidence spans; mark supports, contradicts or context. Preserve quote boundaries and original language. Claim edits invalidate prior validation.",
+    "exceptions": "Text existence is not proof of support. Headlines and video descriptions cannot substitute for unseen reporting. Documents making allegations are evidence of the allegation, not automatically of its truth.",
+    "acceptance": [
+      "An unsupported numeric/date/entity claim blocks publication.",
+      "A reviewer can navigate from every factual block to the exact supporting span."
+    ],
+    "screens": [
+      "SC20",
+      "SC05"
+    ],
+    "flow": "FL13",
+    "phase": "P04",
+    "entities": [
+      "claims",
+      "claim_evidence",
+      "evidence_spans",
+      "article_claims"
+    ]
+  },
+  {
+    "id": "F23",
+    "name": "Grounded synthesis and quality checks",
+    "release": "Launch",
+    "role": "Editor",
+    "behavior": "Generate structured drafts from an approved evidence pack only. Resolve citation IDs to URLs server-side. Check material-claim coverage, factual entailment, quotations, contradiction handling, date consistency, duplication and excessive text overlap. Show AI assistance and human reviewer on published output.",
+    "exceptions": "No model browsing, tools, arbitrary URL generation or source-driven instructions. Failed checks produce a reviewable failure, never a best-effort auto-publication.",
+    "acceptance": [
+      "An injected instruction in a source cannot alter the workflow or access secrets.",
+      "Re-running the same evidence/prompt/model request is traceable and cannot create duplicate published versions."
+    ],
+    "screens": [
+      "SC20"
+    ],
+    "flow": "FL13",
+    "phase": "P04",
+    "entities": [
+      "generation_runs",
+      "validation_results",
+      "article_blocks",
+      "claim_citations"
+    ]
+  },
+  {
+    "id": "F24",
+    "name": "Editorial workbench and publication",
+    "release": "Launch",
+    "role": "Editor / Publisher",
+    "behavior": "Provide source/evidence and draft panes, validation findings, version diff, assignment, preview and approve/publish actions. Publish requires at least three eligible evidence items across at least two independent reporting origins and one human approval. High-risk stories require two distinct human approvers. No exception bypass at launch.",
+    "exceptions": "Approval is bound to an exact content-and-evidence hash and expires on edits. Provider outages or missing rights hold publication. Two reviewers may share a desk but not an identity.",
+    "acceptance": [
+      "A stale approval cannot publish an edited draft.",
+      "Publish atomically makes exactly one version current and emits an invalidation event."
+    ],
+    "screens": [
+      "SC16",
+      "SC20"
+    ],
+    "flow": "FL13",
+    "phase": "P06",
+    "entities": [
+      "review_assignments",
+      "editorial_reviews",
+      "publication_events",
+      "article_versions"
+    ]
+  },
+  {
+    "id": "F25",
+    "name": "Updates, retractions and rights withdrawal",
+    "release": "Launch",
+    "role": "Publisher / Rights reviewer",
+    "behavior": "Re-ingestion can propose an update but never silently overwrite a published version. Distinguish normal update, correction, withdrawal and legal redaction. Revalidate all dependent claims when a source changes or rights expire; suspend affected text and purge caches when required.",
+    "exceptions": "Remove restricted raw text and derivatives according to the applicable grant; provenance hashes do not justify keeping prohibited text. Public tombstones expose only lawful minimal information.",
+    "acceptance": [
+      "A withdrawn sole supporting source prevents continued publication of the unsupported claim.",
+      "The same withdrawal affects brief, standard, preview, search and queued digest representations."
+    ],
+    "screens": [
+      "SC21",
+      "SC06"
+    ],
+    "flow": "FL10",
+    "phase": "P06",
+    "entities": [
+      "corrections",
+      "takedowns",
+      "retention_tasks",
+      "publication_events"
+    ]
+  },
+  {
+    "id": "F26",
+    "name": "Operations and cost controls",
+    "release": "Launch",
+    "role": "Operator",
+    "behavior": "Show connector health, queue age, dead letters, failure reasons, evidence throughput, model tokens/cost, publication lag and deletion work. Retry with bounded backoff; allow safe replay, pause and per-source/global generation kill switches. Jobs and budgets are visible separately.",
+    "exceptions": "Provider quota exhaustion pauses that provider without destroying the queue. Replay requires an audit reason and preserves idempotency. Budget figures are measured usage, not model estimates.",
+    "acceptance": [
+      "A poison item is quarantined after bounded retries while other work continues.",
+      "An operator can stop generation without taking down public reading."
+    ],
+    "screens": [
+      "SC22",
+      "SC23"
+    ],
+    "flow": "FL15",
+    "phase": "P07",
+    "entities": [
+      "processing_jobs",
+      "ingestion_runs",
+      "generation_runs",
+      "outbox_events",
+      "feature_flags"
+    ]
+  },
+  {
+    "id": "F27",
+    "name": "Staff roles, permissions and audit",
+    "release": "Launch",
+    "role": "Administrator",
+    "behavior": "Separate Reader, Editor, Publisher, Source curator, Rights reviewer, Operator and Administrator capabilities. Require staff MFA, least privilege, reasoned sensitive actions and an append-only application audit trail. Administrator is not a shortcut around editorial gates.",
+    "exceptions": "Role changes invalidate privileged sessions. Audit log does not include credentials or unnecessary source bodies. Emergency withdrawal may be immediate and must be reviewed afterward.",
+    "acceptance": [
+      "An operator cannot publish and an editor cannot grant themselves a role.",
+      "Every rights change, approval, publication and deletion has actor, timestamp and correlation ID."
+    ],
+    "screens": [
+      "SC24"
+    ],
+    "flow": "FL16",
+    "phase": "P02",
+    "entities": [
+      "roles",
+      "user_roles",
+      "audit_events"
+    ]
+  },
+  {
+    "id": "F28",
+    "name": "Privacy, export and retention",
+    "release": "Launch",
+    "role": "Member / Rights reviewer",
+    "behavior": "Collect minimum account and explicit preference data. Offer account export and deletion, session revocation, optional analytics consent where applicable and a readable policy. Separate account retention from source-license retention; delete derived restricted content as well as original blobs.",
+    "exceptions": "Deletion can retain minimally necessary lawful audit records after identity minimization. Do not promise one worldwide legal deadline; jurisdictional counsel determines obligations. Backups replay deletion tombstones on restore.",
+    "acceptance": [
+      "A deleted account cannot sign in or receive future optional messages.",
+      "Export contains only that member\u2019s information and expires after 24 hours."
+    ],
+    "screens": [
+      "SC12",
+      "SC25"
+    ],
+    "flow": "FL17",
+    "phase": "P07",
+    "entities": [
+      "privacy_requests",
+      "retention_tasks",
+      "consents",
+      "audit_events"
+    ]
+  },
+  {
+    "id": "F29",
+    "name": "Product and editorial-quality analytics",
+    "release": "Launch",
+    "role": "Product owner / Editor",
+    "behavior": "Track engaged reading, source exploration, save/follow use, correction severity, claim-support audits, failed sourcing and editorial time. Use minimal first-party events and aggregate reporting. Define each metric and denominator before interpreting dashboards.",
+    "exceptions": "A long page view is not comprehension; clicks are not truth. Exclude staff/bots where reliably identified and do not store raw search queries by default.",
+    "acceptance": [
+      "Metric dashboards show sample sizes and event definitions.",
+      "No ranking or source-approval decision is based solely on clicks or popularity."
+    ],
+    "screens": [
+      "SC23"
+    ],
+    "flow": "FL15",
+    "phase": "P07",
+    "entities": [
+      "analytics_events",
+      "validation_results",
+      "reader_reports"
+    ]
+  },
+  {
+    "id": "F30",
+    "name": "Security and abuse resistance",
+    "release": "Launch",
+    "role": "All roles",
+    "behavior": "Protect URL ingestion against SSRF, parsers against hostile files, article rendering against XSS, auth against replay and endpoints against abuse. Isolate model inputs and credentialed tools. Allowlist schemes/domains by adapter; recheck DNS and redirects at connection time.",
+    "exceptions": "Manual editor URLs are also untrusted. No arbitrary public upload or URL-fetch endpoint at launch. Suspicious inputs are quarantined without reflecting executable HTML.",
+    "acceptance": [
+      "Private-network and cloud-metadata URLs remain unreachable through redirects and DNS changes.",
+      "Cross-user authorization and malicious-source regression tests pass before release."
+    ],
+    "screens": [
+      "SC14",
+      "SC18",
+      "SC22"
+    ],
+    "flow": "FL12",
+    "phase": "P07",
+    "entities": [
+      "audit_events",
+      "processing_jobs",
+      "source_endpoints"
+    ]
+  },
+  {
+    "id": "F31",
+    "name": "Reliability, performance and inclusive delivery",
+    "release": "Launch",
+    "role": "All roles",
+    "behavior": "Target 99.9% monthly public-read availability, p75 LCP <=2.5s, INP <=200ms and CLS <=0.1 on measured supported traffic. Target WCAG 2.2 AA, keyboard and screen-reader usability. Serve stale safe published content during non-critical outages and preserve attribution.",
+    "exceptions": "These are acceptance targets, not existing measurements. Rights withdrawal and retractions override stale-content availability. Launch cannot claim accessibility certification from automated scans alone.",
+    "acceptance": [
+      "A simulated generation outage leaves approved articles readable.",
+      "A restore drill meets 24-hour RPO and 4-hour RTO without resurrecting deleted content."
+    ],
+    "screens": [
+      "SC26"
+    ],
+    "flow": "FL18",
+    "phase": "P07",
+    "entities": [
+      "outbox_events",
+      "retention_tasks",
+      "publication_events"
+    ]
+  },
+  {
+    "id": "F32",
+    "name": "Reader source suggestions",
+    "release": "V1",
+    "role": "Member",
+    "behavior": "Accept a suggested source URL into a quarantined editorial queue with reason and related story. Staff evaluate rights and credibility before fetching or using content; no user-triggered public synthesis.",
+    "exceptions": "Unknown hosts remain untrusted. Repeated suggestions deduplicate and do not boost ranking.",
+    "acceptance": [
+      "A submitted URL is never automatically fetched by the public API.",
+      "Rejection does not expose internal risk notes."
+    ],
+    "screens": [
+      "SC27"
+    ],
+    "flow": "FL19",
+    "phase": "P08",
+    "entities": [
+      "source_suggestions"
+    ]
+  },
+  {
+    "id": "F33",
+    "name": "Additional languages",
+    "release": "V1",
+    "role": "Visitor / Editor",
+    "behavior": "Add interface translation and separately reviewed translated article variants after language-specific evidence and QA evaluation. Store language, original evidence, translator/model provenance and separate version approval. Offer language fallback explicitly.",
+    "exceptions": "Never imply machine translation was original reporting; ambiguous quotes retain the original and an identified translation. RTL needs its own validated layouts.",
+    "acceptance": [
+      "Changing language does not change article identity or silently mix evidence dates.",
+      "Unavailable translations fall back with a clear notice."
+    ],
+    "screens": [
+      "SC04",
+      "SC12"
+    ],
+    "flow": "FL04",
+    "phase": "P08",
+    "entities": [
+      "article_variants",
+      "source_item_versions"
+    ]
+  },
+  {
+    "id": "F34",
+    "name": "Collaborative collections",
+    "release": "V2",
+    "role": "Member",
+    "behavior": "Introduce named private collections and invite-based collaboration only after access-control design. Basic bookmarks remain the launch capability.",
+    "exceptions": "No public reading history; revoking an invitation removes access.",
+    "acceptance": [
+      "Collection authorization tests include revoked and expired invitations."
+    ],
+    "screens": [
+      "SC28"
+    ],
+    "flow": "FL08",
+    "phase": "P09",
+    "entities": [
+      "future_collections"
+    ]
+  },
+  {
+    "id": "F35",
+    "name": "Paid products and sponsorship",
+    "release": "V2",
+    "role": "Product owner",
+    "behavior": "Evaluate paid research workflows, business digests or clearly separated sponsorship after validation. Source attribution and public methodology remain free. Pricing, billing provider, tax and entitlement models require a separate approved addendum.",
+    "exceptions": "Payment must not influence source credibility or create unauthorized resale of provider data.",
+    "acceptance": [
+      "An entitlement cannot conceal required source citations or charge solely for an embedded YouTube video."
+    ],
+    "screens": [
+      "SC29"
+    ],
+    "flow": "FL20",
+    "phase": "P09",
+    "entities": [
+      "future_entitlements"
+    ]
+  },
+  {
+    "id": "F36",
+    "name": "Audio briefings",
+    "release": "V2",
+    "role": "Member",
+    "behavior": "Offer clearly labeled synthetic narration of the product\u2019s own approved articles only after rights, pronunciation and accessible transcript checks. Keep visible source links with the audio edition.",
+    "exceptions": "No voice cloning of journalists or extraction of YouTube audio. Corrections invalidate stale narration.",
+    "acceptance": [
+      "Audio is bound to a published version and has a complete text alternative."
+    ],
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL04",
+    "phase": "P09",
+    "entities": [
+      "future_audio_editions"
+    ]
+  },
+  {
+    "id": "F37",
+    "name": "Constrained automatic publishing",
+    "release": "V2",
+    "role": "Publisher",
+    "behavior": "Consider automation only for explicitly approved low-risk desks after calibrated evidence-quality evaluation, shadow operation and a documented rollback decision. Launch remains human-approved.",
+    "exceptions": "High-risk stories remain human-reviewed; automation never bypasses source independence, rights or citation gates.",
+    "acceptance": [
+      "The automation flag defaults off and can be stopped independently."
+    ],
+    "screens": [
+      "SC24"
+    ],
+    "flow": "FL13",
+    "phase": "P09",
+    "entities": [
+      "feature_flags",
+      "editorial_reviews"
+    ]
+  },
+  {
+    "id": "F38",
+    "name": "Ask about this article",
+    "release": "V2",
+    "role": "Visitor / Member",
+    "behavior": "Explore article-scoped questions with answers grounded only in the selected safe published evidence pack, citations and refusal when evidence is insufficient. No open-web agent or personalized high-stakes advice.",
+    "exceptions": "Rights-limited spans cannot be exposed by questions; article corrections invalidate cached answers.",
+    "acceptance": [
+      "An unanswerable question produces an evidence-gap message rather than a fabricated answer."
+    ],
+    "screens": [
+      "SC04"
+    ],
+    "flow": "FL05",
+    "phase": "P09",
+    "entities": [
+      "future_article_questions"
+    ]
+  }
+]

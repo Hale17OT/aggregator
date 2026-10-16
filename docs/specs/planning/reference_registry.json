@@ -1,0 +1,170 @@
+{
+  "R01": {
+    "title": "AutoAnimate repository",
+    "url": "https://github.com/formkit/auto-animate",
+    "purpose": "Vue-compatible automatic layout transitions; implementation reference.",
+    "checked_on": "2026-10-08"
+  },
+  "R02": {
+    "title": "Motion for Vue repository",
+    "url": "https://github.com/motiondivision/motion-vue",
+    "purpose": "Vue animation library; published package is motion-v.",
+    "checked_on": "2026-10-08"
+  },
+  "R03": {
+    "title": "Emil Kowalski design and animation skills",
+    "url": "https://github.com/emilkowalski/skills",
+    "purpose": "Design-engineering and animation review guidance.",
+    "checked_on": "2026-10-08"
+  },
+  "R04": {
+    "title": "Taste Skill repository",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "purpose": "Portable design skills; inspect and pin a reviewed revision.",
+    "checked_on": "2026-10-08"
+  },
+  "R05": {
+    "title": "img2threejs repository",
+    "url": "https://github.com/img2threejs/img2threejs",
+    "purpose": "Procedural Three.js reconstruction from reference imagery; optional exploration only.",
+    "checked_on": "2026-10-08"
+  },
+  "R06": {
+    "title": "Impeccable repository",
+    "url": "https://github.com/pbakaus/impeccable",
+    "purpose": "Design critique, audit, refinement and hardening guidance.",
+    "checked_on": "2026-10-08"
+  },
+  "R07": {
+    "title": "YouTube captions.download",
+    "url": "https://developers.google.com/youtube/v3/docs/captions/download",
+    "purpose": "Caption downloads require authorization and permission to edit the video.",
+    "checked_on": "2026-10-08"
+  },
+  "R08": {
+    "title": "YouTube API Services Developer Policies",
+    "url": "https://developers.google.com/youtube/terms/developer-policies",
+    "purpose": "API-data use, aggregation, storage, attribution, playback and scraping restrictions.",
+    "checked_on": "2026-10-08"
+  },
+  "R09": {
+    "title": "YouTube API quota calculator",
+    "url": "https://developers.google.com/youtube/v3/determine_quota_cost",
+    "purpose": "Quotas and costs are endpoint-specific; verify the project allocation before launch.",
+    "checked_on": "2026-10-08"
+  },
+  "R10": {
+    "title": "U.S. Copyright Office Fair Use Index",
+    "url": "https://www.copyright.gov/fair-use/",
+    "purpose": "U.S.-specific, fact-dependent framework; attribution is not a universal permission rule.",
+    "checked_on": "2026-10-08"
+  },
+  "R11": {
+    "title": "AP news values introduction",
+    "url": "https://www.ap.org/about/news-values-and-principles/news-values-introduction/",
+    "purpose": "Reference for sourcing, independence, accuracy and transparent correction principles.",
+    "checked_on": "2026-10-08"
+  },
+  "R12": {
+    "title": "Reuters journalistic standards",
+    "url": "https://reutersagency.com/about/standards-values/",
+    "purpose": "Reference for verification, accuracy, corrections and editorial accountability.",
+    "checked_on": "2026-10-08"
+  },
+  "R13": {
+    "title": "Figma variables, collections and modes",
+    "url": "https://help.figma.com/hc/en-us/articles/14506821864087-Overview-of-variables-collections-and-modes",
+    "purpose": "Variable-based systems; capabilities and mode counts depend on current plan.",
+    "checked_on": "2026-10-08"
+  },
+  "R14": {
+    "title": "Figma auto layout guide",
+    "url": "https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout-in-Figma",
+    "purpose": "Responsive component and layout construction reference.",
+    "checked_on": "2026-10-08"
+  },
+  "R15": {
+    "title": "Figma variables in prototypes",
+    "url": "https://help.figma.com/hc/en-us/articles/14506587589399-Use-variables-in-prototypes",
+    "purpose": "Stateful prototyping reference; use frame alternatives when unavailable.",
+    "checked_on": "2026-10-08"
+  },
+  "R16": {
+    "title": "WCAG 2.2",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "purpose": "Accessibility conformance reference; this project targets AA.",
+    "checked_on": "2026-10-08"
+  },
+  "R17": {
+    "title": "Nuxt rendering modes",
+    "url": "https://nuxt.com/docs/4.x/guide/concepts/rendering",
+    "purpose": "Vue universal and hybrid rendering reference.",
+    "checked_on": "2026-10-08"
+  },
+  "R18": {
+    "title": "OWASP SSRF prevention",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "purpose": "Untrusted outbound fetch defense guidance.",
+    "checked_on": "2026-10-08"
+  },
+  "R19": {
+    "title": "OWASP LLM prompt injection prevention",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    "purpose": "Treat retrieved content as untrusted data and constrain model capabilities.",
+    "checked_on": "2026-10-08"
+  },
+  "R20": {
+    "title": "BullMQ idempotent jobs",
+    "url": "https://docs.bullmq.io/patterns/idempotent-jobs",
+    "purpose": "Retry-safe, small and atomic job design.",
+    "checked_on": "2026-10-08"
+  },
+  "R21": {
+    "title": "BullMQ retrying failing jobs",
+    "url": "https://docs.bullmq.io/guide/retrying-failing-jobs",
+    "purpose": "Bounded retry and backoff implementation reference.",
+    "checked_on": "2026-10-08"
+  },
+  "R22": {
+    "title": "PostgreSQL row security",
+    "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "purpose": "Database policy behavior and privileged-role caveats.",
+    "checked_on": "2026-10-08"
+  },
+  "R23": {
+    "title": "AutoAnimate documentation",
+    "url": "https://auto-animate.formkit.com/",
+    "purpose": "Runtime behavior and reduced-motion integration reference.",
+    "checked_on": "2026-10-08"
+  },
+  "R24": {
+    "title": "WCAG target-size minimum explanation",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum",
+    "purpose": "AA minimum and exceptions; project uses larger standalone controls.",
+    "checked_on": "2026-10-08"
+  },
+  "R25": {
+    "title": "YouTube developer-policy compliance guide",
+    "url": "https://developers.google.com/youtube/terms/developer-policies-guide",
+    "purpose": "Clarifications on data uses, derived metrics, playback and compliance review.",
+    "checked_on": "2026-10-08"
+  },
+  "R26": {
+    "title": "YouTube branding guidelines",
+    "url": "https://developers.google.com/youtube/terms/branding-guidelines",
+    "purpose": "Per-item attribution and branding requirements.",
+    "checked_on": "2026-10-08"
+  },
+  "R27": {
+    "title": "YouTube embedded player parameters",
+    "url": "https://developers.google.com/youtube/player_parameters",
+    "purpose": "Supported embed and playback parameters.",
+    "checked_on": "2026-10-08"
+  },
+  "R28": {
+    "title": "Google Search article structured data",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "purpose": "Article metadata implementation reference; no ranking guarantee.",
+    "checked_on": "2026-10-08"
+  }
+}

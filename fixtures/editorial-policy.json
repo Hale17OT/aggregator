@@ -1,0 +1,164 @@
+{
+  "provenance": "fictional-test-declaration",
+  "declarations": [
+    {
+      "source": "publisher-1",
+      "item": "document-1",
+      "origin": "origin-1",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-2",
+      "item": "document-2",
+      "origin": "origin-2",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-3",
+      "item": "document-3",
+      "origin": "origin-3",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-4",
+      "item": "document-4",
+      "origin": "origin-1",
+      "relationship": "reprint",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-5",
+      "item": "document-5",
+      "origin": "origin-5",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-6",
+      "item": "document-6",
+      "origin": "origin-6",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-7",
+      "item": "document-7",
+      "origin": "origin-7",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-8",
+      "item": "document-8",
+      "origin": "origin-8",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    },
+    {
+      "source": "publisher-9",
+      "item": "document-9",
+      "origin": "origin-9",
+      "relationship": "original",
+      "independent": true,
+      "provenance": "fictional-test-declaration"
+    }
+  ],
+  "registry": [
+    {
+      "source": "publisher-1",
+      "items": [
+        "document-1",
+        "discovery",
+        "watch-link"
+      ],
+      "kinds": [
+        "html",
+        "feed",
+        "video"
+      ]
+    },
+    {
+      "source": "publisher-2",
+      "items": [
+        "document-2"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-3",
+      "items": [
+        "document-3"
+      ],
+      "kinds": [
+        "transcript"
+      ]
+    },
+    {
+      "source": "publisher-4",
+      "items": [
+        "document-4"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-5",
+      "items": [
+        "document-5"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-6",
+      "items": [
+        "document-6"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-7",
+      "items": [
+        "document-7"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-8",
+      "items": [
+        "document-8"
+      ],
+      "kinds": [
+        "html"
+      ]
+    },
+    {
+      "source": "publisher-9",
+      "items": [
+        "document-9"
+      ],
+      "kinds": [
+        "html"
+      ]
+    }
+  ]
+}

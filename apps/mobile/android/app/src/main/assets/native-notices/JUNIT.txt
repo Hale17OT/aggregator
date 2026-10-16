@@ -1,0 +1,7 @@
+JUnit 4.13.2
+Project and source: https://github.com/junit-team/junit4/tree/r4.13.2
+Published artifact: https://repo.maven.apache.org/maven2/junit/junit/4.13.2/
+
+JUnit is distributed under the Eclipse Public License, version 1.0.
+The full license from the published artifact is included as junit-EPL-1.0.txt.
+JUnit has not been modified by The Aggregator.

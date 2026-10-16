@@ -1,0 +1,24 @@
+flowchart TD
+  A[Public home or shared URL] --> B[Published article and full bottom sources]
+  B --> C[Inline claim citation]
+  C --> D[Version-bound evidence view]
+  D --> E[Exact original article, document or video]
+  B --> F[Save or follow]
+  F --> G{Authenticated?}
+  G -->|No| H[Sign in and resume once]
+  G -->|Yes| I[Private reader preference]
+  H --> I
+  J[Approved identity and scoped rights] --> K[Safe intake and immutable source versions]
+  K --> L[Cluster, independent origins and claims]
+  L --> M[Permissioned evidence pack]
+  M --> N[Structured AI draft]
+  N --> O[Validation and human review]
+  O --> P{Valid rights, evidence and approvals?}
+  P -->|No| Q[Hold, edit or reject]
+  Q --> M
+  P -->|Yes| R[Atomic publication and outbox]
+  R --> B
+  B --> S[Correction or rights report]
+  S --> T[Investigate or immediately withdraw]
+  T --> U[New reviewed version or tombstone]
+  U --> R

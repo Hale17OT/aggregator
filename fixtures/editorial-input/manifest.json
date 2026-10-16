@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "key": "document-1",
+      "source": "publisher-1",
+      "endpoint": "publisher-1",
+      "grant": "publisher-1",
+      "file": "document-1.html",
+      "kind": "html",
+      "url": "https://publisher-1.example.test/report/1?edition=local",
+      "title": "Lock Gazette field report",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-2",
+      "source": "publisher-2",
+      "endpoint": "publisher-2",
+      "grant": "publisher-2",
+      "file": "document-2.html",
+      "kind": "html",
+      "url": "https://publisher-2.example.test/report/2?edition=local",
+      "title": "Northmere Observer flow report",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-3",
+      "source": "publisher-3",
+      "endpoint": "publisher-3",
+      "grant": "publisher-3",
+      "file": "document-3.json",
+      "kind": "transcript",
+      "url": "https://publisher-3.example.test/report/3?edition=local",
+      "title": "Engineer interview transcript",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-4",
+      "source": "publisher-4",
+      "endpoint": "publisher-4",
+      "grant": "publisher-4",
+      "file": "document-4.html",
+      "kind": "html",
+      "url": "https://publisher-4.example.test/report/4?edition=local",
+      "title": "Valley Wire credited reprint",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-5",
+      "source": "publisher-5",
+      "endpoint": "publisher-5",
+      "grant": "publisher-5",
+      "file": "document-5.html",
+      "kind": "html",
+      "url": "https://publisher-5.example.test/report/5?edition=local",
+      "title": "Juniper Library opening note",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "juniper-library",
+        "date": "2026-10-11",
+        "topic": "education",
+        "place": "east-harbor"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-6",
+      "source": "publisher-6",
+      "endpoint": "publisher-6",
+      "grant": "publisher-6",
+      "file": "document-6.html",
+      "kind": "html",
+      "url": "https://publisher-6.example.test/report/6?edition=local",
+      "title": "East Harbor Bulletin kit count",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "juniper-library",
+        "date": "2026-10-11",
+        "topic": "education",
+        "place": "east-harbor"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-7",
+      "source": "publisher-7",
+      "endpoint": "publisher-7",
+      "grant": "publisher-7",
+      "file": "document-7.html",
+      "kind": "html",
+      "url": "https://publisher-7.example.test/report/7?edition=local",
+      "title": "Librarian interview notes",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "juniper-library",
+        "date": "2026-10-11",
+        "topic": "education",
+        "place": "east-harbor"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-8",
+      "source": "publisher-8",
+      "endpoint": "publisher-8",
+      "grant": "publisher-8",
+      "file": "document-8.html",
+      "kind": "html",
+      "url": "https://publisher-8.example.test/report/8?edition=local",
+      "title": "Volunteer opening log",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "juniper-library",
+        "date": "2026-10-11",
+        "topic": "education",
+        "place": "east-harbor"
+      },
+      "language": "en"
+    },
+    {
+      "key": "document-9",
+      "source": "publisher-9",
+      "endpoint": "publisher-9",
+      "grant": "publisher-9",
+      "file": "document-9.html",
+      "kind": "html",
+      "url": "https://publisher-9.example.test/report/9?edition=local",
+      "title": "Southmere theatre announcement",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-12-18",
+        "topic": "theatre",
+        "place": "southmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "discovery",
+      "source": "publisher-1",
+      "endpoint": "publisher-1",
+      "grant": "publisher-1",
+      "file": "discovery.xml",
+      "kind": "feed",
+      "url": "https://publisher-1.example.test/feed.xml",
+      "title": "Fictional discovery feed",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    },
+    {
+      "key": "watch-link",
+      "source": "publisher-1",
+      "endpoint": "publisher-1",
+      "grant": "publisher-1",
+      "file": "no-transcript.txt",
+      "kind": "video",
+      "url": "https://publisher-1.example.test/watch/no-transcript",
+      "title": "Linked video without transcript",
+      "published": "2026-10-10T09:00:00Z",
+      "event": {
+        "entity": "alder-lock",
+        "date": "2026-10-10",
+        "topic": "water",
+        "place": "northmere"
+      },
+      "language": "en"
+    }
+  ]
+}

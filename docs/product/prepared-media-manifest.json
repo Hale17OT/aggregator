@@ -1,0 +1,610 @@
+{
+  "scope": "Fictional prepared media provenance only. No media bytes, permission grant or fresh-clone availability implied. Retained baseline preserved through16 October targeted closeout.",
+  "renditions": 23,
+  "assetReferences": 93,
+  "programmes": [
+    {
+      "id": "radio-alderwick-evening-shuttle-full",
+      "rendition": "5262323c32bb6edb87ce61b34d45562b055bd188513a1c2c54711d6a88f297c1",
+      "assets": [
+        {
+          "id": "b10b2655803e457d867e7366df6c2bf1bbe1ec417cdde2fcc8f7f1f2f32f4607",
+          "bytes": 12178844,
+          "sha256": "b10b2655803e457d867e7366df6c2bf1bbe1ec417cdde2fcc8f7f1f2f32f4607"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-evening-shuttle-brief",
+      "rendition": "391762544bb1fb569450bd739eba47a103da86f1779f588b81676acf5decfe6b",
+      "assets": [
+        {
+          "id": "fc4eac553143dbd9663b24b3ca55fbe03f0e46636dd84dfce14961b6215c9d99",
+          "bytes": 4189244,
+          "sha256": "fc4eac553143dbd9663b24b3ca55fbe03f0e46636dd84dfce14961b6215c9d99"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-rain-gardens-full",
+      "rendition": "1f0a87ca8be16e1260460dba49ab2af9085148084b50062f6d7eb271b1d14911",
+      "assets": [
+        {
+          "id": "feb2260a4ac5d912797e5baa797c01ba9a95a271050ea6fa0853d4b07fb1f3e9",
+          "bytes": 3708044,
+          "sha256": "feb2260a4ac5d912797e5baa797c01ba9a95a271050ea6fa0853d4b07fb1f3e9"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-rain-gardens-brief",
+      "rendition": "fe2e604dcd9ee4ae3be0ccc6b66b410ea829cacc0eeb29c339a750924b61afa6",
+      "assets": [
+        {
+          "id": "001e6559cb487a8e3be6fed39f1eddcc55bce076ee1b22f824aa03fbeecaa814",
+          "bytes": 2433644,
+          "sha256": "001e6559cb487a8e3be6fed39f1eddcc55bce076ee1b22f824aa03fbeecaa814"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-river-thermometers-full",
+      "rendition": "8e422b16996bfc5146b2f3497af8e791f739575ea1f02c52d309e970621c3397",
+      "assets": [
+        {
+          "id": "3c9297f2ca4d55fac46e370f5412956e3385586553a18cab7e814b3bad474a4a",
+          "bytes": 3465644,
+          "sha256": "3c9297f2ca4d55fac46e370f5412956e3385586553a18cab7e814b3bad474a4a"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-river-thermometers-brief",
+      "rendition": "21cdf3c97fb220755541eb2f0361ac91a9280dcb1d54237283823cbfcbe26fc5",
+      "assets": [
+        {
+          "id": "2ecc263b78a9a7112b70674dc2bd89ccbf4daa7e2adab137a8e059dceb3ea8bc",
+          "bytes": 2494844,
+          "sha256": "2ecc263b78a9a7112b70674dc2bd89ccbf4daa7e2adab137a8e059dceb3ea8bc"
+        }
+      ]
+    },
+    {
+      "id": "radio-alderwick-edition",
+      "rendition": "f8f95d2d35c1d41803fb392e9bf9f031820f6dc1671578760ed1f41641504e6c",
+      "assets": [
+        {
+          "id": "7573d6482ba7b6caa0fe5328cba623d1efc1ff1857c4c795299003507096389b",
+          "bytes": 12554444,
+          "sha256": "7573d6482ba7b6caa0fe5328cba623d1efc1ff1857c4c795299003507096389b"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-alderwick-solo",
+      "rendition": "37c111558e10cc72ecc1f442fff6480c17b3d5236d770f12837f7b3dd73c0285",
+      "assets": [
+        {
+          "id": "a0575c8fd5c2a31f06025b8b5fbee66aa7d7bdcc22c6e24be8b49774e08f013c",
+          "bytes": 7130444,
+          "sha256": "a0575c8fd5c2a31f06025b8b5fbee66aa7d7bdcc22c6e24be8b49774e08f013c"
+        },
+        {
+          "id": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac",
+          "bytes": 826,
+          "sha256": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac"
+        },
+        {
+          "id": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd",
+          "bytes": 3076024,
+          "sha256": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "21e8d6da1d3d374084f084559f5996f3727a58d051ae8e69f155c753dad9e1f9",
+          "bytes": 8086080,
+          "sha256": "21e8d6da1d3d374084f084559f5996f3727a58d051ae8e69f155c753dad9e1f9"
+        },
+        {
+          "id": "81c57bfb99a9848cb970d2d4c85d9786c2f7d664be05d53f42b2441e53c53316",
+          "bytes": 218017,
+          "sha256": "81c57bfb99a9848cb970d2d4c85d9786c2f7d664be05d53f42b2441e53c53316"
+        },
+        {
+          "id": "036b4acbad38cc6ccb08bd2c0432ac1f15ac77c54b55dfd13c705c91d8e05e18",
+          "bytes": 3515,
+          "sha256": "036b4acbad38cc6ccb08bd2c0432ac1f15ac77c54b55dfd13c705c91d8e05e18"
+        },
+        {
+          "id": "5615454a67fb4d977b3f9f2fc9da2812989d9e007804050b00f4db97ee224cb3",
+          "bytes": 16730,
+          "sha256": "5615454a67fb4d977b3f9f2fc9da2812989d9e007804050b00f4db97ee224cb3"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-alderwick-duo",
+      "rendition": "7fda71b61d76db7370c93a93005a7c71c490b36ed4291f4f7f565d73de3146de",
+      "assets": [
+        {
+          "id": "17b7c29c0f641c2bce1b849397b34b1561adf732461a64edbf1003c9b023063f",
+          "bytes": 7549244,
+          "sha256": "17b7c29c0f641c2bce1b849397b34b1561adf732461a64edbf1003c9b023063f"
+        },
+        {
+          "id": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac",
+          "bytes": 826,
+          "sha256": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac"
+        },
+        {
+          "id": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd",
+          "bytes": 3076024,
+          "sha256": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "51534d771cf3f654e53167c360be53d95cdf456fbf40eaa0f914f2a8330de13e",
+          "bytes": 8305399,
+          "sha256": "51534d771cf3f654e53167c360be53d95cdf456fbf40eaa0f914f2a8330de13e"
+        },
+        {
+          "id": "7ef2dd48d134793b1d45dc0be1af82c0a901429910fd755c0dc22cd6cc46033a",
+          "bytes": 263322,
+          "sha256": "7ef2dd48d134793b1d45dc0be1af82c0a901429910fd755c0dc22cd6cc46033a"
+        },
+        {
+          "id": "8f48d02c85654038feaa46f177e175e00f7b2b86a9e1e9f99f588b5061b7e694",
+          "bytes": 3533,
+          "sha256": "8f48d02c85654038feaa46f177e175e00f7b2b86a9e1e9f99f588b5061b7e694"
+        },
+        {
+          "id": "836710ba3a0b3e74cd188c867f1ee1e1be1d34972836ccb17fa4b999d013e867",
+          "bytes": 16720,
+          "sha256": "836710ba3a0b3e74cd188c867f1ee1e1be1d34972836ccb17fa4b999d013e867"
+        }
+      ]
+    },
+    {
+      "id": "radio-civic-evening",
+      "rendition": "9bbfa4cae7b0c5004a0181dab927ffae5cf4acbdc7ba3d9c68c373af7ea34b75",
+      "assets": [
+        {
+          "id": "518a644fadd74a09dc5bb5e698591cf759036fcd317bc2185b43828e72a99a54",
+          "bytes": 15886844,
+          "sha256": "518a644fadd74a09dc5bb5e698591cf759036fcd317bc2185b43828e72a99a54"
+        }
+      ]
+    },
+    {
+      "id": "radio-field-notes",
+      "rendition": "67fd22264e1c04683952a82091dcc76a1ce39ca7e66026b928e9f3d5735f4d1e",
+      "assets": [
+        {
+          "id": "8a84065e3ebac38ebbc830bd9c9d7eaa6d815209433ab7f31558c180cd65cd89",
+          "bytes": 7173644,
+          "sha256": "8a84065e3ebac38ebbc830bd9c9d7eaa6d815209433ab7f31558c180cd65cd89"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-shuttle-solo-visual",
+      "rendition": "7c769004069ea3e8ea4d7fab3f12aace5eb7b2fbf2237d6474e76d1b3b13695b",
+      "assets": [
+        {
+          "id": "dadbf01257f536de4a5911117df58cade0668040ceea2d7aa5eff41e7d75fd2b",
+          "bytes": 6224444,
+          "sha256": "dadbf01257f536de4a5911117df58cade0668040ceea2d7aa5eff41e7d75fd2b"
+        },
+        {
+          "id": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd",
+          "bytes": 3076024,
+          "sha256": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac",
+          "bytes": 826,
+          "sha256": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac"
+        },
+        {
+          "id": "7a7842dc39f9c8b100a3ea8784c732aa3c82d8d26c1caf079a53ad76bce52647",
+          "bytes": 7454155,
+          "sha256": "7a7842dc39f9c8b100a3ea8784c732aa3c82d8d26c1caf079a53ad76bce52647"
+        },
+        {
+          "id": "1428b06a70db71759793eb356305fb5cc06cd6e1f10437559b5dab21d45b5391",
+          "bytes": 218409,
+          "sha256": "1428b06a70db71759793eb356305fb5cc06cd6e1f10437559b5dab21d45b5391"
+        },
+        {
+          "id": "4ae3f66331f55fd979cacf8268db4b6ae0697303934af97041b557492e3d9f26",
+          "bytes": 3048,
+          "sha256": "4ae3f66331f55fd979cacf8268db4b6ae0697303934af97041b557492e3d9f26"
+        },
+        {
+          "id": "8d98fe7836a39a03cde7a81eeae4d62517e302938275d85ec154d1de90aa7a8e",
+          "bytes": 15689,
+          "sha256": "8d98fe7836a39a03cde7a81eeae4d62517e302938275d85ec154d1de90aa7a8e"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-shuttle-duo-visual",
+      "rendition": "af9140948221370cfc21fbd4dd8c632d9a1ffaa7d62844067eec5aa3eacc413a",
+      "assets": [
+        {
+          "id": "9bfb0dcbd501284e61f6d98a72010d6201289d146edb1ba0b6827f8583bffb6c",
+          "bytes": 6643244,
+          "sha256": "9bfb0dcbd501284e61f6d98a72010d6201289d146edb1ba0b6827f8583bffb6c"
+        },
+        {
+          "id": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd",
+          "bytes": 3076024,
+          "sha256": "54ba04f400cabd8a1cf0229f0b64f9508452aaccb09060ec96eb8dce110889bd"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac",
+          "bytes": 826,
+          "sha256": "96ddb5052ca710c3605b3ef4691102e8dbe3a94c698280e5d262ecedbe86ccac"
+        },
+        {
+          "id": "2cc7a27ac894d5a7ac3e208c2661c3f5c639ad31020596ccfe13b25cad67133c",
+          "bytes": 7512939,
+          "sha256": "2cc7a27ac894d5a7ac3e208c2661c3f5c639ad31020596ccfe13b25cad67133c"
+        },
+        {
+          "id": "5b65d2336f54b5762a76b96af4e6e3f2f10f31bec7bfe9244aec39b78bd17834",
+          "bytes": 263936,
+          "sha256": "5b65d2336f54b5762a76b96af4e6e3f2f10f31bec7bfe9244aec39b78bd17834"
+        },
+        {
+          "id": "3f498a228ff3c67566028bfe8e1bfd208910f7fdf0e9792761c1f662e96f0364",
+          "bytes": 3066,
+          "sha256": "3f498a228ff3c67566028bfe8e1bfd208910f7fdf0e9792761c1f662e96f0364"
+        },
+        {
+          "id": "4ffd59700073d25238f3a623f27b319a7622c05a1c551aed99f6b31a55bb6011",
+          "bytes": 15689,
+          "sha256": "4ffd59700073d25238f3a623f27b319a7622c05a1c551aed99f6b31a55bb6011"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-shuttle-solo-clip",
+      "rendition": "b1ad3bfcce978138b89548dd982972d4b397906574baba2d1d399412d8907ce0",
+      "assets": [
+        {
+          "id": "a0575c8fd5c2a31f06025b8b5fbee66aa7d7bdcc22c6e24be8b49774e08f013c",
+          "bytes": 7130444,
+          "sha256": "a0575c8fd5c2a31f06025b8b5fbee66aa7d7bdcc22c6e24be8b49774e08f013c"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "dfdb8f00012064753ccff18fa3f659fe813d1adc7c0e22e1b56db7f3e9fcfb3b",
+          "bytes": 9931693,
+          "sha256": "dfdb8f00012064753ccff18fa3f659fe813d1adc7c0e22e1b56db7f3e9fcfb3b"
+        },
+        {
+          "id": "1428b06a70db71759793eb356305fb5cc06cd6e1f10437559b5dab21d45b5391",
+          "bytes": 218409,
+          "sha256": "1428b06a70db71759793eb356305fb5cc06cd6e1f10437559b5dab21d45b5391"
+        },
+        {
+          "id": "036b4acbad38cc6ccb08bd2c0432ac1f15ac77c54b55dfd13c705c91d8e05e18",
+          "bytes": 3515,
+          "sha256": "036b4acbad38cc6ccb08bd2c0432ac1f15ac77c54b55dfd13c705c91d8e05e18"
+        },
+        {
+          "id": "884d9b8a333e8d2d8ab5da5cb20f68530b1df399112c156600c4457d1355fb03",
+          "bytes": 11741,
+          "sha256": "884d9b8a333e8d2d8ab5da5cb20f68530b1df399112c156600c4457d1355fb03"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-shuttle-duo-clip",
+      "rendition": "76d310ee708f576a0eceddf5a73d75fe11521f13eb0877fc63d6374f44ee07e6",
+      "assets": [
+        {
+          "id": "17b7c29c0f641c2bce1b849397b34b1561adf732461a64edbf1003c9b023063f",
+          "bytes": 7549244,
+          "sha256": "17b7c29c0f641c2bce1b849397b34b1561adf732461a64edbf1003c9b023063f"
+        },
+        {
+          "id": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b",
+          "bytes": 241226,
+          "sha256": "8313c0c66c314b6b39dd3a5b688411d7957a0c171ae0a23874e475c25951186b"
+        },
+        {
+          "id": "665123fe61b8dde76a1de9b420e57739f126e2b24bc54bd548e0d2bd96dee42b",
+          "bytes": 10561302,
+          "sha256": "665123fe61b8dde76a1de9b420e57739f126e2b24bc54bd548e0d2bd96dee42b"
+        },
+        {
+          "id": "5b65d2336f54b5762a76b96af4e6e3f2f10f31bec7bfe9244aec39b78bd17834",
+          "bytes": 263936,
+          "sha256": "5b65d2336f54b5762a76b96af4e6e3f2f10f31bec7bfe9244aec39b78bd17834"
+        },
+        {
+          "id": "8f48d02c85654038feaa46f177e175e00f7b2b86a9e1e9f99f588b5061b7e694",
+          "bytes": 3533,
+          "sha256": "8f48d02c85654038feaa46f177e175e00f7b2b86a9e1e9f99f588b5061b7e694"
+        },
+        {
+          "id": "6731d6e789483239c87625b6c695580cb85a11c9336a6066531f258ad192dd69",
+          "bytes": 11743,
+          "sha256": "6731d6e789483239c87625b6c695580cb85a11c9336a6066531f258ad192dd69"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-gardens-solo-visual",
+      "rendition": "de8b469f21f147a5212ff7ca7801509d73d86ee9b0d2af685a54d77b416242fd",
+      "assets": [
+        {
+          "id": "6965479eab13ac82fae52dc095196fe6f1a348bc769f7bb6945438abfc662b00",
+          "bytes": 3708044,
+          "sha256": "6965479eab13ac82fae52dc095196fe6f1a348bc769f7bb6945438abfc662b00"
+        },
+        {
+          "id": "5af9084d7a29b3474e93e0e3975ae1fda10f3aa6f112c27413708dfc1e10d9bd",
+          "bytes": 5558109,
+          "sha256": "5af9084d7a29b3474e93e0e3975ae1fda10f3aa6f112c27413708dfc1e10d9bd"
+        },
+        {
+          "id": "ff8011a3f3c617b06582b4ba267cd5c1b34e17a4d3bf742c543804ae7f031c05",
+          "bytes": 222163,
+          "sha256": "ff8011a3f3c617b06582b4ba267cd5c1b34e17a4d3bf742c543804ae7f031c05"
+        },
+        {
+          "id": "aeab32345dfc4d6c9f8f153537251c3a410351ca5384122e54f5957d499e1783",
+          "bytes": 1894,
+          "sha256": "aeab32345dfc4d6c9f8f153537251c3a410351ca5384122e54f5957d499e1783"
+        },
+        {
+          "id": "67f7a42c305d82757a9ca4620ad2fa091ff957f6e02e11b23945776885013123",
+          "bytes": 7991,
+          "sha256": "67f7a42c305d82757a9ca4620ad2fa091ff957f6e02e11b23945776885013123"
+        }
+      ]
+    },
+    {
+      "id": "newsroom-gardens-duo-visual",
+      "rendition": "8d0c9684043f174dbb98d3113b45611fcd017e4b735e6e30fd0f4463f68481c9",
+      "assets": [
+        {
+          "id": "dd233da29b0969916462fb9f9ed65af0f116e08ec9dd4e42641bd5c5d0db7a93",
+          "bytes": 3847244,
+          "sha256": "dd233da29b0969916462fb9f9ed65af0f116e08ec9dd4e42641bd5c5d0db7a93"
+        },
+        {
+          "id": "d0334ae0f3c9509ecf7c1ffe770430587c880f41f0ef74615634e3dd30ebae57",
+          "bytes": 5662869,
+          "sha256": "d0334ae0f3c9509ecf7c1ffe770430587c880f41f0ef74615634e3dd30ebae57"
+        },
+        {
+          "id": "fe4fe965b0955324b317c83387741b5f8a4f80d6476c2a20acb6c4ecaaec17df",
+          "bytes": 267163,
+          "sha256": "fe4fe965b0955324b317c83387741b5f8a4f80d6476c2a20acb6c4ecaaec17df"
+        },
+        {
+          "id": "c16623bc0ea739fc0210b62104ed4f34d991ead6a0f1c3cf529d7521859e2f64",
+          "bytes": 1894,
+          "sha256": "c16623bc0ea739fc0210b62104ed4f34d991ead6a0f1c3cf529d7521859e2f64"
+        },
+        {
+          "id": "5054fe306c59fc2762a2794b2ff805e207d0a023e785525ca015434ddf8ad001",
+          "bytes": 7991,
+          "sha256": "5054fe306c59fc2762a2794b2ff805e207d0a023e785525ca015434ddf8ad001"
+        }
+      ]
+    },
+    {
+      "id": "clip-rain-garden-trial",
+      "rendition": "25f4af57592a0d3e79ae12bc725a28165b53ac4d01af88d7d7e0fb18ab5f2a58",
+      "assets": [
+        {
+          "id": "0589269cb1e2947c9bfbfe0053731c4d4b14c88d60a9a9c74217665166a32aac",
+          "bytes": 2706044,
+          "sha256": "0589269cb1e2947c9bfbfe0053731c4d4b14c88d60a9a9c74217665166a32aac"
+        },
+        {
+          "id": "385bec76ed9058bd7edfcfe5e0595fa3219197989da2c4aab0cfabd4bf6017ca",
+          "bytes": 1116501,
+          "sha256": "385bec76ed9058bd7edfcfe5e0595fa3219197989da2c4aab0cfabd4bf6017ca"
+        },
+        {
+          "id": "bf36d1237e7630a61dcb601f72e5866f28b8e21174085c0ad63072215391b20c",
+          "bytes": 66549,
+          "sha256": "bf36d1237e7630a61dcb601f72e5866f28b8e21174085c0ad63072215391b20c"
+        },
+        {
+          "id": "4646c8e06c7474572a7060f58a9e73234a27b0f2c1c548f18070703a48eeb0df",
+          "bytes": 1164,
+          "sha256": "4646c8e06c7474572a7060f58a9e73234a27b0f2c1c548f18070703a48eeb0df"
+        },
+        {
+          "id": "63fc1b1076ffe166e77cc02d1cc3c8ad09fbbab4aeab966ed209626ec8636cf8",
+          "bytes": 5357,
+          "sha256": "63fc1b1076ffe166e77cc02d1cc3c8ad09fbbab4aeab966ed209626ec8636cf8"
+        }
+      ]
+    },
+    {
+      "id": "clip-river-placement",
+      "rendition": "fe738ef0316e490a74c382e416c53feff029cc55705b89a198dd642d0214b22f",
+      "assets": [
+        {
+          "id": "61a31b47f4b794831fa845a34f7d04a2317f055a789cc72ce955bd2e0c694453",
+          "bytes": 3320444,
+          "sha256": "61a31b47f4b794831fa845a34f7d04a2317f055a789cc72ce955bd2e0c694453"
+        },
+        {
+          "id": "eb4cca9d58316668ec3dbd9c74d4efbfca8eae35aa2859ae454dcc9784ce0117",
+          "bytes": 1371911,
+          "sha256": "eb4cca9d58316668ec3dbd9c74d4efbfca8eae35aa2859ae454dcc9784ce0117"
+        },
+        {
+          "id": "80261d6d5e8ae3b44a04b377c22ad5982b8690844b3b7019fee80664de3179aa",
+          "bytes": 65575,
+          "sha256": "80261d6d5e8ae3b44a04b377c22ad5982b8690844b3b7019fee80664de3179aa"
+        },
+        {
+          "id": "c6a4d9ad06c182258a1b2bec2caafe9d9096b8652169483aa16ea235d63340f7",
+          "bytes": 1410,
+          "sha256": "c6a4d9ad06c182258a1b2bec2caafe9d9096b8652169483aa16ea235d63340f7"
+        },
+        {
+          "id": "ce4ca5f3235372be73da9209ed9dbf180422a4a4a8c10d73a59b7f7686f2a153",
+          "bytes": 6227,
+          "sha256": "ce4ca5f3235372be73da9209ed9dbf180422a4a4a8c10d73a59b7f7686f2a153"
+        }
+      ]
+    },
+    {
+      "id": "clip-repair-tool-shelf",
+      "rendition": "0db80ff53239aee57580a475ea6e96f6d543baed50e25dcde70673c21b370856",
+      "assets": [
+        {
+          "id": "1881c12a1c471eeb04c36b06948e8431edc8d95d37987d99530148437134d8af",
+          "bytes": 3115244,
+          "sha256": "1881c12a1c471eeb04c36b06948e8431edc8d95d37987d99530148437134d8af"
+        },
+        {
+          "id": "d64eb6abf81af64dad943f3ca53fdddadfc6175cb1e7ac1d0e3e027cdc1f3db1",
+          "bytes": 1331506,
+          "sha256": "d64eb6abf81af64dad943f3ca53fdddadfc6175cb1e7ac1d0e3e027cdc1f3db1"
+        },
+        {
+          "id": "5685b8b704172f885a322857220877ced5899011fe3166b4634d8e0d636ae27b",
+          "bytes": 73684,
+          "sha256": "5685b8b704172f885a322857220877ced5899011fe3166b4634d8e0d636ae27b"
+        },
+        {
+          "id": "f1b9bf814e80f1927e556bb3cb0188a0871946d96f66ed04da55a958806abbf7",
+          "bytes": 1320,
+          "sha256": "f1b9bf814e80f1927e556bb3cb0188a0871946d96f66ed04da55a958806abbf7"
+        },
+        {
+          "id": "fa02b3ff78459b0e5334b15d63e112ae2e7f57c43af6ec3626da024c234996f3",
+          "bytes": 6003,
+          "sha256": "fa02b3ff78459b0e5334b15d63e112ae2e7f57c43af6ec3626da024c234996f3"
+        }
+      ]
+    },
+    {
+      "id": "clip-market-arrivals",
+      "rendition": "381a7dbfa5f4583254e1491ed1069493a26bb01e3a5722f18515f7c68bbb67e3",
+      "assets": [
+        {
+          "id": "7af805ca69ad8647014264847377f9284d28737c2d4b025a86add134a3db29da",
+          "bytes": 1575644,
+          "sha256": "7af805ca69ad8647014264847377f9284d28737c2d4b025a86add134a3db29da"
+        },
+        {
+          "id": "4fbe3c3f93a00f60863b59f56e244dce96463496d67c0e12ff55e1c46e1ec14e",
+          "bytes": 667152,
+          "sha256": "4fbe3c3f93a00f60863b59f56e244dce96463496d67c0e12ff55e1c46e1ec14e"
+        },
+        {
+          "id": "7509f57826772605c26f084612fb91a1bc8cf13adf7eb5233e2b2efc736e7cc3",
+          "bytes": 72773,
+          "sha256": "7509f57826772605c26f084612fb91a1bc8cf13adf7eb5233e2b2efc736e7cc3"
+        },
+        {
+          "id": "4a638792ebd8718ff127d62b0c07f5497095d799e063a184229996a29fd0a96f",
+          "bytes": 655,
+          "sha256": "4a638792ebd8718ff127d62b0c07f5497095d799e063a184229996a29fd0a96f"
+        },
+        {
+          "id": "e96932599c05f65f667bf69da5833b2dbf9974aed22f112ee5d7044488f0b1fe",
+          "bytes": 2964,
+          "sha256": "e96932599c05f65f667bf69da5833b2dbf9974aed22f112ee5d7044488f0b1fe"
+        }
+      ]
+    },
+    {
+      "id": "clip-shuttle-evidence",
+      "rendition": "b58a0b3f187355d9b3ffa0121e032aecd7492e487feca9a5722b1f9615367625",
+      "assets": [
+        {
+          "id": "42026c0d6f4eb10b3cfe26d744a4833aa7f0740abf08f57b8c23cc1e8edcf25f",
+          "bytes": 4815644,
+          "sha256": "42026c0d6f4eb10b3cfe26d744a4833aa7f0740abf08f57b8c23cc1e8edcf25f"
+        },
+        {
+          "id": "cdb4189919f4f06d3b11b666d9ff47581705de029575afea8a12d8ce8821deee",
+          "bytes": 2124284,
+          "sha256": "cdb4189919f4f06d3b11b666d9ff47581705de029575afea8a12d8ce8821deee"
+        },
+        {
+          "id": "18b8a585f0a0bc125e4ebcea08908b8d7cfa838b9eaba95af84268228f1db00a",
+          "bytes": 79447,
+          "sha256": "18b8a585f0a0bc125e4ebcea08908b8d7cfa838b9eaba95af84268228f1db00a"
+        },
+        {
+          "id": "bfd523025dd70a4ddeb5da22442a2892cd000778bfa52d7b9b8b590d1f24634e",
+          "bytes": 2043,
+          "sha256": "bfd523025dd70a4ddeb5da22442a2892cd000778bfa52d7b9b8b590d1f24634e"
+        },
+        {
+          "id": "cbc73f2441e34269c66acd28442697fcc863d71f20c0c171485633a600446824",
+          "bytes": 8006,
+          "sha256": "cbc73f2441e34269c66acd28442697fcc863d71f20c0c171485633a600446824"
+        }
+      ]
+    },
+    {
+      "id": "clip-shuttle-questions",
+      "rendition": "bd63e4a179acbaa22ba33fd3098089db9ec60e66ea01b504e126ce6f4563990d",
+      "assets": [
+        {
+          "id": "0f3353e525d339d444e4ae625cef7ef546b290545c603d120070b8bb37a7662b",
+          "bytes": 5247644,
+          "sha256": "0f3353e525d339d444e4ae625cef7ef546b290545c603d120070b8bb37a7662b"
+        },
+        {
+          "id": "eed983004c3ee85326db5e443ce3ee81af65684a66ae2a5bb861fa156fd93f80",
+          "bytes": 2375301,
+          "sha256": "eed983004c3ee85326db5e443ce3ee81af65684a66ae2a5bb861fa156fd93f80"
+        },
+        {
+          "id": "dd0329a2da87f7ce9c7b86ebd33420272411d9e7e6c79e9143aa587e80c20b1f",
+          "bytes": 75401,
+          "sha256": "dd0329a2da87f7ce9c7b86ebd33420272411d9e7e6c79e9143aa587e80c20b1f"
+        },
+        {
+          "id": "984d326ea9760cf53cb1ddbd31a12a6d2e47f1d99457e48dc427f9dc248ba889",
+          "bytes": 2142,
+          "sha256": "984d326ea9760cf53cb1ddbd31a12a6d2e47f1d99457e48dc427f9dc248ba889"
+        },
+        {
+          "id": "22d7238f4e3a347241cc20e1792bf0a4b048df40b0dedb1a88b01f23bd5489af",
+          "bytes": 8369,
+          "sha256": "22d7238f4e3a347241cc20e1792bf0a4b048df40b0dedb1a88b01f23bd5489af"
+        }
+      ]
+    }
+  ]
+}

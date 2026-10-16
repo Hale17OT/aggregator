@@ -1,0 +1,9 @@
+Guava: Google Core Libraries for Java
+Project: https://github.com/google/guava
+Reviewed application constraint: com.google.guava:guava:33.3.1-android
+
+Guava is licensed under the Apache License, Version 2.0.
+The full license is included alongside this file as APACHE-2.0.txt.
+
+This notice identifies a third-party library; it does not imply endorsement
+of The Aggregator by Google or the Guava contributors.

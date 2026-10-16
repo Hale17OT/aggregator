@@ -1,0 +1,17 @@
+{
+  "language": "en",
+  "provenance": "original fictional supplied interview",
+  "durationMs": 12000,
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 5000,
+      "text": "Engineer Jo said the trial closes on 21 November 2026."
+    },
+    {
+      "startMs": 5000,
+      "endMs": 10000,
+      "text": "Jo cautioned that neither flow reading establishes the long-term rate."
+    }
+  ]
+}

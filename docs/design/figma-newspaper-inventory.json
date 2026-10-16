@@ -1,0 +1,163 @@
+{
+  "page": "8:693",
+  "sections": [
+    {
+      "id": "8:694",
+      "name": "Shared newspaper components",
+      "x": 7000,
+      "y": 0,
+      "width": 11200,
+      "height": 8000,
+      "frames": []
+    },
+    {
+      "id": "8:696",
+      "name": "SC01–SC04 / Light / Refined newspaper",
+      "x": 0,
+      "y": 4500,
+      "width": 6500,
+      "height": 14000,
+      "frames": [
+        {
+          "id": "8:710",
+          "name": "SC01.Home.1440.Light.Newspaper",
+          "width": 1440,
+          "height": 1818.15869140625
+        },
+        {
+          "id": "8:724",
+          "name": "SC04.Article.1440.Light.Newspaper",
+          "width": 1440,
+          "height": 5855
+        },
+        {
+          "id": "8:1166",
+          "name": "SC01.Home.834.Light.Newspaper",
+          "width": 834,
+          "height": 2226.888916015625
+        },
+        {
+          "id": "8:1184",
+          "name": "SC04.Article.834.Light.Newspaper",
+          "width": 834,
+          "height": 5723
+        },
+        {
+          "id": "8:1567",
+          "name": "SC01.Home.390.Light.Newspaper",
+          "width": 390,
+          "height": 3681.5
+        },
+        {
+          "id": "8:1584",
+          "name": "SC04.Article.390.Light.Newspaper",
+          "width": 390,
+          "height": 6670.6669921875
+        }
+      ]
+    },
+    {
+      "id": "8:2011",
+      "name": "SC01–SC04 / Dark / Refined newspaper",
+      "x": 0,
+      "y": 19000,
+      "width": 6500,
+      "height": 14000,
+      "frames": [
+        {
+          "id": "8:2029",
+          "name": "SC01.Home.1440.Dark.Newspaper",
+          "width": 1440,
+          "height": 1820.15869140625
+        },
+        {
+          "id": "8:2047",
+          "name": "SC04.Article.1440.Dark.Newspaper",
+          "width": 1440,
+          "height": 5857
+        },
+        {
+          "id": "8:2492",
+          "name": "SC01.Home.834.Dark.Newspaper",
+          "width": 834,
+          "height": 2226.888916015625
+        },
+        {
+          "id": "8:2510",
+          "name": "SC04.Article.834.Dark.Newspaper",
+          "width": 834,
+          "height": 5723
+        },
+        {
+          "id": "8:2893",
+          "name": "SC01.Home.390.Dark.Newspaper",
+          "width": 390,
+          "height": 3681.5
+        },
+        {
+          "id": "8:2910",
+          "name": "SC04.Article.390.Dark.Newspaper",
+          "width": 390,
+          "height": 6670.6669921875
+        }
+      ]
+    },
+    {
+      "id": "8:3358",
+      "name": "SC04 / Other fixtures — shared opening treatment",
+      "x": 0,
+      "y": 34000,
+      "width": 3300,
+      "height": 10000,
+      "frames": [
+        {
+          "id": "8:3359",
+          "name": "SC04.Article.390.Light.long-headline",
+          "width": 390,
+          "height": 6821.5
+        },
+        {
+          "id": "8:3549",
+          "name": "SC04.Article.390.Light.conflicting-accounts",
+          "width": 390,
+          "height": 6315.33349609375
+        },
+        {
+          "id": "8:3719",
+          "name": "SC04.Article.390.Light.corrected-source-unavailable",
+          "width": 390,
+          "height": 6599.33349609375
+        },
+        {
+          "id": "8:3897",
+          "name": "SC04.Article.390.Dark.long-headline",
+          "width": 390,
+          "height": 6821.5
+        },
+        {
+          "id": "8:4087",
+          "name": "SC04.Article.390.Dark.conflicting-accounts",
+          "width": 390,
+          "height": 6315.33349609375
+        },
+        {
+          "id": "8:4257",
+          "name": "SC04.Article.390.Dark.corrected-source-unavailable",
+          "width": 390,
+          "height": 6599.33349609375
+        }
+      ]
+    }
+  ],
+  "priorReviewFrames": 30,
+  "components": 38,
+  "instances": 70,
+  "controlsRefinement": {
+    "date": "2026-10-12",
+    "inventory": "figma-controls-inventory.json",
+    "snapshotPage": "12:1522",
+    "workingPageComponents": 71,
+    "workingPageInstances": 246,
+    "status": "Implemented and locally verified; owner review pending"
+  }
+}

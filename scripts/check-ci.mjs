@@ -1,0 +1,11 @@
+import { spawnSync } from 'node:child_process';
+import { readFileSync, writeFileSync } from 'node:fs';
+import assert from 'node:assert/strict';
+import { tool, tools } from './foundation-tools.mjs';
+const workflow=readFileSync('.github/workflows/ci.yml','utf8');
+assert.ok(workflow.includes('contents: read'));assert.ok(workflow.includes('npm audit --audit-level=high'));
+assert.ok(!workflow.includes('continue-on-error'));assert.ok(!workflow.includes('pull_request_target'));
+for(const line of workflow.split('\n').filter(l=>l.includes('uses:')))assert.match(line,/uses: [\w/-]+@[a-f0-9]{40}/);
+const exe=await tool('actionlint');const r=spawnSync(exe,['-color','.github/workflows/ci.yml'],{encoding:'utf8',windowsHide:true});
+process.stdout.write(r.stdout);process.stderr.write(r.stderr);if(r.status!==0)process.exit(r.status||1);
+writeFileSync('docs/engineering/ci-validation.json',JSON.stringify({date:new Date().toISOString(),actionlint:tools.actionlint.version,status:'passed',hostedRun:false,checks:['Workflow syntax and action inputs','Read-only contents permission','Immutable action SHAs','No pull_request_target or continue-on-error','High-severity audit gate retained'],limitations:['Local static validation is not an executed GitHub Actions run.','Shellcheck is used by actionlint only if installed; it is not installed on this Windows host.','No remote, push or hosted workflow invocation was performed.']},null,2)+'\n');console.log('CI static validation passed; hosted execution not performed.');

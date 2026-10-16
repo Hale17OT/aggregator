@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-12",
+  "fileKey": "cU1bmSQP5Nh5PX0WayfEpT",
+  "page": "8:693",
+  "snapshotPage": "12:1522",
+  "section": "14:6318",
+  "set": "14:6438",
+  "groups": "14:6457",
+  "controls": [
+    {
+      "id": "14:6320",
+      "name": "Family=Primary, State=Default"
+    },
+    {
+      "id": "14:6324",
+      "name": "Family=Primary, State=Hover"
+    },
+    {
+      "id": "14:6328",
+      "name": "Family=Primary, State=Pressed"
+    },
+    {
+      "id": "14:6332",
+      "name": "Family=Primary, State=Focus"
+    },
+    {
+      "id": "14:6337",
+      "name": "Family=Primary, State=Disabled"
+    },
+    {
+      "id": "14:6341",
+      "name": "Family=Secondary, State=Default"
+    },
+    {
+      "id": "14:6345",
+      "name": "Family=Secondary, State=Hover"
+    },
+    {
+      "id": "14:6349",
+      "name": "Family=Secondary, State=Pressed"
+    },
+    {
+      "id": "14:6353",
+      "name": "Family=Secondary, State=Focus"
+    },
+    {
+      "id": "14:6358",
+      "name": "Family=Secondary, State=Disabled"
+    },
+    {
+      "id": "14:6362",
+      "name": "Family=Quiet, State=Default"
+    },
+    {
+      "id": "14:6366",
+      "name": "Family=Quiet, State=Hover"
+    },
+    {
+      "id": "14:6370",
+      "name": "Family=Quiet, State=Pressed"
+    },
+    {
+      "id": "14:6374",
+      "name": "Family=Quiet, State=Focus"
+    },
+    {
+      "id": "14:6379",
+      "name": "Family=Quiet, State=Disabled"
+    },
+    {
+      "id": "14:6383",
+      "name": "Family=Danger, State=Default"
+    },
+    {
+      "id": "14:6387",
+      "name": "Family=Danger, State=Hover"
+    },
+    {
+      "id": "14:6391",
+      "name": "Family=Danger, State=Pressed"
+    },
+    {
+      "id": "14:6395",
+      "name": "Family=Danger, State=Focus"
+    },
+    {
+      "id": "14:6400",
+      "name": "Family=Danger, State=Disabled"
+    },
+    {
+      "id": "14:6404",
+      "name": "Family=Icon, State=Default"
+    },
+    {
+      "id": "14:6407",
+      "name": "Family=Icon, State=Pressed"
+    },
+    {
+      "id": "14:6410",
+      "name": "Family=Icon, State=Focus"
+    },
+    {
+      "id": "14:6414",
+      "name": "Family=Copy, State=Default"
+    },
+    {
+      "id": "14:6418",
+      "name": "Family=Copy, State=Loading"
+    },
+    {
+      "id": "14:6422",
+      "name": "Family=Copy, State=Success"
+    },
+    {
+      "id": "14:6426",
+      "name": "Family=Copy, State=Error"
+    },
+    {
+      "id": "14:6430",
+      "name": "Family=Theme, State=Dark"
+    },
+    {
+      "id": "14:6434",
+      "name": "Family=Theme, State=Light"
+    },
+    {
+      "id": "14:6833",
+      "name": "Family=Sources, State=Default"
+    },
+    {
+      "id": "14:6839",
+      "name": "Family=SourceLink, State=Default"
+    }
+  ],
+  "groupIds": [
+    "14:6439",
+    "14:6448"
+  ],
+  "specimens": [
+    {
+      "theme": "Light",
+      "id": "14:6474"
+    },
+    {
+      "theme": "Dark",
+      "id": "14:6653"
+    }
+  ],
+  "migrated": [
+    {
+      "id": "8:697",
+      "name": "PublicationMasthead / 1440 / Light",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:1149",
+      "name": "PublicationMasthead / 834 / Light",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:1551",
+      "name": "PublicationMasthead / 390 / Light",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:2012",
+      "name": "PublicationMasthead / 1440 / Dark",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:2475",
+      "name": "PublicationMasthead / 834 / Dark",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:2877",
+      "name": "PublicationMasthead / 390 / Dark",
+      "utilityHeight": 44
+    },
+    {
+      "id": "8:724",
+      "name": "SC04.Article.1440.Light.Newspaper",
+      "toolbar": "14:6939",
+      "evidenceActions": "14:6965",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:1184",
+      "name": "SC04.Article.834.Light.Newspaper",
+      "toolbar": "14:6976",
+      "evidenceActions": "14:7002",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:1584",
+      "name": "SC04.Article.390.Light.Newspaper",
+      "toolbar": "14:7013",
+      "evidenceActions": "14:7039",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:2047",
+      "name": "SC04.Article.1440.Dark.Newspaper",
+      "toolbar": "14:7050",
+      "evidenceActions": "14:7076",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:2510",
+      "name": "SC04.Article.834.Dark.Newspaper",
+      "toolbar": "14:7087",
+      "evidenceActions": "14:7113",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:2910",
+      "name": "SC04.Article.390.Dark.Newspaper",
+      "toolbar": "14:7124",
+      "evidenceActions": "14:7150",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:3359",
+      "name": "SC04.Article.390.Light.long-headline",
+      "toolbar": "14:7161",
+      "evidenceActions": "14:7187",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:3549",
+      "name": "SC04.Article.390.Light.conflicting-accounts",
+      "toolbar": "14:7198",
+      "evidenceActions": "14:7224",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:3719",
+      "name": "SC04.Article.390.Light.corrected-source-unavailable",
+      "toolbar": "14:7235",
+      "evidenceActions": "14:7261",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:3897",
+      "name": "SC04.Article.390.Dark.long-headline",
+      "toolbar": "14:7272",
+      "evidenceActions": "14:7298",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:4087",
+      "name": "SC04.Article.390.Dark.conflicting-accounts",
+      "toolbar": "14:7309",
+      "evidenceActions": "14:7335",
+      "openingUnchanged": true
+    },
+    {
+      "id": "8:4257",
+      "name": "SC04.Article.390.Dark.corrected-source-unavailable",
+      "toolbar": "14:7346",
+      "evidenceActions": "14:7372",
+      "openingUnchanged": true
+    }
+  ],
+  "contexts": [
+    {
+      "id": "14:7383",
+      "theme": "Light"
+    },
+    {
+      "id": "14:7422",
+      "theme": "Dark"
+    }
+  ],
+  "originalReviewFrames": 30,
+  "snapshotFrames": 18,
+  "components": 71,
+  "instances": 246,
+  "variableBindings": 85,
+  "prototypeReactions": 9,
+  "reviewStatus": "Owner review pending; newspaper and controls refinement are not approved",
+  "limitations": [
+    "Native prototype approximates press and selected reading length. The browser owns actual href navigation, focus and clipboard behavior.",
+    "Figma state colors use semantic bindings and narrow control aliases. CSS is the authority for color-mix and reduced motion."
+  ],
+  "themeTransitions": 18,
+  "matchingLocalCopyPrototypeLinks": 12,
+  "housekeeping": {
+    "emptyFrames": 0,
+    "temporarySlices": 0,
+    "orphanComponents": 0
+  }
+}

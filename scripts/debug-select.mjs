@@ -1,0 +1,3 @@
+/* global document */
+import{chromium}from'playwright';const b=await chromium.launch({channel:'chrome',headless:true});try{const p=await b.newPage();p.on('pageerror',e=>console.log('ERROR',e.message));p.on('console',m=>console.log(m.text()));await p.goto('http://127.0.0.1:3000/radio');const c=p.locator('.field-select').nth(1);await c.click();await p.waitForTimeout(300);console.log('before',await c.getAttribute('aria-expanded'),await p.evaluate(()=>document.activeElement?.outerHTML));await p.keyboard.press('Tab');await p.waitForTimeout(500);console.log('after',await c.getAttribute('aria-expanded'),await p.evaluate(()=>document.activeElement?.outerHTML));await p.screenshot({path:'output/playwright/interactive-controls/tab-debug.png'});}finally{await b.close();}
+

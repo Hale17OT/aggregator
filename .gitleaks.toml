@@ -1,0 +1,18 @@
+title = "Aggregator: default rules, generated artifacts excluded"
+[extend]
+useDefault = true
+[[allowlists]]
+description = "Installed dependencies, build/cache/Git internals only; source, specs, lockfile and .env are scanned"
+paths = ['''(^|/)(node_modules|\.nuxt|\.output|\.cache|\.git|dist|coverage|playwright-report|test-results)(/|$)''']
+[[allowlists]]
+description = "Exact public Figma document identifier already present in review URLs; not an API credential"
+condition = "AND"
+paths = ['''^docs/design/figma-(controls-)?inventory\.json$''']
+regexTarget = "secret"
+regexes = ['''^cU1bmSQP5Nh5PX0WayfEpT$''']
+[[allowlists]]
+description = "Verified public content-addressed media filenames in immutable Flutter baseline: all 93 names equal their asset SHA256 plus media extension, not credentials"
+condition = "AND"
+paths = ['''^docs/engineering/flutter-closeout/baseline\.json$''']
+regexTarget = "match"
+regexes = ['''storageKey"\s*:\s*"[a-f0-9]{64}\.(json|mp4|png|svg|vtt|wav|webm)"''']

@@ -1,0 +1,6 @@
+<script setup lang="ts">
+import type { PublicArticle } from '../../../../../packages/contracts/src/index';
+const route=useRoute();const {data,error}=await useFetch<{data:{concept:{id:string;label:string;kind:string;is_fictional?:boolean};articles:PublicArticle[]}}>(()=>`/api/v1/interests/hub/${encodeURIComponent(String(route.params.id))}`);
+useHead({title:computed(()=>data.value?.data.concept.label||'Interest unavailable')});
+</script>
+<template><main id="main" class="shell member-page"><NuxtLink to="/interests">Your interests</NuxtLink><h1>{{ data?.data.concept.label||'Interest unavailable' }}</h1><p v-if="error">This concept could not be loaded.</p><template v-else-if="data"><p>{{ data.data.concept.kind }} · {{ data.data.concept.is_fictional?'Fictional test entity':'Named catalogue concept' }}</p><NuxtLink to="/interests">Manage follow and mute choices</NuxtLink><p v-if="!data.data.articles.length">No eligible fictional stories currently cover this interest. Following it will not invent coverage or include unrelated teams.</p><StoryBrief v-for="article in data.data.articles" :key="article.id" :article="article" summary/><p><NuxtLink to="/methodology">Methodology and source transparency</NuxtLink></p></template></main></template>

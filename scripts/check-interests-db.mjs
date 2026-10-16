@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import { once } from 'node:events';
+import { randomUUID,randomBytes } from 'node:crypto';
+import { writeFileSync } from 'node:fs';
+import { Pool } from 'pg';
+import { withDisposableDatabase } from './disposable-database.mjs';
+import { migrations,migrate } from './db-migrations.mjs';
+import { importInterests } from './import-interest-catalogue.mjs';
+import { PostgresMemberUnit } from '../packages/db/src/member.ts';
+import { createApp } from '../apps/api/src/app.ts';
+import { createFixtureRepository } from '../packages/test-fixtures/src/index.ts';
+import { verifier } from '../packages/domain/src/identity.ts';
+const report={checks:[],at:new Date().toISOString()};
+await withDisposableDatabase(async h=>{
+ const db=h.createDatabase('aggregator_identity');migrate(db,migrations('packages/db/migrations'));
+ const target={purpose:'aggregator-disposable-pg18',data:h.data,host:'127.0.0.1',port:h.port,database:'aggregator_identity',systemIdentifier:h.systemIdentifier};
+ const admin=new Pool({host:target.host,port:h.port,database:target.database,user:'agg_bootstrap'});let unit=new PostgresMemberUnit(target),server;
+ try{await admin.query("INSERT INTO public.roles(code,name) VALUES('reader','Reader')");await importInterests(admin);
+ const issue=async email=>{const selector=randomUUID(),secret=randomBytes(32).toString('hex'),browser=randomBytes(32).toString('hex'),id=randomUUID(),bearer=randomBytes(32).toString('hex');await unit.pool.query('SELECT public.request_local_signin($1,$2,$3,$4,$5)',[selector,email,verifier(secret),verifier(browser),'/library']);await unit.pool.query('SELECT public.redeem_local_signin($1,$2,$3,$4,$5,$6)',[selector,verifier(secret),verifier(browser),id,verifier(bearer),randomBytes(32).toString('hex')]);return `${id}.${bearer}`;};
+ const a=await issue('interest-a@example.test'),b=await issue('interest-b@example.test');
+ const start=async()=>{server=createApp(createFixtureRepository(),{unit,localAuth:unit}).listen(0,'127.0.0.1');await once(server,'listening');return `http://127.0.0.1:${server.address().port}/api/v1`;};let base=await start();
+ const headers=async token=>({cookie:`agg_session=${token}`,origin:'http://127.0.0.1:3000','content-type':'application/json','x-csrf-token':(await(await fetch(base+'/me/session',{headers:{cookie:`agg_session=${token}`}})).json()).data.csrfToken});const ha=await headers(a),hb=await headers(b);
+ const get=async h=>(await(await fetch(base+'/me/interests',{headers:h})).json()).data;
+ const put=(h,p)=>fetch(base+'/me/interests',{method:'PUT',headers:h,body:JSON.stringify(p)});
+ assert.equal((await get(ha)).status,'not_started');
+ const patch={revision:0,status:'completed',rules:[{target:'agg:team:manchester-city-men',action:'follow'}],hiddenStories:[]};
+ const writes=await Promise.all([put(ha,patch),put(ha,patch)]);assert.deepEqual(writes.map(r=>r.status).sort(),[200,409]);assert.equal((await get(hb)).rules.length,0);report.checks.push('Actual authenticated API: atomic completion, concurrent 200/409, two-user isolation');
+ assert.equal((await put({...ha,origin:'https://evil.example'}, {...patch,revision:1})).status,403);
+ assert.equal((await put(ha,{...patch,revision:1,userId:randomUUID()})).status,422);
+ assert.equal((await put(ha,{...patch,revision:1,rules:[{target:'agg:team:unknown',action:'follow'}]})).status,422);
+ assert.equal((await get(ha)).revision,1);assert.equal((await fetch(base+'/staff',{headers:ha})).status,403);report.checks.push('Origin, submitted owner, unknown concept and staff rejected without mutation');
+ await new Promise(ok=>server.close(ok));server=null;await unit.close();unit=new PostgresMemberUnit(target);base=await start();assert.equal((await get(ha)).rules[0].target,patch.rules[0].target);report.checks.push('API/connection restart restores exact durable team interest');
+ db.reject('SELECT * FROM public.article_subject_assertions','agg_api_login','42501');db.reject('SET ROLE agg_pipeline; SELECT * FROM public.interest_states','agg_bootstrap','42501');db.reject("INSERT INTO public.topics(slug,name,scope) VALUES('bad','bad','bad')",'agg_api_login','42501');report.checks.push('Pipeline cannot read interests; API cannot mutate taxonomy');
+ }finally{if(server)await new Promise(ok=>server.close(ok));await unit.close();await admin.end();}
+});report.status='passed';writeFileSync('docs/engineering/interests-db-checks.json',JSON.stringify(report,null,2));console.log(report);

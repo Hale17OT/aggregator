@@ -1,0 +1,11 @@
+/* global document */
+import assert from 'node:assert/strict';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { chromium } from 'playwright';
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+const results=[];
+try{for(const variant of ['solo','duo']){const latest=JSON.parse(await readFile(`.cache/broadcast/latest-${variant}-full.json`,'utf8'));const report=JSON.parse(await readFile(join(latest.out,'render.json'),'utf8'));const out=resolve('output/playwright/broadcast-files',variant);await mkdir(out,{recursive:true});const page=await browser.newPage({viewport:{width:1280,height:720}});await page.goto(pathToFileURL(join(latest.out,'programme.mp4')).href);await page.locator('video').evaluate(v=>{v.controls=false;v.style.cssText='width:1280px;height:720px;position:fixed;inset:0';v.volume=.5;v.play();});const samples=[];for(const target of [1,9,24,39,54,69,84,99,114,129,144,report.durationSeconds-1]){await page.waitForFunction(t=>document.querySelector('video').currentTime>=t,target,{timeout:35000});const state=await page.locator('video').evaluate(v=>({time:v.currentTime,paused:v.paused,ended:v.ended,readyState:v.readyState,width:v.videoWidth,height:v.videoHeight,decoded:v.getVideoPlaybackQuality().totalVideoFrames,dropped:v.getVideoPlaybackQuality().droppedVideoFrames}));assert(!state.paused);assert(state.decoded>0);await page.screenshot({path:join(out,`playing-${target}.png`)});samples.push(state);console.log(`${variant}: played ${state.time.toFixed(2)}s`);}await page.waitForFunction(()=>document.querySelector('video').ended,null,{timeout:10000});results.push({variant,file:join(latest.out,'programme.mp4'),duration:report.durationSeconds,continuousPlayback:'PASS',samples});await page.close();}}finally{await browser.close();}
+await writeFile(resolve('docs/engineering/broadcast-files-playback.json'),JSON.stringify({at:new Date().toISOString(),results,audio:'AAC decoded and unmuted in actual browser; direct auditory judgement unavailable',review:'Continuous playback with sampled visual inspection; not owner acceptance'},null,2));
+

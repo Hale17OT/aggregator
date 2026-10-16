@@ -1,0 +1,5 @@
+{
+  "reference": "docs/specs/engineering/001_launch_schema.sql",
+  "sha256": "ca5b44fab80faed583a67bec6b83053d3402d259814dc727aed2b9fcb63003ef",
+  "extraction": "0001-0003 preserve all launch statements in order; 0004 adds reviewed role and integrity hardening. V1 extensions excluded."
+}

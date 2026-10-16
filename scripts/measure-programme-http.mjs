@@ -1,0 +1,4 @@
+/* global performance */
+import {writeFile,mkdir} from 'node:fs/promises';const phase=process.argv[2]||'baseline',root='http://127.0.0.1:3000',catalog=await(await fetch(root+'/api/v1/programmes')).json(),video=catalog.data.find(p=>p.videoRendition).videoRendition.url,rows=[];
+for(let i=0;i<12;i++){const start=performance.now(),response=await fetch(root+video,{headers:{range:'bytes=0-65535'}}),bytes=(await response.arrayBuffer()).byteLength;rows.push({i,ms:performance.now()-start,status:response.status,bytes,contentRange:response.headers.get('content-range')});}await mkdir(`output/playwright/performance/${phase}`,{recursive:true});await writeFile(`output/playwright/performance/${phase}/range-requests.json`,JSON.stringify({at:new Date().toISOString(),method:'Sequential 64KiB protected ranges; first request reported separately from eleven warm requests. Source eligibility still required.',rows},null,2));console.log(rows);
+

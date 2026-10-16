@@ -1,0 +1,8 @@
+<script setup lang="ts">
+import type { Programme } from '../../../../../packages/contracts/src/programme';
+const route=useRoute();const {data,error}=await useFetch<{data:Programme}>(()=>`/api/v1/programmes/${route.params.id}`);const clip=computed(()=>data.value?.data.kind==='clip'?data.value.data:null);
+if(import.meta.server&&(!clip.value||error.value))setResponseStatus(useRequestEvent()!,404);
+useHead({title:computed(()=>clip.value?clip.value.title+' — Clips':'Clip unavailable')});
+</script>
+<template><main id="main" class="shell"><NuxtLink to="/clips">All Clips</NuxtLink><template v-if="clip"><h1>{{ clip.title }}</h1><div style="height: min(85dvh,900px)"><ClipFeed :clips="[clip]"/></div><section id="transcript"><h2>Transcript and visual description</h2><p>{{ clip.syntheticDisclosure }}</p><p>Portrait evidence cards show numbered notes and an advancing position marker. They illustrate the announced plan and its limitations; they are not documentary footage.</p><p v-for="segment in clip.segments" :key="segment.id"><a :href="`/articles/${segment.articleSlug}#${segment.blockIds[0]}`">{{ (segment.startMs/1000).toFixed(1) }}s · Read this section</a> — {{ segment.text }}</p></section><section id="sources"><h2>Clip sources</h2><ol><li v-for="s in clip.sources" :key="s.id"><h3>{{ s.title }}</h3><p>{{ s.publisher }} · Fictional example-domain source</p><a :href="s.url" rel="noreferrer">Exact original item</a> · <NuxtLink :to="`/articles/${s.articleSlug}#sources`">Full article bibliography</NuxtLink></li></ol></section></template><section v-else><h1>Clip unavailable</h1><p>This rendition is missing, withdrawn or no longer eligible. No stale media is offered.</p></section></main></template>
+

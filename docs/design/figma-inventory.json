@@ -1,0 +1,217 @@
+{
+  "checkedDate": "2026-10-12",
+  "fileKey": "cU1bmSQP5Nh5PX0WayfEpT",
+  "pageId": "0:1",
+  "frames": [
+    {
+      "id": "1:71",
+      "name": "SC04.Article.Standard.Desktop.Light.Default",
+      "width": 1440,
+      "height": 4778
+    },
+    {
+      "id": "1:158",
+      "name": "SC04.Article.Brief.Desktop.Light.Default",
+      "width": 1440,
+      "height": 3030
+    },
+    {
+      "id": "1:230",
+      "name": "SC04.Article.Standard.Desktop.Dark.Default",
+      "width": 1440,
+      "height": 4778
+    },
+    {
+      "id": "1:317",
+      "name": "SC04.Article.Brief.Desktop.Dark.Default",
+      "width": 1440,
+      "height": 3030
+    },
+    {
+      "id": "1:389",
+      "name": "SC04.Article.Standard.Tablet.Light.Default",
+      "width": 834,
+      "height": 4618
+    },
+    {
+      "id": "1:470",
+      "name": "SC04.Article.Brief.Tablet.Light.Default",
+      "width": 834,
+      "height": 3030
+    },
+    {
+      "id": "1:536",
+      "name": "SC04.Article.Standard.Tablet.Dark.Default",
+      "width": 834,
+      "height": 4618
+    },
+    {
+      "id": "1:617",
+      "name": "SC04.Article.Brief.Tablet.Dark.Default",
+      "width": 834,
+      "height": 3030
+    },
+    {
+      "id": "1:683",
+      "name": "SC04.Article.Standard.Mobile.Light.Default",
+      "width": 390,
+      "height": 5983
+    },
+    {
+      "id": "1:764",
+      "name": "SC04.Article.Brief.Mobile.Light.Default",
+      "width": 390,
+      "height": 3472
+    },
+    {
+      "id": "1:830",
+      "name": "SC04.Article.Standard.Mobile.Dark.Default",
+      "width": 390,
+      "height": 5983
+    },
+    {
+      "id": "1:911",
+      "name": "SC04.Article.Brief.Mobile.Dark.Default",
+      "width": 390,
+      "height": 3472
+    },
+    {
+      "id": "1:977",
+      "name": "SC05.Evidence.Disputed.Desktop.Light.Default",
+      "width": 1440,
+      "height": 1636
+    },
+    {
+      "id": "1:1009",
+      "name": "SC05.Evidence.Disputed.Desktop.Dark.Default",
+      "width": 1440,
+      "height": 1636
+    },
+    {
+      "id": "1:1041",
+      "name": "SC05.Evidence.Disputed.Tablet.Light.Default",
+      "width": 834,
+      "height": 1474
+    },
+    {
+      "id": "1:1073",
+      "name": "SC05.Evidence.Disputed.Tablet.Dark.Default",
+      "width": 834,
+      "height": 1474
+    },
+    {
+      "id": "1:1105",
+      "name": "SC05.Evidence.Disputed.Mobile.Light.Default",
+      "width": 390,
+      "height": 1718
+    },
+    {
+      "id": "1:1137",
+      "name": "SC05.Evidence.Disputed.Mobile.Dark.Default",
+      "width": 390,
+      "height": 1718
+    },
+    {
+      "id": "1:1169",
+      "name": "SC01.Home.Editorial.Desktop.Light.Default",
+      "width": 1440,
+      "height": 1084
+    },
+    {
+      "id": "1:1200",
+      "name": "SC01.Home.Editorial.Desktop.Dark.Default",
+      "width": 1440,
+      "height": 1084
+    },
+    {
+      "id": "1:1231",
+      "name": "SC01.Home.Editorial.Tablet.Light.Default",
+      "width": 834,
+      "height": 1377
+    },
+    {
+      "id": "1:1262",
+      "name": "SC01.Home.Editorial.Tablet.Dark.Default",
+      "width": 834,
+      "height": 1377
+    },
+    {
+      "id": "1:1293",
+      "name": "SC01.Home.Editorial.Mobile.Light.Default",
+      "width": 390,
+      "height": 1686
+    },
+    {
+      "id": "1:1324",
+      "name": "SC01.Home.Editorial.Mobile.Dark.Default",
+      "width": 390,
+      "height": 1686
+    },
+    {
+      "id": "1:1355",
+      "name": "SC20.Workbench.ValidationFailure.Desktop.Light.Default",
+      "width": 1440,
+      "height": 1017
+    },
+    {
+      "id": "1:1384",
+      "name": "SC20.Workbench.ValidationFailure.Desktop.Dark.Default",
+      "width": 1440,
+      "height": 1017
+    },
+    {
+      "id": "1:1413",
+      "name": "SC20.Workbench.ValidationFailure.Mobile.Light.Default",
+      "width": 390,
+      "height": 1642
+    },
+    {
+      "id": "1:1443",
+      "name": "SC20.Workbench.ValidationFailure.Mobile.Dark.Default",
+      "width": 390,
+      "height": 1642
+    },
+    {
+      "id": "5:553",
+      "name": "SC04.Article.Brief.Desktop.Light.Correction.LongHeadline",
+      "width": 1440,
+      "height": 3154
+    },
+    {
+      "id": "5:626",
+      "name": "SC04.Article.Brief.Mobile.Light.Correction.LongHeadline",
+      "width": 390,
+      "height": 3638
+    }
+  ],
+  "components": [
+    {
+      "id": "1:61",
+      "name": "Button"
+    },
+    {
+      "id": "1:53",
+      "name": "State=Default"
+    },
+    {
+      "id": "1:55",
+      "name": "State=Focus"
+    },
+    {
+      "id": "1:57",
+      "name": "State=Disabled"
+    },
+    {
+      "id": "1:59",
+      "name": "State=Selected"
+    },
+    {
+      "id": "1:62",
+      "name": "StatusBadge / Disputed"
+    },
+    {
+      "id": "1:64",
+      "name": "SourceEntry"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Preserve source bytes, especially checksum-bound SQL migrations and patches.
+# Do not apply the workstation's core.autocrlf conversion to staged blobs.
+* -text
+# Recognize existing CRLF as line endings without changing any stored bytes.
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

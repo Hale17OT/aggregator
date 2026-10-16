@@ -1,0 +1,1 @@
+export default defineEventHandler(async (event):Promise<unknown>=>{setResponseHeader(event,'Cache-Control','no-store');try{return await $fetch<unknown>(`${useRuntimeConfig(event).apiBase}/api/v1/edition`,{query:getQuery(event)});}catch(e){throw createError({statusCode:(e as {statusCode?:number}).statusCode||503,statusMessage:'Edition unavailable or expired'});}});

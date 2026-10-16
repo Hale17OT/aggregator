@@ -1,0 +1,1727 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "versionId": "00000000-0000-4000-8000-000000000002",
+    "slug": "alderwick-evening-shuttle",
+    "version": 1,
+    "fixture": true,
+    "state": "draft",
+    "risk": "normal",
+    "topic": "Culture",
+    "headline": "A small evening shuttle puts Alderwick’s shared route to the test",
+    "deck": "A six-week experiment links three community stops. The timetable is clear; the early passenger counts need context.",
+    "leadMedia": {
+      "id": "alderwick-shuttle-illustration",
+      "kind": "image",
+      "src": "/media/alderwick-shuttle.png",
+      "width": 1536,
+      "height": 1024,
+      "alt": "An imagined green shuttle outside Alderwick’s riverside library at dusk",
+      "caption": "An imagined shuttle at the library stop in fictional Alderwick. Synthetic illustration; not a photograph of an actual trial.",
+      "credit": "The Aggregator / AI-generated fixture",
+      "originalUrl": "/media/alderwick-shuttle.png",
+      "provenance": "Original generated asset, 12 October 2026",
+      "role": "illustration",
+      "displayPermitted": true,
+      "availability": "available",
+      "focalPoint": {
+        "x": 62,
+        "y": 53
+      }
+    },
+    "inlineMedia": [
+      {
+        "afterBlockIds": [
+          "block-1",
+          "brief-1"
+        ],
+        "media": {
+          "id": "alderwick-route-figure",
+          "kind": "image",
+          "src": "/media/alderwick-route.svg",
+          "width": 1200,
+          "height": 700,
+          "alt": "Schematic of the fictional Library, Riverside workshop and North Quay stops; not to scale",
+          "caption": "The announced three-stop plan. An original schematic of the fictional notice; not a measured map.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.svg",
+          "provenance": "Locally authored SVG",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          }
+        }
+      },
+      {
+        "afterBlockIds": [
+          "block-5"
+        ],
+        "media": {
+          "id": "alderwick-route-animation",
+          "kind": "video",
+          "src": "/media/alderwick-route.webm",
+          "width": 1200,
+          "height": 700,
+          "alt": "A silent captioned animation connecting the three fictional stops",
+          "caption": "Illustrative route walkthrough, 4 seconds. This is not the publisher demonstration or source 4; it does not establish actual journey performance.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.webm",
+          "provenance": "Locally authored canvas animation",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          },
+          "poster": "/media/alderwick-route.svg",
+          "captions": "/media/route-captions.vtt"
+        }
+      }
+    ],
+    "headerClaimIds": [
+      "claim-1",
+      "claim-2",
+      "claim-3"
+    ],
+    "cutoff": "2026-10-08T12:00:00Z",
+    "publishedAt": "2026-10-08T14:00:00Z",
+    "correction": null,
+    "sources": [
+      {
+        "id": "source-1",
+        "itemId": "item-1",
+        "versionId": "source-version-1",
+        "ordinal": 1,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Evening shuttle trial: route, operating window and six-week review arrangements",
+        "kind": "document",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/trial-notice",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-2",
+        "itemId": "item-2",
+        "versionId": "source-version-2",
+        "ordinal": 2,
+        "publisher": "Alderwick Ledger",
+        "title": "At the three stops: an independent check of the evening shuttle timetable and the North Quay waiting group",
+        "kind": "article",
+        "originId": "origin-ledger",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/ledger-stop-check",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-3",
+        "itemId": "item-3",
+        "versionId": "source-version-3",
+        "ordinal": 3,
+        "publisher": "Quay Notebook",
+        "title": "Twenty-four boardings across the outward and return journeys: what our observation does and does not count",
+        "kind": "article",
+        "originId": "origin-notebook",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/quay-boardings",
+        "author": null,
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-4",
+        "itemId": "item-4",
+        "versionId": "source-version-4",
+        "ordinal": 4,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Route demonstration — publisher-supplied fictional transcript and aligned segment",
+        "kind": "video",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/route-demonstration",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": {
+          "startMs": 72000,
+          "endMs": 88000,
+          "durationMs": 180000,
+          "validated": true,
+          "provenance": "fictional publisher-supplied transcript"
+        }
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-1",
+        "proposition": "A shared route, a limited trial",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-2",
+        "proposition": "What changes for readers",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "id": "claim-3",
+        "proposition": "Two counts describe different things",
+        "status": "disputed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-4",
+        "proposition": "How the trial will be reviewed",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-5",
+        "proposition": "What the demonstration shows",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-6",
+        "proposition": "Why the distinction matters",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3",
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-7",
+        "proposition": "The remaining evidence gap",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-8",
+        "proposition": "What happens next",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-4"
+        ]
+      }
+    ],
+    "variants": {
+      "standard": [
+        {
+          "id": "block-1",
+          "heading": "A shared route, a limited trial",
+          "text": "The fictional town of Alderwick will test an evening shuttle between its library, riverside workshop and North Quay for six weeks. A published trial notice sets out three stops and a fixed review date. The service is an experiment, rather than a commitment to keep the route permanently. Its organizers say the timetable will be assessed after the trial, when trip records and written feedback can be considered together.",
+          "claimIds": [
+            "claim-1"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-2",
+          "heading": "What changes for readers",
+          "text": "The notice lists departures every thirty minutes between six and nine in the evening. Alderwick Ledger independently checked the signs at all three stops and found the same operating window. Readers should distinguish the advertised timetable from evidence of actual reliability: the trial has not yet produced a complete set of journey records. Neither the notice nor the site visit establishes how often a shuttle will arrive on time.",
+          "claimIds": [
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "block-3",
+          "heading": "Two counts describe different things",
+          "text": "Alderwick Ledger counted eighteen people waiting at North Quay during its observation period. Quay Notebook reported twenty-four boardings over a longer period that included the return journey. These figures describe different units and time windows. They cannot be combined into one attendance total, and neither establishes the number of unique passengers across the evening. The accounts remain attributed separately while that limitation is unresolved.",
+          "claimIds": [
+            "claim-3"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-4",
+          "heading": "How the trial will be reviewed",
+          "text": "The trial notice asks the operating team to retain a daily tally of completed trips and record missed departures separately. It also provides for written feedback at the library. Those records could help explain whether the timetable meets the needs described by participants, but the supplied notice does not establish a representative survey method. A collection of comments should therefore not be presented as the opinion of the whole town.",
+          "claimIds": [
+            "claim-4"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-5",
+          "heading": "What the demonstration shows",
+          "text": "A fictional publisher-supplied transcript records an organizer explaining the three-stop route beside a printed map. The aligned segment begins at one minute and twelve seconds. It supports the statement that the route was described at the demonstration, not a conclusion that the service has already delivered every promised journey. The transcript and its timestamp are synthetic fixtures; the example-domain video link is not a real recording.",
+          "claimIds": [
+            "claim-5"
+          ],
+          "sourceIds": [
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-6",
+          "heading": "Why the distinction matters",
+          "text": "The independently written Ledger account and Quay Notebook account contribute observations about the same bounded event. The trial notice and the demonstration transcript share the organizer as their reporting origin. Four items therefore do not represent four independent investigations. Keeping those relationships visible helps a reader distinguish an announced plan, an organizer’s explanation and observations made outside the operating team. More links alone would not resolve the mismatch in passenger counts.",
+          "claimIds": [
+            "claim-6"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3",
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-7",
+          "heading": "The remaining evidence gap",
+          "text": "The supplied accounts do not include a complete evening trip log, a passenger-level register or observations from each day of the six-week period. They cannot establish average demand, repeat use, accessibility for every passenger or the long-term cost of the service. Those questions remain open in this fictional example. A future update would need additional permitted evidence and fresh review rather than silently extending the claims made here.",
+          "claimIds": [
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-8",
+          "heading": "What happens next",
+          "text": "The notice schedules a review after the six-week trial. Any later decision to change the stops or continue the service would be a new development with its own evidence cutoff. This version separates that future decision from the limited plan and observations already described. The full bibliography below preserves every item used in this version, including the demonstration transcript, so the brief and standard views can be checked against the same source numbering.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-4"
+          ]
+        }
+      ],
+      "brief": [
+        {
+          "id": "brief-1",
+          "heading": "The plan",
+          "text": "Alderwick’s fictional evening shuttle trial links the library, riverside workshop and North Quay for six weeks. The notice describes a half-hourly timetable between six and nine in the evening. An independent stop check found matching signs, but a published timetable is not evidence that every departure has run on time.",
+          "claimIds": [
+            "claim-1",
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "brief-2",
+          "heading": "The uncertainty",
+          "text": "The two observations use different measures: Alderwick Ledger counted eighteen people waiting; Quay Notebook recorded twenty-four boardings across a longer window and return journey. These are not competing estimates of one verified total. They should stay attributed separately. The supplied material does not establish unique passengers, average demand or long-term costs.",
+          "claimIds": [
+            "claim-3",
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "brief-3",
+          "heading": "What comes next",
+          "text": "The organizer’s notice schedules a review after the trial. Any decision to continue the route will need new evidence and fresh review. This short view uses the same version and evidence cutoff as the full article. All four version-wide sources remain below; the demonstration transcript is used in the full article.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        }
+      ]
+    },
+    "privateNotes": "PRIVATE FIXTURE: never include in public projection",
+    "reviews": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000003",
+    "versionId": "00000000-0000-4000-8000-000000000004",
+    "slug": "long-headline",
+    "version": 1,
+    "fixture": true,
+    "state": "draft",
+    "risk": "normal",
+    "topic": "Culture",
+    "headline": "Why a six-week evening shuttle experiment across Alderwick’s library, riverside workshop and North Quay cannot yet tell us how many different people will use the route",
+    "deck": "A six-week experiment links three community stops. The timetable is clear; the early passenger counts need context.",
+    "leadMedia": {
+      "id": "alderwick-route-figure",
+      "kind": "image",
+      "src": "/media/alderwick-route.svg",
+      "width": 1200,
+      "height": 700,
+      "alt": "Schematic of the fictional Library, Riverside workshop and North Quay stops; not to scale",
+      "caption": "The announced three-stop plan. An original schematic of the fictional notice; not a measured map.",
+      "credit": "The Aggregator / original fixture graphic",
+      "originalUrl": "/media/alderwick-route.svg",
+      "provenance": "Locally authored SVG",
+      "role": "illustration",
+      "displayPermitted": true,
+      "availability": "available",
+      "focalPoint": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    "inlineMedia": [
+      {
+        "afterBlockIds": [
+          "block-1",
+          "brief-1"
+        ],
+        "media": {
+          "id": "alderwick-route-figure",
+          "kind": "image",
+          "src": "/media/alderwick-route.svg",
+          "width": 1200,
+          "height": 700,
+          "alt": "Schematic of the fictional Library, Riverside workshop and North Quay stops; not to scale",
+          "caption": "The announced three-stop plan. An original schematic of the fictional notice; not a measured map.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.svg",
+          "provenance": "Locally authored SVG",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          }
+        }
+      },
+      {
+        "afterBlockIds": [
+          "block-5"
+        ],
+        "media": {
+          "id": "alderwick-route-animation",
+          "kind": "video",
+          "src": "/media/alderwick-route.webm",
+          "width": 1200,
+          "height": 700,
+          "alt": "A silent captioned animation connecting the three fictional stops",
+          "caption": "Illustrative route walkthrough, 4 seconds. This is not the publisher demonstration or source 4; it does not establish actual journey performance.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.webm",
+          "provenance": "Locally authored canvas animation",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          },
+          "poster": "/media/alderwick-route.svg",
+          "captions": "/media/route-captions.vtt"
+        }
+      }
+    ],
+    "headerClaimIds": [
+      "claim-1",
+      "claim-2",
+      "claim-3"
+    ],
+    "cutoff": "2026-10-08T12:00:00Z",
+    "publishedAt": "2026-10-08T14:00:00Z",
+    "correction": null,
+    "sources": [
+      {
+        "id": "source-1",
+        "itemId": "item-1",
+        "versionId": "source-version-1",
+        "ordinal": 1,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Evening shuttle trial: route, operating window and six-week review arrangements",
+        "kind": "document",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/trial-notice",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-2",
+        "itemId": "item-2",
+        "versionId": "source-version-2",
+        "ordinal": 2,
+        "publisher": "Alderwick Ledger",
+        "title": "At the three stops: an independent check of the evening shuttle timetable and the North Quay waiting group",
+        "kind": "article",
+        "originId": "origin-ledger",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/ledger-stop-check",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-3",
+        "itemId": "item-3",
+        "versionId": "source-version-3",
+        "ordinal": 3,
+        "publisher": "Quay Notebook",
+        "title": "Twenty-four boardings across the outward and return journeys: what our observation does and does not count",
+        "kind": "article",
+        "originId": "origin-notebook",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/quay-boardings",
+        "author": null,
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-4",
+        "itemId": "item-4",
+        "versionId": "source-version-4",
+        "ordinal": 4,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Route demonstration — publisher-supplied fictional transcript and aligned segment",
+        "kind": "video",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/route-demonstration",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": {
+          "startMs": 72000,
+          "endMs": 88000,
+          "durationMs": 180000,
+          "validated": true,
+          "provenance": "fictional publisher-supplied transcript"
+        }
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-1",
+        "proposition": "A shared route, a limited trial",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-2",
+        "proposition": "What changes for readers",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "id": "claim-3",
+        "proposition": "Two counts describe different things",
+        "status": "disputed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-4",
+        "proposition": "How the trial will be reviewed",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-5",
+        "proposition": "What the demonstration shows",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-6",
+        "proposition": "Why the distinction matters",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3",
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-7",
+        "proposition": "The remaining evidence gap",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-8",
+        "proposition": "What happens next",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-4"
+        ]
+      }
+    ],
+    "variants": {
+      "standard": [
+        {
+          "id": "block-1",
+          "heading": "A shared route, a limited trial",
+          "text": "The fictional town of Alderwick will test an evening shuttle between its library, riverside workshop and North Quay for six weeks. A published trial notice sets out three stops and a fixed review date. The service is an experiment, rather than a commitment to keep the route permanently. Its organizers say the timetable will be assessed after the trial, when trip records and written feedback can be considered together.",
+          "claimIds": [
+            "claim-1"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-2",
+          "heading": "What changes for readers",
+          "text": "The notice lists departures every thirty minutes between six and nine in the evening. Alderwick Ledger independently checked the signs at all three stops and found the same operating window. Readers should distinguish the advertised timetable from evidence of actual reliability: the trial has not yet produced a complete set of journey records. Neither the notice nor the site visit establishes how often a shuttle will arrive on time.",
+          "claimIds": [
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "block-3",
+          "heading": "Two counts describe different things",
+          "text": "Alderwick Ledger counted eighteen people waiting at North Quay during its observation period. Quay Notebook reported twenty-four boardings over a longer period that included the return journey. These figures describe different units and time windows. They cannot be combined into one attendance total, and neither establishes the number of unique passengers across the evening. The accounts remain attributed separately while that limitation is unresolved.",
+          "claimIds": [
+            "claim-3"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-4",
+          "heading": "How the trial will be reviewed",
+          "text": "The trial notice asks the operating team to retain a daily tally of completed trips and record missed departures separately. It also provides for written feedback at the library. Those records could help explain whether the timetable meets the needs described by participants, but the supplied notice does not establish a representative survey method. A collection of comments should therefore not be presented as the opinion of the whole town.",
+          "claimIds": [
+            "claim-4"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-5",
+          "heading": "What the demonstration shows",
+          "text": "A fictional publisher-supplied transcript records an organizer explaining the three-stop route beside a printed map. The aligned segment begins at one minute and twelve seconds. It supports the statement that the route was described at the demonstration, not a conclusion that the service has already delivered every promised journey. The transcript and its timestamp are synthetic fixtures; the example-domain video link is not a real recording.",
+          "claimIds": [
+            "claim-5"
+          ],
+          "sourceIds": [
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-6",
+          "heading": "Why the distinction matters",
+          "text": "The independently written Ledger account and Quay Notebook account contribute observations about the same bounded event. The trial notice and the demonstration transcript share the organizer as their reporting origin. Four items therefore do not represent four independent investigations. Keeping those relationships visible helps a reader distinguish an announced plan, an organizer’s explanation and observations made outside the operating team. More links alone would not resolve the mismatch in passenger counts.",
+          "claimIds": [
+            "claim-6"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3",
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-7",
+          "heading": "The remaining evidence gap",
+          "text": "The supplied accounts do not include a complete evening trip log, a passenger-level register or observations from each day of the six-week period. They cannot establish average demand, repeat use, accessibility for every passenger or the long-term cost of the service. Those questions remain open in this fictional example. A future update would need additional permitted evidence and fresh review rather than silently extending the claims made here.",
+          "claimIds": [
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-8",
+          "heading": "What happens next",
+          "text": "The notice schedules a review after the six-week trial. Any later decision to change the stops or continue the service would be a new development with its own evidence cutoff. This version separates that future decision from the limited plan and observations already described. The full bibliography below preserves every item used in this version, including the demonstration transcript, so the brief and standard views can be checked against the same source numbering.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-4"
+          ]
+        }
+      ],
+      "brief": [
+        {
+          "id": "brief-1",
+          "heading": "The plan",
+          "text": "Alderwick’s fictional evening shuttle trial links the library, riverside workshop and North Quay for six weeks. The notice describes a half-hourly timetable between six and nine in the evening. An independent stop check found matching signs, but a published timetable is not evidence that every departure has run on time.",
+          "claimIds": [
+            "claim-1",
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "brief-2",
+          "heading": "The uncertainty",
+          "text": "The two observations use different measures: Alderwick Ledger counted eighteen people waiting; Quay Notebook recorded twenty-four boardings across a longer window and return journey. These are not competing estimates of one verified total. They should stay attributed separately. The supplied material does not establish unique passengers, average demand or long-term costs.",
+          "claimIds": [
+            "claim-3",
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "brief-3",
+          "heading": "What comes next",
+          "text": "The organizer’s notice schedules a review after the trial. Any decision to continue the route will need new evidence and fresh review. This short view uses the same version and evidence cutoff as the full article. All four version-wide sources remain below; the demonstration transcript is used in the full article.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        }
+      ]
+    },
+    "privateNotes": "PRIVATE FIXTURE: never include in public projection",
+    "reviews": [],
+    "scenario": "long-headline"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000005",
+    "versionId": "00000000-0000-4000-8000-000000000006",
+    "slug": "conflicting-accounts",
+    "version": 1,
+    "fixture": true,
+    "state": "draft",
+    "risk": "normal",
+    "topic": "Culture",
+    "headline": "Two passenger counts, two different questions",
+    "deck": "Eighteen people waiting and twenty-four boardings describe different measures. Neither is a verified total of unique passengers.",
+    "leadMedia": null,
+    "inlineMedia": [
+      {
+        "afterBlockIds": [
+          "block-1",
+          "brief-1"
+        ],
+        "media": {
+          "id": "alderwick-route-figure",
+          "kind": "image",
+          "src": "/media/alderwick-route.svg",
+          "width": 1200,
+          "height": 700,
+          "alt": "Schematic of the fictional Library, Riverside workshop and North Quay stops; not to scale",
+          "caption": "The announced three-stop plan. An original schematic of the fictional notice; not a measured map.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.svg",
+          "provenance": "Locally authored SVG",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          }
+        }
+      },
+      {
+        "afterBlockIds": [
+          "block-5"
+        ],
+        "media": {
+          "id": "alderwick-route-animation",
+          "kind": "video",
+          "src": "/media/alderwick-route.webm",
+          "width": 1200,
+          "height": 700,
+          "alt": "A silent captioned animation connecting the three fictional stops",
+          "caption": "Illustrative route walkthrough, 4 seconds. This is not the publisher demonstration or source 4; it does not establish actual journey performance.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.webm",
+          "provenance": "Locally authored canvas animation",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          },
+          "poster": "/media/alderwick-route.svg",
+          "captions": "/media/route-captions.vtt"
+        }
+      }
+    ],
+    "headerClaimIds": [
+      "claim-1",
+      "claim-2",
+      "claim-3"
+    ],
+    "cutoff": "2026-10-08T12:00:00Z",
+    "publishedAt": "2026-10-08T14:00:00Z",
+    "correction": null,
+    "sources": [
+      {
+        "id": "source-1",
+        "itemId": "item-1",
+        "versionId": "source-version-1",
+        "ordinal": 1,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Evening shuttle trial: route, operating window and six-week review arrangements",
+        "kind": "document",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/trial-notice",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-2",
+        "itemId": "item-2",
+        "versionId": "source-version-2",
+        "ordinal": 2,
+        "publisher": "Alderwick Ledger",
+        "title": "At the three stops: an independent check of the evening shuttle timetable and the North Quay waiting group",
+        "kind": "article",
+        "originId": "origin-ledger",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/ledger-stop-check",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-3",
+        "itemId": "item-3",
+        "versionId": "source-version-3",
+        "ordinal": 3,
+        "publisher": "Quay Notebook",
+        "title": "Twenty-four boardings across the outward and return journeys: what our observation does and does not count",
+        "kind": "article",
+        "originId": "origin-notebook",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/quay-boardings",
+        "author": null,
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-4",
+        "itemId": "item-4",
+        "versionId": "source-version-4",
+        "ordinal": 4,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Route demonstration — publisher-supplied fictional transcript and aligned segment",
+        "kind": "video",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/route-demonstration",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": {
+          "startMs": 72000,
+          "endMs": 88000,
+          "durationMs": 180000,
+          "validated": true,
+          "provenance": "fictional publisher-supplied transcript"
+        }
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-1",
+        "proposition": "A shared route, a limited trial",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-2",
+        "proposition": "What changes for readers",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "id": "claim-3",
+        "proposition": "Two counts describe different things",
+        "status": "disputed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-4",
+        "proposition": "How the trial will be reviewed",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-5",
+        "proposition": "What the demonstration shows",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-6",
+        "proposition": "Why the distinction matters",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3",
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-7",
+        "proposition": "The remaining evidence gap",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-8",
+        "proposition": "What happens next",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-4"
+        ]
+      }
+    ],
+    "variants": {
+      "standard": [
+        {
+          "id": "block-1",
+          "heading": "A shared route, a limited trial",
+          "text": "The fictional town of Alderwick will test an evening shuttle between its library, riverside workshop and North Quay for six weeks. A published trial notice sets out three stops and a fixed review date. The service is an experiment, rather than a commitment to keep the route permanently. Its organizers say the timetable will be assessed after the trial, when trip records and written feedback can be considered together.",
+          "claimIds": [
+            "claim-1"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-2",
+          "heading": "What changes for readers",
+          "text": "The notice lists departures every thirty minutes between six and nine in the evening. Alderwick Ledger independently checked the signs at all three stops and found the same operating window. Readers should distinguish the advertised timetable from evidence of actual reliability: the trial has not yet produced a complete set of journey records. Neither the notice nor the site visit establishes how often a shuttle will arrive on time.",
+          "claimIds": [
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "block-3",
+          "heading": "Two counts describe different things",
+          "text": "Alderwick Ledger counted eighteen people waiting at North Quay during its observation period. Quay Notebook reported twenty-four boardings over a longer period that included the return journey. These figures describe different units and time windows. They cannot be combined into one attendance total, and neither establishes the number of unique passengers across the evening. The accounts remain attributed separately while that limitation is unresolved.",
+          "claimIds": [
+            "claim-3"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-4",
+          "heading": "How the trial will be reviewed",
+          "text": "The trial notice asks the operating team to retain a daily tally of completed trips and record missed departures separately. It also provides for written feedback at the library. Those records could help explain whether the timetable meets the needs described by participants, but the supplied notice does not establish a representative survey method. A collection of comments should therefore not be presented as the opinion of the whole town.",
+          "claimIds": [
+            "claim-4"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-5",
+          "heading": "What the demonstration shows",
+          "text": "A fictional publisher-supplied transcript records an organizer explaining the three-stop route beside a printed map. The aligned segment begins at one minute and twelve seconds. It supports the statement that the route was described at the demonstration, not a conclusion that the service has already delivered every promised journey. The transcript and its timestamp are synthetic fixtures; the example-domain video link is not a real recording.",
+          "claimIds": [
+            "claim-5"
+          ],
+          "sourceIds": [
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-6",
+          "heading": "Why the distinction matters",
+          "text": "The independently written Ledger account and Quay Notebook account contribute observations about the same bounded event. The trial notice and the demonstration transcript share the organizer as their reporting origin. Four items therefore do not represent four independent investigations. Keeping those relationships visible helps a reader distinguish an announced plan, an organizer’s explanation and observations made outside the operating team. More links alone would not resolve the mismatch in passenger counts.",
+          "claimIds": [
+            "claim-6"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3",
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-7",
+          "heading": "The remaining evidence gap",
+          "text": "The supplied accounts do not include a complete evening trip log, a passenger-level register or observations from each day of the six-week period. They cannot establish average demand, repeat use, accessibility for every passenger or the long-term cost of the service. Those questions remain open in this fictional example. A future update would need additional permitted evidence and fresh review rather than silently extending the claims made here.",
+          "claimIds": [
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-8",
+          "heading": "What happens next",
+          "text": "The notice schedules a review after the six-week trial. Any later decision to change the stops or continue the service would be a new development with its own evidence cutoff. This version separates that future decision from the limited plan and observations already described. The full bibliography below preserves every item used in this version, including the demonstration transcript, so the brief and standard views can be checked against the same source numbering.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-4"
+          ]
+        }
+      ],
+      "brief": [
+        {
+          "id": "brief-1",
+          "heading": "The plan",
+          "text": "Alderwick’s fictional evening shuttle trial links the library, riverside workshop and North Quay for six weeks. The notice describes a half-hourly timetable between six and nine in the evening. An independent stop check found matching signs, but a published timetable is not evidence that every departure has run on time.",
+          "claimIds": [
+            "claim-1",
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "brief-2",
+          "heading": "The uncertainty",
+          "text": "The two observations use different measures: Alderwick Ledger counted eighteen people waiting; Quay Notebook recorded twenty-four boardings across a longer window and return journey. These are not competing estimates of one verified total. They should stay attributed separately. The supplied material does not establish unique passengers, average demand or long-term costs.",
+          "claimIds": [
+            "claim-3",
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "brief-3",
+          "heading": "What comes next",
+          "text": "The organizer’s notice schedules a review after the trial. Any decision to continue the route will need new evidence and fresh review. This short view uses the same version and evidence cutoff as the full article. All four version-wide sources remain below; the demonstration transcript is used in the full article.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        }
+      ]
+    },
+    "privateNotes": "PRIVATE FIXTURE: never include in public projection",
+    "reviews": [],
+    "scenario": "conflicting-evidence"
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000007",
+    "versionId": "00000000-0000-4000-8000-000000000008",
+    "slug": "corrected-source-unavailable",
+    "version": 2,
+    "fixture": true,
+    "state": "draft",
+    "risk": "normal",
+    "topic": "Culture",
+    "headline": "Correction: what the North Quay count measures",
+    "deck": "The record now makes the observation window explicit. One original source is unavailable; its attribution remains visible.",
+    "leadMedia": {
+      "id": "alderwick-shuttle-illustration",
+      "kind": "image",
+      "src": "/media/alderwick-shuttle.png",
+      "width": 1536,
+      "height": 1024,
+      "alt": "An imagined green shuttle outside Alderwick’s riverside library at dusk",
+      "caption": "An imagined shuttle at the library stop in fictional Alderwick. Synthetic illustration; not a photograph of an actual trial.",
+      "credit": "The Aggregator / AI-generated fixture",
+      "originalUrl": "/media/alderwick-shuttle.png",
+      "provenance": "Original generated asset, 12 October 2026",
+      "role": "illustration",
+      "displayPermitted": true,
+      "availability": "unavailable",
+      "focalPoint": {
+        "x": 62,
+        "y": 53
+      }
+    },
+    "inlineMedia": [
+      {
+        "afterBlockIds": [
+          "block-1",
+          "brief-1"
+        ],
+        "media": {
+          "id": "alderwick-route-figure",
+          "kind": "image",
+          "src": "/media/alderwick-route.svg",
+          "width": 1200,
+          "height": 700,
+          "alt": "Schematic of the fictional Library, Riverside workshop and North Quay stops; not to scale",
+          "caption": "The announced three-stop plan. An original schematic of the fictional notice; not a measured map.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.svg",
+          "provenance": "Locally authored SVG",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          }
+        }
+      },
+      {
+        "afterBlockIds": [
+          "block-5"
+        ],
+        "media": {
+          "id": "alderwick-route-animation",
+          "kind": "video",
+          "src": "/media/alderwick-route.webm",
+          "width": 1200,
+          "height": 700,
+          "alt": "A silent captioned animation connecting the three fictional stops",
+          "caption": "Illustrative route walkthrough, 4 seconds. This is not the publisher demonstration or source 4; it does not establish actual journey performance.",
+          "credit": "The Aggregator / original fixture graphic",
+          "originalUrl": "/media/alderwick-route.webm",
+          "provenance": "Locally authored canvas animation",
+          "role": "illustration",
+          "displayPermitted": true,
+          "availability": "available",
+          "focalPoint": {
+            "x": 50,
+            "y": 50
+          },
+          "poster": "/media/alderwick-route.svg",
+          "captions": "/media/route-captions.vtt"
+        }
+      }
+    ],
+    "headerClaimIds": [
+      "claim-1",
+      "claim-2",
+      "claim-3"
+    ],
+    "cutoff": "2026-10-08T12:00:00Z",
+    "publishedAt": "2026-10-08T14:00:00Z",
+    "correction": "Correction: eighteen refers to people waiting during one observation window, not unique passengers for the whole evening.",
+    "sources": [
+      {
+        "id": "source-1",
+        "itemId": "item-1",
+        "versionId": "source-version-1",
+        "ordinal": 1,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Evening shuttle trial: route, operating window and six-week review arrangements",
+        "kind": "document",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/trial-notice",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-2",
+        "itemId": "item-2",
+        "versionId": "source-version-2",
+        "ordinal": 2,
+        "publisher": "Alderwick Ledger",
+        "title": "At the three stops: an independent check of the evening shuttle timetable and the North Quay waiting group",
+        "kind": "article",
+        "originId": "origin-ledger",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/ledger-stop-check",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-3",
+        "itemId": "item-3",
+        "versionId": "source-version-3",
+        "ordinal": 3,
+        "publisher": "Quay Notebook",
+        "title": "Twenty-four boardings across the outward and return journeys: what our observation does and does not count",
+        "kind": "article",
+        "originId": "origin-notebook",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/quay-boardings",
+        "author": null,
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "unavailable",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": null
+      },
+      {
+        "id": "source-4",
+        "itemId": "item-4",
+        "versionId": "source-version-4",
+        "ordinal": 4,
+        "publisher": "Alderwick Mobility Office",
+        "title": "Route demonstration — publisher-supplied fictional transcript and aligned segment",
+        "kind": "video",
+        "originId": "origin-office",
+        "originVerified": true,
+        "url": "https://example.com/aggregator-fixtures/route-demonstration",
+        "author": "Fictional fixture author",
+        "publishedAt": "2026-10-08T09:00:00Z",
+        "checkedAt": "2026-10-08T12:00:00Z",
+        "availability": "available",
+        "role": "evidence",
+        "eligible": true,
+        "rights": {
+          "revision": 1,
+          "sourceApproved": true,
+          "model": true,
+          "synthesis": true,
+          "publicExcerpt": false,
+          "revoked": false,
+          "expiresAt": "2027-10-08T00:00:00Z"
+        },
+        "locator": {
+          "startMs": 72000,
+          "endMs": 88000,
+          "durationMs": 180000,
+          "validated": true,
+          "provenance": "fictional publisher-supplied transcript"
+        }
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-1",
+        "proposition": "A shared route, a limited trial",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-2",
+        "proposition": "What changes for readers",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2"
+        ]
+      },
+      {
+        "id": "claim-3",
+        "proposition": "Two counts describe different things",
+        "status": "disputed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-4",
+        "proposition": "How the trial will be reviewed",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1"
+        ]
+      },
+      {
+        "id": "claim-5",
+        "proposition": "What the demonstration shows",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-6",
+        "proposition": "Why the distinction matters",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3",
+          "source-4"
+        ]
+      },
+      {
+        "id": "claim-7",
+        "proposition": "The remaining evidence gap",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-2",
+          "source-3"
+        ]
+      },
+      {
+        "id": "claim-8",
+        "proposition": "What happens next",
+        "status": "attributed",
+        "reviewed": true,
+        "sourceIds": [
+          "source-1",
+          "source-4"
+        ]
+      }
+    ],
+    "variants": {
+      "standard": [
+        {
+          "id": "block-1",
+          "heading": "A shared route, a limited trial",
+          "text": "The fictional town of Alderwick will test an evening shuttle between its library, riverside workshop and North Quay for six weeks. A published trial notice sets out three stops and a fixed review date. The service is an experiment, rather than a commitment to keep the route permanently. Its organizers say the timetable will be assessed after the trial, when trip records and written feedback can be considered together.",
+          "claimIds": [
+            "claim-1"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-2",
+          "heading": "What changes for readers",
+          "text": "The notice lists departures every thirty minutes between six and nine in the evening. Alderwick Ledger independently checked the signs at all three stops and found the same operating window. Readers should distinguish the advertised timetable from evidence of actual reliability: the trial has not yet produced a complete set of journey records. Neither the notice nor the site visit establishes how often a shuttle will arrive on time.",
+          "claimIds": [
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "block-3",
+          "heading": "Two counts describe different things",
+          "text": "Alderwick Ledger counted eighteen people waiting at North Quay during its observation period. Quay Notebook reported twenty-four boardings over a longer period that included the return journey. These figures describe different units and time windows. They cannot be combined into one attendance total, and neither establishes the number of unique passengers across the evening. The accounts remain attributed separately while that limitation is unresolved.",
+          "claimIds": [
+            "claim-3"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-4",
+          "heading": "How the trial will be reviewed",
+          "text": "The trial notice asks the operating team to retain a daily tally of completed trips and record missed departures separately. It also provides for written feedback at the library. Those records could help explain whether the timetable meets the needs described by participants, but the supplied notice does not establish a representative survey method. A collection of comments should therefore not be presented as the opinion of the whole town.",
+          "claimIds": [
+            "claim-4"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        },
+        {
+          "id": "block-5",
+          "heading": "What the demonstration shows",
+          "text": "A fictional publisher-supplied transcript records an organizer explaining the three-stop route beside a printed map. The aligned segment begins at one minute and twelve seconds. It supports the statement that the route was described at the demonstration, not a conclusion that the service has already delivered every promised journey. The transcript and its timestamp are synthetic fixtures; the example-domain video link is not a real recording.",
+          "claimIds": [
+            "claim-5"
+          ],
+          "sourceIds": [
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-6",
+          "heading": "Why the distinction matters",
+          "text": "The independently written Ledger account and Quay Notebook account contribute observations about the same bounded event. The trial notice and the demonstration transcript share the organizer as their reporting origin. Four items therefore do not represent four independent investigations. Keeping those relationships visible helps a reader distinguish an announced plan, an organizer’s explanation and observations made outside the operating team. More links alone would not resolve the mismatch in passenger counts.",
+          "claimIds": [
+            "claim-6"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3",
+            "source-4"
+          ]
+        },
+        {
+          "id": "block-7",
+          "heading": "The remaining evidence gap",
+          "text": "The supplied accounts do not include a complete evening trip log, a passenger-level register or observations from each day of the six-week period. They cannot establish average demand, repeat use, accessibility for every passenger or the long-term cost of the service. Those questions remain open in this fictional example. A future update would need additional permitted evidence and fresh review rather than silently extending the claims made here.",
+          "claimIds": [
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "block-8",
+          "heading": "What happens next",
+          "text": "The notice schedules a review after the six-week trial. Any later decision to change the stops or continue the service would be a new development with its own evidence cutoff. This version separates that future decision from the limited plan and observations already described. The full bibliography below preserves every item used in this version, including the demonstration transcript, so the brief and standard views can be checked against the same source numbering.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-4"
+          ]
+        }
+      ],
+      "brief": [
+        {
+          "id": "brief-1",
+          "heading": "The plan",
+          "text": "Alderwick’s fictional evening shuttle trial links the library, riverside workshop and North Quay for six weeks. The notice describes a half-hourly timetable between six and nine in the evening. An independent stop check found matching signs, but a published timetable is not evidence that every departure has run on time.",
+          "claimIds": [
+            "claim-1",
+            "claim-2"
+          ],
+          "sourceIds": [
+            "source-1",
+            "source-2"
+          ]
+        },
+        {
+          "id": "brief-2",
+          "heading": "The uncertainty",
+          "text": "The two observations use different measures: Alderwick Ledger counted eighteen people waiting; Quay Notebook recorded twenty-four boardings across a longer window and return journey. These are not competing estimates of one verified total. They should stay attributed separately. The supplied material does not establish unique passengers, average demand or long-term costs.",
+          "claimIds": [
+            "claim-3",
+            "claim-7"
+          ],
+          "sourceIds": [
+            "source-2",
+            "source-3"
+          ]
+        },
+        {
+          "id": "brief-3",
+          "heading": "What comes next",
+          "text": "The organizer’s notice schedules a review after the trial. Any decision to continue the route will need new evidence and fresh review. This short view uses the same version and evidence cutoff as the full article. All four version-wide sources remain below; the demonstration transcript is used in the full article.",
+          "claimIds": [
+            "claim-8"
+          ],
+          "sourceIds": [
+            "source-1"
+          ]
+        }
+      ]
+    },
+    "privateNotes": "PRIVATE FIXTURE: never include in public projection",
+    "reviews": [],
+    "scenario": "correction-unavailable"
+  }
+]

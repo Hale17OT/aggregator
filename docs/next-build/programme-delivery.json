@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "fixtureOnly": true,
+  "programmes": [
+    {"id":"radio-civic-evening","kind":"radio","variant":"full","title":"Civic evening — transport and public spaces","stories":["alderwick-evening-shuttle","alderwick-rain-gardens"]},
+    {"id":"radio-field-notes","kind":"radio","variant":"full","title":"Field notes — water, measurement and uncertainty","stories":["alderwick-river-thermometers","alderwick-rain-gardens"]},
+    {"id":"newsroom-shuttle-solo-visual","kind":"broadcast","variant":"solo","title":"The evening shuttle — narrated visuals, one anchor","stories":["alderwick-evening-shuttle"],"treatment":"narration_over_visual","sourceProgramme":"newsroom-alderwick-solo","panelStyle":"attributed-text"},
+    {"id":"newsroom-shuttle-duo-visual","kind":"broadcast","variant":"duo","title":"The evening shuttle — narrated visuals, two anchors","stories":["alderwick-evening-shuttle"],"treatment":"narration_over_visual","sourceProgramme":"newsroom-alderwick-duo","panelStyle":"attributed-text"},
+    {"id":"newsroom-shuttle-solo-clip","kind":"broadcast","variant":"solo","title":"The evening shuttle — clip and commentary, one anchor","stories":["alderwick-evening-shuttle"],"treatment":"clip_then_comment","sourceProgramme":"newsroom-alderwick-solo","panelStyle":"attributed-text"},
+    {"id":"newsroom-shuttle-duo-clip","kind":"broadcast","variant":"duo","title":"The evening shuttle — clip and commentary, two anchors","stories":["alderwick-evening-shuttle"],"treatment":"clip_then_comment","sourceProgramme":"newsroom-alderwick-duo","panelStyle":"attributed-text"},
+    {"id":"newsroom-gardens-solo-visual","kind":"broadcast","variant":"solo","title":"Rain gardens — what the trial can establish, one anchor","stories":["alderwick-rain-gardens"],"treatment":"narration_over_visual","sourceProgramme":"radio-alderwick-rain-gardens-full","panelStyle":"attributed-text"},
+    {"id":"newsroom-gardens-duo-visual","kind":"broadcast","variant":"duo","title":"Rain gardens — what the trial can establish, two anchors","stories":["alderwick-rain-gardens"],"treatment":"narration_over_visual","sourceProgramme":"radio-alderwick-rain-gardens-full","panelStyle":"attributed-text"}
+  ]
+}

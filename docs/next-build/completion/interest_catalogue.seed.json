@@ -1,0 +1,6092 @@
+{
+  "schema_version": "proposal-1.0",
+  "created_on": "2026-10-14",
+  "purpose": "Authored product taxonomy seed and small researched entity example; adapt to existing repository identities before migration. This is not executed application code.",
+  "external_catalogue": {
+    "name": "IPTC Media Topics",
+    "catalogue_url": "https://cv.iptc.org/newscodes/mediatopic/",
+    "json_url": "https://cv.iptc.org/newscodes/mediatopic/?format=json&lang=en-GB",
+    "license": "CC-BY-4.0",
+    "bundled": false,
+    "note": "Full upstream payload is not bundled. Read the taxonomy guide for attribution, mapping and a reviewed import. Unmapped authored terms do not claim to be IPTC codes."
+  },
+  "coverage": {
+    "authored_topic_count": 390,
+    "browse_group_count": 24,
+    "named_entity_count": 6,
+    "scope": "Broad subject coverage with detailed sports/technology branches and a focused football entity example; not all clubs, people, places or every possible news topic."
+  },
+  "concepts": [
+    {
+      "id": "agg:topic:world-affairs",
+      "kind": "topic",
+      "label": "World affairs",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:diplomacy",
+      "kind": "topic",
+      "label": "Diplomacy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-organisations",
+      "kind": "topic",
+      "label": "International organisations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-trade",
+      "kind": "topic",
+      "label": "International trade",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:borders-and-migration",
+      "kind": "topic",
+      "label": "Borders and migration",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:development-and-aid",
+      "kind": "topic",
+      "label": "Development and aid",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:humanitarian-affairs",
+      "kind": "topic",
+      "label": "Humanitarian affairs",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:global-cooperation",
+      "kind": "topic",
+      "label": "Global cooperation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:geopolitics",
+      "kind": "topic",
+      "label": "Geopolitics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:politics-and-government",
+      "kind": "topic",
+      "label": "Politics and government",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:elections",
+      "kind": "topic",
+      "label": "Elections",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-policy",
+      "kind": "topic",
+      "label": "Public policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:parliaments-and-legislation",
+      "kind": "topic",
+      "label": "Parliaments and legislation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:local-government",
+      "kind": "topic",
+      "label": "Local government",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-administration",
+      "kind": "topic",
+      "label": "Public administration",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-spending",
+      "kind": "topic",
+      "label": "Public spending",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:government-accountability",
+      "kind": "topic",
+      "label": "Government accountability",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:political-parties",
+      "kind": "topic",
+      "label": "Political parties",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:democratic-institutions",
+      "kind": "topic",
+      "label": "Democratic institutions",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:civic-participation",
+      "kind": "topic",
+      "label": "Civic participation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:business-and-economy",
+      "kind": "topic",
+      "label": "Business and economy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:economic-indicators",
+      "kind": "topic",
+      "label": "Economic indicators",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:inflation",
+      "kind": "topic",
+      "label": "Inflation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:trade-and-supply-chains",
+      "kind": "topic",
+      "label": "Trade and supply chains",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:companies-and-industries",
+      "kind": "topic",
+      "label": "Companies and industries",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:startups-and-entrepreneurship",
+      "kind": "topic",
+      "label": "Startups and entrepreneurship",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:small-business",
+      "kind": "topic",
+      "label": "Small business",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:corporate-governance",
+      "kind": "topic",
+      "label": "Corporate governance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mergers-and-acquisitions",
+      "kind": "topic",
+      "label": "Mergers and acquisitions",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:retail-and-commerce",
+      "kind": "topic",
+      "label": "Retail and commerce",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:manufacturing",
+      "kind": "topic",
+      "label": "Manufacturing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:competition-policy",
+      "kind": "topic",
+      "label": "Competition policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:consumer-affairs",
+      "kind": "topic",
+      "label": "Consumer affairs",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:markets-and-personal-finance",
+      "kind": "topic",
+      "label": "Markets and personal finance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:stocks-and-exchanges",
+      "kind": "topic",
+      "label": "Stocks and exchanges",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:bonds-and-interest-rates",
+      "kind": "topic",
+      "label": "Bonds and interest rates",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:banking",
+      "kind": "topic",
+      "label": "Banking",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:insurance",
+      "kind": "topic",
+      "label": "Insurance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:currencies",
+      "kind": "topic",
+      "label": "Currencies",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:digital-assets",
+      "kind": "topic",
+      "label": "Digital assets",
+      "aliases": [
+        "Cryptocurrency",
+        "Crypto"
+      ],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:household-budgets",
+      "kind": "topic",
+      "label": "Household budgets",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:savings",
+      "kind": "topic",
+      "label": "Savings",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:borrowing-and-credit",
+      "kind": "topic",
+      "label": "Borrowing and credit",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:pensions",
+      "kind": "topic",
+      "label": "Pensions",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:taxes",
+      "kind": "topic",
+      "label": "Taxes",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:payments-and-financial-technology",
+      "kind": "topic",
+      "label": "Payments and financial technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:technology",
+      "kind": "topic",
+      "label": "Technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:artificial-intelligence",
+      "kind": "topic",
+      "label": "Artificial intelligence",
+      "aliases": [
+        "AI"
+      ],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:software-development",
+      "kind": "topic",
+      "label": "Software development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cybersecurity",
+      "kind": "topic",
+      "label": "Cybersecurity",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:privacy-and-data-protection",
+      "kind": "topic",
+      "label": "Privacy and data protection",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:consumer-electronics",
+      "kind": "topic",
+      "label": "Consumer electronics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mobile-and-telecommunications",
+      "kind": "topic",
+      "label": "Mobile and telecommunications",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cloud-and-infrastructure",
+      "kind": "topic",
+      "label": "Cloud and infrastructure",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:semiconductors",
+      "kind": "topic",
+      "label": "Semiconductors",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:robotics",
+      "kind": "topic",
+      "label": "Robotics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:open-source",
+      "kind": "topic",
+      "label": "Open source",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:internet-platforms",
+      "kind": "topic",
+      "label": "Internet platforms",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:accessibility-technology",
+      "kind": "topic",
+      "label": "Accessibility technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:science-and-space",
+      "kind": "topic",
+      "label": "Science and space",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:astronomy",
+      "kind": "topic",
+      "label": "Astronomy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:space-exploration",
+      "kind": "topic",
+      "label": "Space exploration",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:physics",
+      "kind": "topic",
+      "label": "Physics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:chemistry",
+      "kind": "topic",
+      "label": "Chemistry",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:biology",
+      "kind": "topic",
+      "label": "Biology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:earth-science",
+      "kind": "topic",
+      "label": "Earth science",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mathematics",
+      "kind": "topic",
+      "label": "Mathematics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:research-policy",
+      "kind": "topic",
+      "label": "Research policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:scientific-methods",
+      "kind": "topic",
+      "label": "Scientific methods",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:archaeology",
+      "kind": "topic",
+      "label": "Archaeology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:ocean-science",
+      "kind": "topic",
+      "label": "Ocean science",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:research-discoveries",
+      "kind": "topic",
+      "label": "Research discoveries",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:health-and-medicine",
+      "kind": "topic",
+      "label": "Health and medicine",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-health",
+      "kind": "topic",
+      "label": "Public health",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:medical-research",
+      "kind": "topic",
+      "label": "Medical research",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:healthcare-systems",
+      "kind": "topic",
+      "label": "Healthcare systems",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mental-health-reporting",
+      "kind": "topic",
+      "label": "Mental health reporting",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:nutrition-research",
+      "kind": "topic",
+      "label": "Nutrition research",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:medicines-and-vaccines",
+      "kind": "topic",
+      "label": "Medicines and vaccines",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:infectious-diseases",
+      "kind": "topic",
+      "label": "Infectious diseases",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:noncommunicable-diseases",
+      "kind": "topic",
+      "label": "Noncommunicable diseases",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:medical-technology",
+      "kind": "topic",
+      "label": "Medical technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:patient-safety",
+      "kind": "topic",
+      "label": "Patient safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:reproductive-health-reporting",
+      "kind": "topic",
+      "label": "Reproductive health reporting",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:disability-and-access",
+      "kind": "topic",
+      "label": "Disability and access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:climate-and-environment",
+      "kind": "topic",
+      "label": "Climate and environment",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:climate-science",
+      "kind": "topic",
+      "label": "Climate science",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:climate-policy",
+      "kind": "topic",
+      "label": "Climate policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:conservation",
+      "kind": "topic",
+      "label": "Conservation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:biodiversity",
+      "kind": "topic",
+      "label": "Biodiversity",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:air-quality",
+      "kind": "topic",
+      "label": "Air quality",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:water-and-sanitation",
+      "kind": "topic",
+      "label": "Water and sanitation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:waste-and-recycling",
+      "kind": "topic",
+      "label": "Waste and recycling",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:forests",
+      "kind": "topic",
+      "label": "Forests",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:oceans-and-coasts",
+      "kind": "topic",
+      "label": "Oceans and coasts",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:sustainable-cities",
+      "kind": "topic",
+      "label": "Sustainable cities",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:environmental-justice",
+      "kind": "topic",
+      "label": "Environmental justice",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:pollution",
+      "kind": "topic",
+      "label": "Pollution",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy",
+      "kind": "topic",
+      "label": "Energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:renewable-energy",
+      "kind": "topic",
+      "label": "Renewable energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:electricity-grids",
+      "kind": "topic",
+      "label": "Electricity grids",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy-storage",
+      "kind": "topic",
+      "label": "Energy storage",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:oil-and-gas",
+      "kind": "topic",
+      "label": "Oil and gas",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:nuclear-energy",
+      "kind": "topic",
+      "label": "Nuclear energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy-efficiency",
+      "kind": "topic",
+      "label": "Energy efficiency",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy-prices",
+      "kind": "topic",
+      "label": "Energy prices",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy-access",
+      "kind": "topic",
+      "label": "Energy access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:hydrogen",
+      "kind": "topic",
+      "label": "Hydrogen",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:energy-transitions",
+      "kind": "topic",
+      "label": "Energy transitions",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:sports",
+      "kind": "topic",
+      "label": "Sports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:football-soccer",
+      "kind": "topic",
+      "label": "Football (soccer)",
+      "aliases": [
+        "Football",
+        "Soccer",
+        "Association football"
+      ],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": [
+        {
+          "relation": "exactMatch",
+          "uri": "http://cv.iptc.org/newscodes/mediatopic/20001065",
+          "checked_on": "2026-10-14",
+          "source_ref": "R03",
+          "note": "Preferred display label adapted to project English; only this mapping is claimed verified."
+        }
+      ]
+    },
+    {
+      "id": "agg:topic:basketball",
+      "kind": "topic",
+      "label": "Basketball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:american-football",
+      "kind": "topic",
+      "label": "American football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:baseball",
+      "kind": "topic",
+      "label": "Baseball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cricket",
+      "kind": "topic",
+      "label": "Cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rugby",
+      "kind": "topic",
+      "label": "Rugby",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:tennis",
+      "kind": "topic",
+      "label": "Tennis",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:motorsport",
+      "kind": "topic",
+      "label": "Motorsport",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:athletics",
+      "kind": "topic",
+      "label": "Athletics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cycling",
+      "kind": "topic",
+      "label": "Cycling",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:golf",
+      "kind": "topic",
+      "label": "Golf",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:ice-hockey",
+      "kind": "topic",
+      "label": "Ice hockey",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:field-hockey",
+      "kind": "topic",
+      "label": "Field hockey",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:volleyball",
+      "kind": "topic",
+      "label": "Volleyball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:combat-sports",
+      "kind": "topic",
+      "label": "Combat sports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:swimming-and-diving",
+      "kind": "topic",
+      "label": "Swimming and diving",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:winter-sports",
+      "kind": "topic",
+      "label": "Winter sports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:gymnastics",
+      "kind": "topic",
+      "label": "Gymnastics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:racket-sports",
+      "kind": "topic",
+      "label": "Racket sports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:sailing-and-rowing",
+      "kind": "topic",
+      "label": "Sailing and rowing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:para-sport",
+      "kind": "topic",
+      "label": "Para sport",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:olympic-and-multi-sport-events",
+      "kind": "topic",
+      "label": "Olympic and multi-sport events",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:sports-business-and-governance",
+      "kind": "topic",
+      "label": "Sports business and governance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:women-in-sport",
+      "kind": "topic",
+      "label": "Women in sport",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:arts-and-culture",
+      "kind": "topic",
+      "label": "Arts and culture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:visual-arts",
+      "kind": "topic",
+      "label": "Visual arts",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:books-and-literature",
+      "kind": "topic",
+      "label": "Books and literature",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:theatre",
+      "kind": "topic",
+      "label": "Theatre",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:dance",
+      "kind": "topic",
+      "label": "Dance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:architecture",
+      "kind": "topic",
+      "label": "Architecture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:design",
+      "kind": "topic",
+      "label": "Design",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:museums",
+      "kind": "topic",
+      "label": "Museums",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cultural-heritage",
+      "kind": "topic",
+      "label": "Cultural heritage",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:languages",
+      "kind": "topic",
+      "label": "Languages",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:festivals",
+      "kind": "topic",
+      "label": "Festivals",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:photography",
+      "kind": "topic",
+      "label": "Photography",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:classical-music",
+      "kind": "topic",
+      "label": "Classical music",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:entertainment",
+      "kind": "topic",
+      "label": "Entertainment",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:film",
+      "kind": "topic",
+      "label": "Film",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:television",
+      "kind": "topic",
+      "label": "Television",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:popular-music",
+      "kind": "topic",
+      "label": "Popular music",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:streaming-entertainment",
+      "kind": "topic",
+      "label": "Streaming entertainment",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:animation",
+      "kind": "topic",
+      "label": "Animation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:comedy",
+      "kind": "topic",
+      "label": "Comedy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:celebrity-and-entertainment-industry",
+      "kind": "topic",
+      "label": "Celebrity and entertainment industry",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:awards",
+      "kind": "topic",
+      "label": "Awards",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:live-performances",
+      "kind": "topic",
+      "label": "Live performances",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:independent-entertainment",
+      "kind": "topic",
+      "label": "Independent entertainment",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:gaming-and-esports",
+      "kind": "topic",
+      "label": "Gaming and esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:video-games",
+      "kind": "topic",
+      "label": "Video games",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:pc-gaming",
+      "kind": "topic",
+      "label": "PC gaming",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:console-gaming",
+      "kind": "topic",
+      "label": "Console gaming",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mobile-gaming",
+      "kind": "topic",
+      "label": "Mobile gaming",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:game-development",
+      "kind": "topic",
+      "label": "Game development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:game-reviews-and-criticism",
+      "kind": "topic",
+      "label": "Game reviews and criticism",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:gaming-accessibility",
+      "kind": "topic",
+      "label": "Gaming accessibility",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:esports",
+      "kind": "topic",
+      "label": "Esports",
+      "aliases": [
+        "E-sports",
+        "Competitive gaming"
+      ],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:competitive-gaming-governance",
+      "kind": "topic",
+      "label": "Competitive gaming governance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:gaming-communities",
+      "kind": "topic",
+      "label": "Gaming communities",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:education",
+      "kind": "topic",
+      "label": "Education",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:early-learning",
+      "kind": "topic",
+      "label": "Early learning",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:primary-and-secondary-schools",
+      "kind": "topic",
+      "label": "Primary and secondary schools",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:higher-education",
+      "kind": "topic",
+      "label": "Higher education",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:vocational-education",
+      "kind": "topic",
+      "label": "Vocational education",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:adult-learning",
+      "kind": "topic",
+      "label": "Adult learning",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:education-policy",
+      "kind": "topic",
+      "label": "Education policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:teaching",
+      "kind": "topic",
+      "label": "Teaching",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:education-technology",
+      "kind": "topic",
+      "label": "Education technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:student-affairs",
+      "kind": "topic",
+      "label": "Student affairs",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:literacy",
+      "kind": "topic",
+      "label": "Literacy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:scholarships-and-access",
+      "kind": "topic",
+      "label": "Scholarships and access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:society-and-communities",
+      "kind": "topic",
+      "label": "Society and communities",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:human-rights",
+      "kind": "topic",
+      "label": "Human rights",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:equality-and-inclusion",
+      "kind": "topic",
+      "label": "Equality and inclusion",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:families",
+      "kind": "topic",
+      "label": "Families",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:children-and-young-people",
+      "kind": "topic",
+      "label": "Children and young people",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:older-people",
+      "kind": "topic",
+      "label": "Older people",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:population-and-demographics",
+      "kind": "topic",
+      "label": "Population and demographics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:religion-and-belief-reporting",
+      "kind": "topic",
+      "label": "Religion and belief reporting",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:community-initiatives",
+      "kind": "topic",
+      "label": "Community initiatives",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:civil-society",
+      "kind": "topic",
+      "label": "Civil society",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:accessibility-and-inclusion",
+      "kind": "topic",
+      "label": "Accessibility and inclusion",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:social-services",
+      "kind": "topic",
+      "label": "Social services",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:law-crime-and-justice",
+      "kind": "topic",
+      "label": "Law crime and justice",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:courts",
+      "kind": "topic",
+      "label": "Courts",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:criminal-justice",
+      "kind": "topic",
+      "label": "Criminal justice",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:civil-law",
+      "kind": "topic",
+      "label": "Civil law",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:policing",
+      "kind": "topic",
+      "label": "Policing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:consumer-law",
+      "kind": "topic",
+      "label": "Consumer law",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:corporate-regulation",
+      "kind": "topic",
+      "label": "Corporate regulation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cybercrime",
+      "kind": "topic",
+      "label": "Cybercrime",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-safety",
+      "kind": "topic",
+      "label": "Public safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:prisons-and-rehabilitation",
+      "kind": "topic",
+      "label": "Prisons and rehabilitation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:legal-reform",
+      "kind": "topic",
+      "label": "Legal reform",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:investigations",
+      "kind": "topic",
+      "label": "Investigations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:conflict-defence-and-security",
+      "kind": "topic",
+      "label": "Conflict defence and security",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:armed-conflict-reporting",
+      "kind": "topic",
+      "label": "Armed conflict reporting",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:peace-negotiations",
+      "kind": "topic",
+      "label": "Peace negotiations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:defence-policy",
+      "kind": "topic",
+      "label": "Defence policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:military-affairs",
+      "kind": "topic",
+      "label": "Military affairs",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-security",
+      "kind": "topic",
+      "label": "International security",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:arms-control",
+      "kind": "topic",
+      "label": "Arms control",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:peacekeeping",
+      "kind": "topic",
+      "label": "Peacekeeping",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:civilian-protection",
+      "kind": "topic",
+      "label": "Civilian protection",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:security-diplomacy",
+      "kind": "topic",
+      "label": "Security diplomacy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:weather-disasters-and-safety",
+      "kind": "topic",
+      "label": "Weather disasters and safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:weather-forecasts",
+      "kind": "topic",
+      "label": "Weather forecasts",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:extreme-weather",
+      "kind": "topic",
+      "label": "Extreme weather",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:earthquakes-and-volcanoes",
+      "kind": "topic",
+      "label": "Earthquakes and volcanoes",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:floods",
+      "kind": "topic",
+      "label": "Floods",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:wildfires",
+      "kind": "topic",
+      "label": "Wildfires",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:emergency-response",
+      "kind": "topic",
+      "label": "Emergency response",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:disaster-preparedness",
+      "kind": "topic",
+      "label": "Disaster preparedness",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:transport-safety",
+      "kind": "topic",
+      "label": "Transport safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:disaster-recovery",
+      "kind": "topic",
+      "label": "Disaster recovery",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cities-housing-and-transport",
+      "kind": "topic",
+      "label": "Cities housing and transport",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:housing",
+      "kind": "topic",
+      "label": "Housing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:urban-planning",
+      "kind": "topic",
+      "label": "Urban planning",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-transport",
+      "kind": "topic",
+      "label": "Public transport",
+      "aliases": [
+        "Public transit",
+        "Mass transit"
+      ],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:roads",
+      "kind": "topic",
+      "label": "Roads",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rail",
+      "kind": "topic",
+      "label": "Rail",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:aviation",
+      "kind": "topic",
+      "label": "Aviation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:shipping-and-ports",
+      "kind": "topic",
+      "label": "Shipping and ports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:infrastructure",
+      "kind": "topic",
+      "label": "Infrastructure",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:urban-design",
+      "kind": "topic",
+      "label": "Urban design",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rural-development",
+      "kind": "topic",
+      "label": "Rural development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:housing-affordability",
+      "kind": "topic",
+      "label": "Housing affordability",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:local-services",
+      "kind": "topic",
+      "label": "Local services",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:work-and-careers",
+      "kind": "topic",
+      "label": "Work and careers",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:labour-markets",
+      "kind": "topic",
+      "label": "Labour markets",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:workers-rights",
+      "kind": "topic",
+      "label": "Workers rights",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:workplace-culture",
+      "kind": "topic",
+      "label": "Workplace culture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:professional-development",
+      "kind": "topic",
+      "label": "Professional development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:skills-and-training",
+      "kind": "topic",
+      "label": "Skills and training",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:employment-policy",
+      "kind": "topic",
+      "label": "Employment policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:remote-work",
+      "kind": "topic",
+      "label": "Remote work",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:occupational-safety",
+      "kind": "topic",
+      "label": "Occupational safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:industrial-relations",
+      "kind": "topic",
+      "label": "Industrial relations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:recruitment",
+      "kind": "topic",
+      "label": "Recruitment",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-and-agriculture",
+      "kind": "topic",
+      "label": "Food and agriculture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:agriculture",
+      "kind": "topic",
+      "label": "Agriculture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-supply",
+      "kind": "topic",
+      "label": "Food supply",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-security",
+      "kind": "topic",
+      "label": "Food security",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fisheries",
+      "kind": "topic",
+      "label": "Fisheries",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:livestock",
+      "kind": "topic",
+      "label": "Livestock",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:farming-technology",
+      "kind": "topic",
+      "label": "Farming technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-safety",
+      "kind": "topic",
+      "label": "Food safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cooking-and-recipes",
+      "kind": "topic",
+      "label": "Cooking and recipes",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-culture",
+      "kind": "topic",
+      "label": "Food culture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:restaurants",
+      "kind": "topic",
+      "label": "Restaurants",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rural-economies",
+      "kind": "topic",
+      "label": "Rural economies",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:travel-and-destinations",
+      "kind": "topic",
+      "label": "Travel and destinations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:travel-news",
+      "kind": "topic",
+      "label": "Travel news",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:destinations",
+      "kind": "topic",
+      "label": "Destinations",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:tourism-industry",
+      "kind": "topic",
+      "label": "Tourism industry",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:transport-for-travellers",
+      "kind": "topic",
+      "label": "Transport for travellers",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:hotels-and-hospitality",
+      "kind": "topic",
+      "label": "Hotels and hospitality",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:responsible-travel",
+      "kind": "topic",
+      "label": "Responsible travel",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:outdoor-travel",
+      "kind": "topic",
+      "label": "Outdoor travel",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:cultural-travel",
+      "kind": "topic",
+      "label": "Cultural travel",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:travel-accessibility",
+      "kind": "topic",
+      "label": "Travel accessibility",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:lifestyle-and-wellbeing",
+      "kind": "topic",
+      "label": "Lifestyle and wellbeing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fitness",
+      "kind": "topic",
+      "label": "Fitness",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:home-and-interiors",
+      "kind": "topic",
+      "label": "Home and interiors",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:gardening",
+      "kind": "topic",
+      "label": "Gardening",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fashion",
+      "kind": "topic",
+      "label": "Fashion",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:beauty",
+      "kind": "topic",
+      "label": "Beauty",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:relationships",
+      "kind": "topic",
+      "label": "Relationships",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:parenting",
+      "kind": "topic",
+      "label": "Parenting",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:hobbies",
+      "kind": "topic",
+      "label": "Hobbies",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:pets",
+      "kind": "topic",
+      "label": "Pets",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:everyday-wellbeing",
+      "kind": "topic",
+      "label": "Everyday wellbeing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:media-and-internet-culture",
+      "kind": "topic",
+      "label": "Media and internet culture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "is_browse_root": true,
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:journalism",
+      "kind": "topic",
+      "label": "Journalism",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:press-freedom",
+      "kind": "topic",
+      "label": "Press freedom",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:media-industry",
+      "kind": "topic",
+      "label": "Media industry",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:misinformation-and-verification",
+      "kind": "topic",
+      "label": "Misinformation and verification",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:digital-culture",
+      "kind": "topic",
+      "label": "Digital culture",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:creator-economy",
+      "kind": "topic",
+      "label": "Creator economy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:social-platforms",
+      "kind": "topic",
+      "label": "Social platforms",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:advertising",
+      "kind": "topic",
+      "label": "Advertising",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:publishing",
+      "kind": "topic",
+      "label": "Publishing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:public-service-media",
+      "kind": "topic",
+      "label": "Public service media",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:club-football",
+      "kind": "topic",
+      "label": "Club football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-football",
+      "kind": "topic",
+      "label": "International football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:women-s-football",
+      "kind": "topic",
+      "label": "Women’s football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:youth-football",
+      "kind": "topic",
+      "label": "Youth football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:football-transfers",
+      "kind": "topic",
+      "label": "Football transfers",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:football-tactics",
+      "kind": "topic",
+      "label": "Football tactics",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:football-governance",
+      "kind": "topic",
+      "label": "Football governance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:futsal",
+      "kind": "topic",
+      "label": "Futsal",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:beach-football",
+      "kind": "topic",
+      "label": "Beach football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:professional-basketball",
+      "kind": "topic",
+      "label": "Professional basketball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:women-s-basketball",
+      "kind": "topic",
+      "label": "Women’s basketball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:college-basketball",
+      "kind": "topic",
+      "label": "College basketball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-basketball",
+      "kind": "topic",
+      "label": "International basketball",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:basketball-development",
+      "kind": "topic",
+      "label": "Basketball development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:professional-american-football",
+      "kind": "topic",
+      "label": "Professional American football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:college-american-football",
+      "kind": "topic",
+      "label": "College American football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:international-american-football",
+      "kind": "topic",
+      "label": "International American football",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:test-cricket",
+      "kind": "topic",
+      "label": "Test cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:one-day-cricket",
+      "kind": "topic",
+      "label": "One-day cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:twenty20-cricket",
+      "kind": "topic",
+      "label": "Twenty20 cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:women-s-cricket",
+      "kind": "topic",
+      "label": "Women’s cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:domestic-cricket",
+      "kind": "topic",
+      "label": "Domestic cricket",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rugby-union",
+      "kind": "topic",
+      "label": "Rugby union",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rugby-league",
+      "kind": "topic",
+      "label": "Rugby league",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rugby-sevens",
+      "kind": "topic",
+      "label": "Rugby sevens",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:women-s-rugby",
+      "kind": "topic",
+      "label": "Women’s rugby",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:formula-racing",
+      "kind": "topic",
+      "label": "Formula racing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:motorcycle-racing",
+      "kind": "topic",
+      "label": "Motorcycle racing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:endurance-racing",
+      "kind": "topic",
+      "label": "Endurance racing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:rallying",
+      "kind": "topic",
+      "label": "Rallying",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:stock-car-racing",
+      "kind": "topic",
+      "label": "Stock car racing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:electric-motorsport",
+      "kind": "topic",
+      "label": "Electric motorsport",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:boxing",
+      "kind": "topic",
+      "label": "Boxing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mixed-martial-arts",
+      "kind": "topic",
+      "label": "Mixed martial arts",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:wrestling",
+      "kind": "topic",
+      "label": "Wrestling",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:judo",
+      "kind": "topic",
+      "label": "Judo",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:taekwondo",
+      "kind": "topic",
+      "label": "Taekwondo",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:karate",
+      "kind": "topic",
+      "label": "Karate",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:badminton",
+      "kind": "topic",
+      "label": "Badminton",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:table-tennis",
+      "kind": "topic",
+      "label": "Table tennis",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:squash",
+      "kind": "topic",
+      "label": "Squash",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:padel",
+      "kind": "topic",
+      "label": "Padel",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:tactical-shooter-esports",
+      "kind": "topic",
+      "label": "Tactical shooter esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:moba-esports",
+      "kind": "topic",
+      "label": "MOBA esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fighting-game-esports",
+      "kind": "topic",
+      "label": "Fighting game esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:sports-simulation-esports",
+      "kind": "topic",
+      "label": "Sports simulation esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:racing-esports",
+      "kind": "topic",
+      "label": "Racing esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:battle-royale-esports",
+      "kind": "topic",
+      "label": "Battle royale esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:strategy-game-esports",
+      "kind": "topic",
+      "label": "Strategy game esports",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:ai-research",
+      "kind": "topic",
+      "label": "AI research",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:ai-applications",
+      "kind": "topic",
+      "label": "AI applications",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:ai-policy-and-safety",
+      "kind": "topic",
+      "label": "AI policy and safety",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:machine-learning",
+      "kind": "topic",
+      "label": "Machine learning",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:generative-ai",
+      "kind": "topic",
+      "label": "Generative AI",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:computer-vision",
+      "kind": "topic",
+      "label": "Computer vision",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:language-technology",
+      "kind": "topic",
+      "label": "Language technology",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:frontend-development",
+      "kind": "topic",
+      "label": "Frontend development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:backend-development",
+      "kind": "topic",
+      "label": "Backend development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:mobile-development",
+      "kind": "topic",
+      "label": "Mobile development",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:developer-tools",
+      "kind": "topic",
+      "label": "Developer tools",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:databases",
+      "kind": "topic",
+      "label": "Databases",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:software-testing",
+      "kind": "topic",
+      "label": "Software testing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:emissions-policy",
+      "kind": "topic",
+      "label": "Emissions policy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:climate-adaptation",
+      "kind": "topic",
+      "label": "Climate adaptation",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:climate-finance",
+      "kind": "topic",
+      "label": "Climate finance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:solar-energy",
+      "kind": "topic",
+      "label": "Solar energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:wind-energy",
+      "kind": "topic",
+      "label": "Wind energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:hydropower",
+      "kind": "topic",
+      "label": "Hydropower",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:geothermal-energy",
+      "kind": "topic",
+      "label": "Geothermal energy",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:buses",
+      "kind": "topic",
+      "label": "Buses",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:metro-and-light-rail",
+      "kind": "topic",
+      "label": "Metro and light rail",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:transport-accessibility",
+      "kind": "topic",
+      "label": "Transport accessibility",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fares-and-service-changes",
+      "kind": "topic",
+      "label": "Fares and service changes",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:fiction-and-poetry",
+      "kind": "topic",
+      "label": "Fiction and poetry",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:nonfiction",
+      "kind": "topic",
+      "label": "Nonfiction",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:book-publishing",
+      "kind": "topic",
+      "label": "Book publishing",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:literary-events",
+      "kind": "topic",
+      "label": "Literary events",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:film-releases",
+      "kind": "topic",
+      "label": "Film releases",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:film-production",
+      "kind": "topic",
+      "label": "Film production",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:documentary-film",
+      "kind": "topic",
+      "label": "Documentary film",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:film-criticism",
+      "kind": "topic",
+      "label": "Film criticism",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:game-releases",
+      "kind": "topic",
+      "label": "Game releases",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:role-playing-games",
+      "kind": "topic",
+      "label": "Role-playing games",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:strategy-games",
+      "kind": "topic",
+      "label": "Strategy games",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:simulation-games",
+      "kind": "topic",
+      "label": "Simulation games",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:indie-games",
+      "kind": "topic",
+      "label": "Indie games",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:national-elections",
+      "kind": "topic",
+      "label": "National elections",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:local-elections",
+      "kind": "topic",
+      "label": "Local elections",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:election-administration",
+      "kind": "topic",
+      "label": "Election administration",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:voting-access",
+      "kind": "topic",
+      "label": "Voting access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:disease-surveillance",
+      "kind": "topic",
+      "label": "Disease surveillance",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:health-access",
+      "kind": "topic",
+      "label": "Health access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:health-promotion",
+      "kind": "topic",
+      "label": "Health promotion",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:health-inequalities",
+      "kind": "topic",
+      "label": "Health inequalities",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:food-affordability",
+      "kind": "topic",
+      "label": "Food affordability",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:supply-disruption",
+      "kind": "topic",
+      "label": "Supply disruption",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:topic:nutrition-access",
+      "kind": "topic",
+      "label": "Nutrition access",
+      "aliases": [],
+      "source": "authored-product-taxonomy",
+      "status": "active",
+      "external_mappings": []
+    },
+    {
+      "id": "agg:competition:premier-league",
+      "kind": "competition",
+      "label": "Premier League",
+      "aliases": [
+        "EPL",
+        "English Premier League"
+      ],
+      "status": "active",
+      "source_refs": [
+        "R04"
+      ],
+      "metadata_checked_on": "2026-10-14",
+      "primary_sport": "agg:topic:football-soccer",
+      "logo": null
+    },
+    {
+      "id": "agg:organisation:manchester-city",
+      "kind": "organisation",
+      "label": "Manchester City",
+      "aliases": [
+        "Man City",
+        "Manchester City FC"
+      ],
+      "status": "active",
+      "source_refs": [
+        "R05"
+      ],
+      "metadata_checked_on": "2026-10-14",
+      "logo": null
+    },
+    {
+      "id": "agg:team:manchester-city-men",
+      "kind": "team",
+      "label": "Manchester City — men’s first team",
+      "aliases": [
+        "Man City men",
+        "Manchester City men",
+        "Man City first team"
+      ],
+      "status": "active",
+      "source_refs": [
+        "R05",
+        "R06"
+      ],
+      "metadata_checked_on": "2026-10-14",
+      "logo": null
+    },
+    {
+      "id": "agg:competition:uefa-champions-league",
+      "kind": "competition",
+      "label": "UEFA Champions League",
+      "aliases": [
+        "Champions League",
+        "UCL"
+      ],
+      "status": "active",
+      "source_refs": [
+        "R06"
+      ],
+      "metadata_checked_on": "2026-10-14",
+      "primary_sport": "agg:topic:football-soccer",
+      "logo": null
+    },
+    {
+      "id": "agg:competition:alder-community-league-demo",
+      "kind": "competition",
+      "label": "Alder Community League",
+      "aliases": [],
+      "status": "active",
+      "is_fictional": true,
+      "source": "authored-test-fixture",
+      "primary_sport": "agg:topic:football-soccer",
+      "logo": null
+    },
+    {
+      "id": "agg:team:juniper-athletic-demo",
+      "kind": "team",
+      "label": "Juniper Athletic",
+      "aliases": [
+        "Juniper Athletic demo"
+      ],
+      "status": "active",
+      "is_fictional": true,
+      "source": "authored-test-fixture",
+      "logo": null
+    }
+  ],
+  "topic_edges": [
+    {
+      "from": "agg:topic:diplomacy",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:international-organisations",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:international-trade",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:borders-and-migration",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:development-and-aid",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:humanitarian-affairs",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:global-cooperation",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:geopolitics",
+      "relation": "broader",
+      "to": "agg:topic:world-affairs"
+    },
+    {
+      "from": "agg:topic:elections",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:public-policy",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:parliaments-and-legislation",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:local-government",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:public-administration",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:public-spending",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:government-accountability",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:political-parties",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:democratic-institutions",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:civic-participation",
+      "relation": "broader",
+      "to": "agg:topic:politics-and-government"
+    },
+    {
+      "from": "agg:topic:economic-indicators",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:inflation",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:trade-and-supply-chains",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:companies-and-industries",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:startups-and-entrepreneurship",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:small-business",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:corporate-governance",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:mergers-and-acquisitions",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:retail-and-commerce",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:manufacturing",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:competition-policy",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:consumer-affairs",
+      "relation": "broader",
+      "to": "agg:topic:business-and-economy"
+    },
+    {
+      "from": "agg:topic:stocks-and-exchanges",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:bonds-and-interest-rates",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:banking",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:insurance",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:currencies",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:digital-assets",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:household-budgets",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:savings",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:borrowing-and-credit",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:pensions",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:taxes",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:payments-and-financial-technology",
+      "relation": "broader",
+      "to": "agg:topic:markets-and-personal-finance"
+    },
+    {
+      "from": "agg:topic:artificial-intelligence",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:software-development",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:cybersecurity",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:privacy-and-data-protection",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:consumer-electronics",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:mobile-and-telecommunications",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:cloud-and-infrastructure",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:semiconductors",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:robotics",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:open-source",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:internet-platforms",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:accessibility-technology",
+      "relation": "broader",
+      "to": "agg:topic:technology"
+    },
+    {
+      "from": "agg:topic:astronomy",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:space-exploration",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:physics",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:chemistry",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:biology",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:earth-science",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:mathematics",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:research-policy",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:scientific-methods",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:archaeology",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:ocean-science",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:research-discoveries",
+      "relation": "broader",
+      "to": "agg:topic:science-and-space"
+    },
+    {
+      "from": "agg:topic:public-health",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:medical-research",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:healthcare-systems",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:mental-health-reporting",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:nutrition-research",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:medicines-and-vaccines",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:infectious-diseases",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:noncommunicable-diseases",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:medical-technology",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:patient-safety",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:reproductive-health-reporting",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:disability-and-access",
+      "relation": "broader",
+      "to": "agg:topic:health-and-medicine"
+    },
+    {
+      "from": "agg:topic:climate-science",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:climate-policy",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:conservation",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:biodiversity",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:air-quality",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:water-and-sanitation",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:waste-and-recycling",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:forests",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:oceans-and-coasts",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:sustainable-cities",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:environmental-justice",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:pollution",
+      "relation": "broader",
+      "to": "agg:topic:climate-and-environment"
+    },
+    {
+      "from": "agg:topic:renewable-energy",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:electricity-grids",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:energy-storage",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:oil-and-gas",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:nuclear-energy",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:energy-efficiency",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:energy-prices",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:energy-access",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:hydrogen",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:energy-transitions",
+      "relation": "broader",
+      "to": "agg:topic:energy"
+    },
+    {
+      "from": "agg:topic:football-soccer",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:basketball",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:american-football",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:baseball",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:cricket",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:rugby",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:tennis",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:motorsport",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:athletics",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:cycling",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:golf",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:ice-hockey",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:field-hockey",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:volleyball",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:combat-sports",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:swimming-and-diving",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:winter-sports",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:gymnastics",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:racket-sports",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:sailing-and-rowing",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:para-sport",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:olympic-and-multi-sport-events",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:sports-business-and-governance",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:women-in-sport",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    },
+    {
+      "from": "agg:topic:visual-arts",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:books-and-literature",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:theatre",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:dance",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:architecture",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:design",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:museums",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:cultural-heritage",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:languages",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:festivals",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:photography",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:classical-music",
+      "relation": "broader",
+      "to": "agg:topic:arts-and-culture"
+    },
+    {
+      "from": "agg:topic:film",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:television",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:popular-music",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:streaming-entertainment",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:animation",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:comedy",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:celebrity-and-entertainment-industry",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:awards",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:live-performances",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:independent-entertainment",
+      "relation": "broader",
+      "to": "agg:topic:entertainment"
+    },
+    {
+      "from": "agg:topic:video-games",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:pc-gaming",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:console-gaming",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:mobile-gaming",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:game-development",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:game-reviews-and-criticism",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:gaming-accessibility",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:esports",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:competitive-gaming-governance",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:gaming-communities",
+      "relation": "broader",
+      "to": "agg:topic:gaming-and-esports"
+    },
+    {
+      "from": "agg:topic:early-learning",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:primary-and-secondary-schools",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:higher-education",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:vocational-education",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:adult-learning",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:education-policy",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:teaching",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:education-technology",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:student-affairs",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:literacy",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:scholarships-and-access",
+      "relation": "broader",
+      "to": "agg:topic:education"
+    },
+    {
+      "from": "agg:topic:human-rights",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:equality-and-inclusion",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:families",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:children-and-young-people",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:older-people",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:population-and-demographics",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:religion-and-belief-reporting",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:community-initiatives",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:civil-society",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:accessibility-and-inclusion",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:social-services",
+      "relation": "broader",
+      "to": "agg:topic:society-and-communities"
+    },
+    {
+      "from": "agg:topic:courts",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:criminal-justice",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:civil-law",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:policing",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:consumer-law",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:corporate-regulation",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:cybercrime",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:public-safety",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:prisons-and-rehabilitation",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:legal-reform",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:investigations",
+      "relation": "broader",
+      "to": "agg:topic:law-crime-and-justice"
+    },
+    {
+      "from": "agg:topic:armed-conflict-reporting",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:peace-negotiations",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:defence-policy",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:military-affairs",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:international-security",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:arms-control",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:peacekeeping",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:civilian-protection",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:security-diplomacy",
+      "relation": "broader",
+      "to": "agg:topic:conflict-defence-and-security"
+    },
+    {
+      "from": "agg:topic:weather-forecasts",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:extreme-weather",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:earthquakes-and-volcanoes",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:floods",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:wildfires",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:emergency-response",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:disaster-preparedness",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:transport-safety",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:disaster-recovery",
+      "relation": "broader",
+      "to": "agg:topic:weather-disasters-and-safety"
+    },
+    {
+      "from": "agg:topic:housing",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:urban-planning",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:public-transport",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:roads",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:rail",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:aviation",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:shipping-and-ports",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:infrastructure",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:urban-design",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:rural-development",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:housing-affordability",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:local-services",
+      "relation": "broader",
+      "to": "agg:topic:cities-housing-and-transport"
+    },
+    {
+      "from": "agg:topic:labour-markets",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:workers-rights",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:workplace-culture",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:professional-development",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:skills-and-training",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:employment-policy",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:remote-work",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:occupational-safety",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:industrial-relations",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:recruitment",
+      "relation": "broader",
+      "to": "agg:topic:work-and-careers"
+    },
+    {
+      "from": "agg:topic:agriculture",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:food-supply",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:food-security",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:fisheries",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:livestock",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:farming-technology",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:food-safety",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:cooking-and-recipes",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:food-culture",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:restaurants",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:rural-economies",
+      "relation": "broader",
+      "to": "agg:topic:food-and-agriculture"
+    },
+    {
+      "from": "agg:topic:travel-news",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:destinations",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:tourism-industry",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:transport-for-travellers",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:hotels-and-hospitality",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:responsible-travel",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:outdoor-travel",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:cultural-travel",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:travel-accessibility",
+      "relation": "broader",
+      "to": "agg:topic:travel-and-destinations"
+    },
+    {
+      "from": "agg:topic:fitness",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:home-and-interiors",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:gardening",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:fashion",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:beauty",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:relationships",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:parenting",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:hobbies",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:pets",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:everyday-wellbeing",
+      "relation": "broader",
+      "to": "agg:topic:lifestyle-and-wellbeing"
+    },
+    {
+      "from": "agg:topic:journalism",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:press-freedom",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:media-industry",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:misinformation-and-verification",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:digital-culture",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:creator-economy",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:social-platforms",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:advertising",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:publishing",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:public-service-media",
+      "relation": "broader",
+      "to": "agg:topic:media-and-internet-culture"
+    },
+    {
+      "from": "agg:topic:club-football",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:international-football",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:women-s-football",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:youth-football",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:football-transfers",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:football-tactics",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:football-governance",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:futsal",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:beach-football",
+      "relation": "broader",
+      "to": "agg:topic:football-soccer"
+    },
+    {
+      "from": "agg:topic:professional-basketball",
+      "relation": "broader",
+      "to": "agg:topic:basketball"
+    },
+    {
+      "from": "agg:topic:women-s-basketball",
+      "relation": "broader",
+      "to": "agg:topic:basketball"
+    },
+    {
+      "from": "agg:topic:college-basketball",
+      "relation": "broader",
+      "to": "agg:topic:basketball"
+    },
+    {
+      "from": "agg:topic:international-basketball",
+      "relation": "broader",
+      "to": "agg:topic:basketball"
+    },
+    {
+      "from": "agg:topic:basketball-development",
+      "relation": "broader",
+      "to": "agg:topic:basketball"
+    },
+    {
+      "from": "agg:topic:professional-american-football",
+      "relation": "broader",
+      "to": "agg:topic:american-football"
+    },
+    {
+      "from": "agg:topic:college-american-football",
+      "relation": "broader",
+      "to": "agg:topic:american-football"
+    },
+    {
+      "from": "agg:topic:international-american-football",
+      "relation": "broader",
+      "to": "agg:topic:american-football"
+    },
+    {
+      "from": "agg:topic:test-cricket",
+      "relation": "broader",
+      "to": "agg:topic:cricket"
+    },
+    {
+      "from": "agg:topic:one-day-cricket",
+      "relation": "broader",
+      "to": "agg:topic:cricket"
+    },
+    {
+      "from": "agg:topic:twenty20-cricket",
+      "relation": "broader",
+      "to": "agg:topic:cricket"
+    },
+    {
+      "from": "agg:topic:women-s-cricket",
+      "relation": "broader",
+      "to": "agg:topic:cricket"
+    },
+    {
+      "from": "agg:topic:domestic-cricket",
+      "relation": "broader",
+      "to": "agg:topic:cricket"
+    },
+    {
+      "from": "agg:topic:rugby-union",
+      "relation": "broader",
+      "to": "agg:topic:rugby"
+    },
+    {
+      "from": "agg:topic:rugby-league",
+      "relation": "broader",
+      "to": "agg:topic:rugby"
+    },
+    {
+      "from": "agg:topic:rugby-sevens",
+      "relation": "broader",
+      "to": "agg:topic:rugby"
+    },
+    {
+      "from": "agg:topic:women-s-rugby",
+      "relation": "broader",
+      "to": "agg:topic:rugby"
+    },
+    {
+      "from": "agg:topic:formula-racing",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:motorcycle-racing",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:endurance-racing",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:rallying",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:stock-car-racing",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:electric-motorsport",
+      "relation": "broader",
+      "to": "agg:topic:motorsport"
+    },
+    {
+      "from": "agg:topic:boxing",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:mixed-martial-arts",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:wrestling",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:judo",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:taekwondo",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:karate",
+      "relation": "broader",
+      "to": "agg:topic:combat-sports"
+    },
+    {
+      "from": "agg:topic:badminton",
+      "relation": "broader",
+      "to": "agg:topic:racket-sports"
+    },
+    {
+      "from": "agg:topic:table-tennis",
+      "relation": "broader",
+      "to": "agg:topic:racket-sports"
+    },
+    {
+      "from": "agg:topic:squash",
+      "relation": "broader",
+      "to": "agg:topic:racket-sports"
+    },
+    {
+      "from": "agg:topic:padel",
+      "relation": "broader",
+      "to": "agg:topic:racket-sports"
+    },
+    {
+      "from": "agg:topic:tactical-shooter-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:moba-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:fighting-game-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:sports-simulation-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:racing-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:battle-royale-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:strategy-game-esports",
+      "relation": "broader",
+      "to": "agg:topic:esports"
+    },
+    {
+      "from": "agg:topic:ai-research",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:ai-applications",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:ai-policy-and-safety",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:machine-learning",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:generative-ai",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:computer-vision",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:language-technology",
+      "relation": "broader",
+      "to": "agg:topic:artificial-intelligence"
+    },
+    {
+      "from": "agg:topic:frontend-development",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:backend-development",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:mobile-development",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:developer-tools",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:databases",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:software-testing",
+      "relation": "broader",
+      "to": "agg:topic:software-development"
+    },
+    {
+      "from": "agg:topic:emissions-policy",
+      "relation": "broader",
+      "to": "agg:topic:climate-policy"
+    },
+    {
+      "from": "agg:topic:climate-adaptation",
+      "relation": "broader",
+      "to": "agg:topic:climate-policy"
+    },
+    {
+      "from": "agg:topic:climate-finance",
+      "relation": "broader",
+      "to": "agg:topic:climate-policy"
+    },
+    {
+      "from": "agg:topic:solar-energy",
+      "relation": "broader",
+      "to": "agg:topic:renewable-energy"
+    },
+    {
+      "from": "agg:topic:wind-energy",
+      "relation": "broader",
+      "to": "agg:topic:renewable-energy"
+    },
+    {
+      "from": "agg:topic:hydropower",
+      "relation": "broader",
+      "to": "agg:topic:renewable-energy"
+    },
+    {
+      "from": "agg:topic:geothermal-energy",
+      "relation": "broader",
+      "to": "agg:topic:renewable-energy"
+    },
+    {
+      "from": "agg:topic:buses",
+      "relation": "broader",
+      "to": "agg:topic:public-transport"
+    },
+    {
+      "from": "agg:topic:metro-and-light-rail",
+      "relation": "broader",
+      "to": "agg:topic:public-transport"
+    },
+    {
+      "from": "agg:topic:transport-accessibility",
+      "relation": "broader",
+      "to": "agg:topic:public-transport"
+    },
+    {
+      "from": "agg:topic:fares-and-service-changes",
+      "relation": "broader",
+      "to": "agg:topic:public-transport"
+    },
+    {
+      "from": "agg:topic:fiction-and-poetry",
+      "relation": "broader",
+      "to": "agg:topic:books-and-literature"
+    },
+    {
+      "from": "agg:topic:nonfiction",
+      "relation": "broader",
+      "to": "agg:topic:books-and-literature"
+    },
+    {
+      "from": "agg:topic:book-publishing",
+      "relation": "broader",
+      "to": "agg:topic:books-and-literature"
+    },
+    {
+      "from": "agg:topic:literary-events",
+      "relation": "broader",
+      "to": "agg:topic:books-and-literature"
+    },
+    {
+      "from": "agg:topic:film-releases",
+      "relation": "broader",
+      "to": "agg:topic:film"
+    },
+    {
+      "from": "agg:topic:film-production",
+      "relation": "broader",
+      "to": "agg:topic:film"
+    },
+    {
+      "from": "agg:topic:documentary-film",
+      "relation": "broader",
+      "to": "agg:topic:film"
+    },
+    {
+      "from": "agg:topic:film-criticism",
+      "relation": "broader",
+      "to": "agg:topic:film"
+    },
+    {
+      "from": "agg:topic:game-releases",
+      "relation": "broader",
+      "to": "agg:topic:video-games"
+    },
+    {
+      "from": "agg:topic:role-playing-games",
+      "relation": "broader",
+      "to": "agg:topic:video-games"
+    },
+    {
+      "from": "agg:topic:strategy-games",
+      "relation": "broader",
+      "to": "agg:topic:video-games"
+    },
+    {
+      "from": "agg:topic:simulation-games",
+      "relation": "broader",
+      "to": "agg:topic:video-games"
+    },
+    {
+      "from": "agg:topic:indie-games",
+      "relation": "broader",
+      "to": "agg:topic:video-games"
+    },
+    {
+      "from": "agg:topic:national-elections",
+      "relation": "broader",
+      "to": "agg:topic:elections"
+    },
+    {
+      "from": "agg:topic:local-elections",
+      "relation": "broader",
+      "to": "agg:topic:elections"
+    },
+    {
+      "from": "agg:topic:election-administration",
+      "relation": "broader",
+      "to": "agg:topic:elections"
+    },
+    {
+      "from": "agg:topic:voting-access",
+      "relation": "broader",
+      "to": "agg:topic:elections"
+    },
+    {
+      "from": "agg:topic:disease-surveillance",
+      "relation": "broader",
+      "to": "agg:topic:public-health"
+    },
+    {
+      "from": "agg:topic:health-access",
+      "relation": "broader",
+      "to": "agg:topic:public-health"
+    },
+    {
+      "from": "agg:topic:health-promotion",
+      "relation": "broader",
+      "to": "agg:topic:public-health"
+    },
+    {
+      "from": "agg:topic:health-inequalities",
+      "relation": "broader",
+      "to": "agg:topic:public-health"
+    },
+    {
+      "from": "agg:topic:food-affordability",
+      "relation": "broader",
+      "to": "agg:topic:food-security"
+    },
+    {
+      "from": "agg:topic:supply-disruption",
+      "relation": "broader",
+      "to": "agg:topic:food-security"
+    },
+    {
+      "from": "agg:topic:nutrition-access",
+      "relation": "broader",
+      "to": "agg:topic:food-security"
+    },
+    {
+      "from": "agg:topic:esports",
+      "relation": "broader",
+      "to": "agg:topic:sports"
+    }
+  ],
+  "entity_relations": [
+    {
+      "from": "agg:competition:premier-league",
+      "relation": "sport",
+      "to": "agg:topic:football-soccer",
+      "source_refs": [
+        "R04"
+      ]
+    },
+    {
+      "from": "agg:competition:uefa-champions-league",
+      "relation": "sport",
+      "to": "agg:topic:football-soccer",
+      "source_refs": [
+        "R06"
+      ]
+    },
+    {
+      "from": "agg:team:manchester-city-men",
+      "relation": "part_of",
+      "to": "agg:organisation:manchester-city",
+      "source_refs": [
+        "R05"
+      ]
+    },
+    {
+      "from": "agg:team:manchester-city-men",
+      "relation": "participates_in",
+      "to": "agg:competition:premier-league",
+      "season": "2026/27",
+      "checked_on": "2026-10-14",
+      "source_refs": [
+        "R04",
+        "R05"
+      ],
+      "valid_from": null,
+      "valid_to": null,
+      "note": "Season-qualified association; not a permanent broader/narrower edge."
+    },
+    {
+      "from": "agg:team:manchester-city-men",
+      "relation": "participates_in",
+      "to": "agg:competition:uefa-champions-league",
+      "season": "2026/27",
+      "checked_on": "2026-10-14",
+      "source_refs": [
+        "R06"
+      ],
+      "valid_from": null,
+      "valid_to": null
+    },
+    {
+      "from": "agg:competition:alder-community-league-demo",
+      "relation": "sport",
+      "to": "agg:topic:football-soccer",
+      "is_fictional": true
+    },
+    {
+      "from": "agg:team:juniper-athletic-demo",
+      "relation": "participates_in",
+      "to": "agg:competition:alder-community-league-demo",
+      "season": "demo-2026",
+      "is_fictional": true
+    }
+  ],
+  "browse_groups": [
+    {
+      "id": "agg:view:world-affairs",
+      "label": "World affairs",
+      "root_concept_ids": [
+        "agg:topic:world-affairs"
+      ],
+      "initial_child_ids": [
+        "agg:topic:diplomacy",
+        "agg:topic:international-organisations",
+        "agg:topic:international-trade",
+        "agg:topic:borders-and-migration",
+        "agg:topic:development-and-aid",
+        "agg:topic:humanitarian-affairs",
+        "agg:topic:global-cooperation",
+        "agg:topic:geopolitics"
+      ]
+    },
+    {
+      "id": "agg:view:politics-and-government",
+      "label": "Politics and government",
+      "root_concept_ids": [
+        "agg:topic:politics-and-government"
+      ],
+      "initial_child_ids": [
+        "agg:topic:elections",
+        "agg:topic:public-policy",
+        "agg:topic:parliaments-and-legislation",
+        "agg:topic:local-government",
+        "agg:topic:public-administration",
+        "agg:topic:public-spending",
+        "agg:topic:government-accountability",
+        "agg:topic:political-parties",
+        "agg:topic:democratic-institutions",
+        "agg:topic:civic-participation"
+      ]
+    },
+    {
+      "id": "agg:view:business-and-economy",
+      "label": "Business and economy",
+      "root_concept_ids": [
+        "agg:topic:business-and-economy"
+      ],
+      "initial_child_ids": [
+        "agg:topic:economic-indicators",
+        "agg:topic:inflation",
+        "agg:topic:trade-and-supply-chains",
+        "agg:topic:companies-and-industries",
+        "agg:topic:startups-and-entrepreneurship",
+        "agg:topic:small-business",
+        "agg:topic:corporate-governance",
+        "agg:topic:mergers-and-acquisitions",
+        "agg:topic:retail-and-commerce",
+        "agg:topic:manufacturing",
+        "agg:topic:competition-policy",
+        "agg:topic:consumer-affairs"
+      ]
+    },
+    {
+      "id": "agg:view:markets-and-personal-finance",
+      "label": "Markets and personal finance",
+      "root_concept_ids": [
+        "agg:topic:markets-and-personal-finance"
+      ],
+      "initial_child_ids": [
+        "agg:topic:stocks-and-exchanges",
+        "agg:topic:bonds-and-interest-rates",
+        "agg:topic:banking",
+        "agg:topic:insurance",
+        "agg:topic:currencies",
+        "agg:topic:digital-assets",
+        "agg:topic:household-budgets",
+        "agg:topic:savings",
+        "agg:topic:borrowing-and-credit",
+        "agg:topic:pensions",
+        "agg:topic:taxes",
+        "agg:topic:payments-and-financial-technology"
+      ]
+    },
+    {
+      "id": "agg:view:technology",
+      "label": "Technology",
+      "root_concept_ids": [
+        "agg:topic:technology"
+      ],
+      "initial_child_ids": [
+        "agg:topic:artificial-intelligence",
+        "agg:topic:software-development",
+        "agg:topic:cybersecurity",
+        "agg:topic:privacy-and-data-protection",
+        "agg:topic:consumer-electronics",
+        "agg:topic:mobile-and-telecommunications",
+        "agg:topic:cloud-and-infrastructure",
+        "agg:topic:semiconductors",
+        "agg:topic:robotics",
+        "agg:topic:open-source",
+        "agg:topic:internet-platforms",
+        "agg:topic:accessibility-technology"
+      ]
+    },
+    {
+      "id": "agg:view:science-and-space",
+      "label": "Science and space",
+      "root_concept_ids": [
+        "agg:topic:science-and-space"
+      ],
+      "initial_child_ids": [
+        "agg:topic:astronomy",
+        "agg:topic:space-exploration",
+        "agg:topic:physics",
+        "agg:topic:chemistry",
+        "agg:topic:biology",
+        "agg:topic:earth-science",
+        "agg:topic:mathematics",
+        "agg:topic:research-policy",
+        "agg:topic:scientific-methods",
+        "agg:topic:archaeology",
+        "agg:topic:ocean-science",
+        "agg:topic:research-discoveries"
+      ]
+    },
+    {
+      "id": "agg:view:health-and-medicine",
+      "label": "Health and medicine",
+      "root_concept_ids": [
+        "agg:topic:health-and-medicine"
+      ],
+      "initial_child_ids": [
+        "agg:topic:public-health",
+        "agg:topic:medical-research",
+        "agg:topic:healthcare-systems",
+        "agg:topic:mental-health-reporting",
+        "agg:topic:nutrition-research",
+        "agg:topic:medicines-and-vaccines",
+        "agg:topic:infectious-diseases",
+        "agg:topic:noncommunicable-diseases",
+        "agg:topic:medical-technology",
+        "agg:topic:patient-safety",
+        "agg:topic:reproductive-health-reporting",
+        "agg:topic:disability-and-access"
+      ]
+    },
+    {
+      "id": "agg:view:climate-and-environment",
+      "label": "Climate and environment",
+      "root_concept_ids": [
+        "agg:topic:climate-and-environment"
+      ],
+      "initial_child_ids": [
+        "agg:topic:climate-science",
+        "agg:topic:climate-policy",
+        "agg:topic:conservation",
+        "agg:topic:biodiversity",
+        "agg:topic:air-quality",
+        "agg:topic:water-and-sanitation",
+        "agg:topic:waste-and-recycling",
+        "agg:topic:forests",
+        "agg:topic:oceans-and-coasts",
+        "agg:topic:sustainable-cities",
+        "agg:topic:environmental-justice",
+        "agg:topic:pollution"
+      ]
+    },
+    {
+      "id": "agg:view:energy",
+      "label": "Energy",
+      "root_concept_ids": [
+        "agg:topic:energy"
+      ],
+      "initial_child_ids": [
+        "agg:topic:renewable-energy",
+        "agg:topic:electricity-grids",
+        "agg:topic:energy-storage",
+        "agg:topic:oil-and-gas",
+        "agg:topic:nuclear-energy",
+        "agg:topic:energy-efficiency",
+        "agg:topic:energy-prices",
+        "agg:topic:energy-access",
+        "agg:topic:hydrogen",
+        "agg:topic:energy-transitions"
+      ]
+    },
+    {
+      "id": "agg:view:sports",
+      "label": "Sports",
+      "root_concept_ids": [
+        "agg:topic:sports"
+      ],
+      "initial_child_ids": [
+        "agg:topic:football-soccer",
+        "agg:topic:basketball",
+        "agg:topic:american-football",
+        "agg:topic:baseball",
+        "agg:topic:cricket",
+        "agg:topic:rugby",
+        "agg:topic:tennis",
+        "agg:topic:motorsport",
+        "agg:topic:athletics",
+        "agg:topic:cycling",
+        "agg:topic:golf",
+        "agg:topic:ice-hockey",
+        "agg:topic:field-hockey",
+        "agg:topic:volleyball",
+        "agg:topic:combat-sports",
+        "agg:topic:swimming-and-diving",
+        "agg:topic:winter-sports",
+        "agg:topic:gymnastics",
+        "agg:topic:racket-sports",
+        "agg:topic:sailing-and-rowing",
+        "agg:topic:para-sport",
+        "agg:topic:olympic-and-multi-sport-events",
+        "agg:topic:sports-business-and-governance",
+        "agg:topic:women-in-sport"
+      ]
+    },
+    {
+      "id": "agg:view:arts-and-culture",
+      "label": "Arts and culture",
+      "root_concept_ids": [
+        "agg:topic:arts-and-culture"
+      ],
+      "initial_child_ids": [
+        "agg:topic:visual-arts",
+        "agg:topic:books-and-literature",
+        "agg:topic:theatre",
+        "agg:topic:dance",
+        "agg:topic:architecture",
+        "agg:topic:design",
+        "agg:topic:museums",
+        "agg:topic:cultural-heritage",
+        "agg:topic:languages",
+        "agg:topic:festivals",
+        "agg:topic:photography",
+        "agg:topic:classical-music"
+      ]
+    },
+    {
+      "id": "agg:view:entertainment",
+      "label": "Entertainment",
+      "root_concept_ids": [
+        "agg:topic:entertainment"
+      ],
+      "initial_child_ids": [
+        "agg:topic:film",
+        "agg:topic:television",
+        "agg:topic:popular-music",
+        "agg:topic:streaming-entertainment",
+        "agg:topic:animation",
+        "agg:topic:comedy",
+        "agg:topic:celebrity-and-entertainment-industry",
+        "agg:topic:awards",
+        "agg:topic:live-performances",
+        "agg:topic:independent-entertainment"
+      ]
+    },
+    {
+      "id": "agg:view:gaming-and-esports",
+      "label": "Gaming and esports",
+      "root_concept_ids": [
+        "agg:topic:gaming-and-esports"
+      ],
+      "initial_child_ids": [
+        "agg:topic:video-games",
+        "agg:topic:pc-gaming",
+        "agg:topic:console-gaming",
+        "agg:topic:mobile-gaming",
+        "agg:topic:game-development",
+        "agg:topic:game-reviews-and-criticism",
+        "agg:topic:gaming-accessibility",
+        "agg:topic:esports",
+        "agg:topic:competitive-gaming-governance",
+        "agg:topic:gaming-communities"
+      ]
+    },
+    {
+      "id": "agg:view:education",
+      "label": "Education",
+      "root_concept_ids": [
+        "agg:topic:education"
+      ],
+      "initial_child_ids": [
+        "agg:topic:early-learning",
+        "agg:topic:primary-and-secondary-schools",
+        "agg:topic:higher-education",
+        "agg:topic:vocational-education",
+        "agg:topic:adult-learning",
+        "agg:topic:education-policy",
+        "agg:topic:teaching",
+        "agg:topic:education-technology",
+        "agg:topic:student-affairs",
+        "agg:topic:literacy",
+        "agg:topic:scholarships-and-access"
+      ]
+    },
+    {
+      "id": "agg:view:society-and-communities",
+      "label": "Society and communities",
+      "root_concept_ids": [
+        "agg:topic:society-and-communities"
+      ],
+      "initial_child_ids": [
+        "agg:topic:human-rights",
+        "agg:topic:equality-and-inclusion",
+        "agg:topic:families",
+        "agg:topic:children-and-young-people",
+        "agg:topic:older-people",
+        "agg:topic:population-and-demographics",
+        "agg:topic:religion-and-belief-reporting",
+        "agg:topic:community-initiatives",
+        "agg:topic:civil-society",
+        "agg:topic:accessibility-and-inclusion",
+        "agg:topic:social-services"
+      ]
+    },
+    {
+      "id": "agg:view:law-crime-and-justice",
+      "label": "Law crime and justice",
+      "root_concept_ids": [
+        "agg:topic:law-crime-and-justice"
+      ],
+      "initial_child_ids": [
+        "agg:topic:courts",
+        "agg:topic:criminal-justice",
+        "agg:topic:civil-law",
+        "agg:topic:policing",
+        "agg:topic:consumer-law",
+        "agg:topic:corporate-regulation",
+        "agg:topic:cybercrime",
+        "agg:topic:public-safety",
+        "agg:topic:prisons-and-rehabilitation",
+        "agg:topic:legal-reform",
+        "agg:topic:investigations"
+      ]
+    },
+    {
+      "id": "agg:view:conflict-defence-and-security",
+      "label": "Conflict defence and security",
+      "root_concept_ids": [
+        "agg:topic:conflict-defence-and-security"
+      ],
+      "initial_child_ids": [
+        "agg:topic:armed-conflict-reporting",
+        "agg:topic:peace-negotiations",
+        "agg:topic:defence-policy",
+        "agg:topic:military-affairs",
+        "agg:topic:international-security",
+        "agg:topic:arms-control",
+        "agg:topic:peacekeeping",
+        "agg:topic:civilian-protection",
+        "agg:topic:security-diplomacy"
+      ]
+    },
+    {
+      "id": "agg:view:weather-disasters-and-safety",
+      "label": "Weather disasters and safety",
+      "root_concept_ids": [
+        "agg:topic:weather-disasters-and-safety"
+      ],
+      "initial_child_ids": [
+        "agg:topic:weather-forecasts",
+        "agg:topic:extreme-weather",
+        "agg:topic:earthquakes-and-volcanoes",
+        "agg:topic:floods",
+        "agg:topic:wildfires",
+        "agg:topic:emergency-response",
+        "agg:topic:disaster-preparedness",
+        "agg:topic:transport-safety",
+        "agg:topic:disaster-recovery"
+      ]
+    },
+    {
+      "id": "agg:view:cities-housing-and-transport",
+      "label": "Cities housing and transport",
+      "root_concept_ids": [
+        "agg:topic:cities-housing-and-transport"
+      ],
+      "initial_child_ids": [
+        "agg:topic:housing",
+        "agg:topic:urban-planning",
+        "agg:topic:public-transport",
+        "agg:topic:roads",
+        "agg:topic:rail",
+        "agg:topic:aviation",
+        "agg:topic:shipping-and-ports",
+        "agg:topic:infrastructure",
+        "agg:topic:urban-design",
+        "agg:topic:rural-development",
+        "agg:topic:housing-affordability",
+        "agg:topic:local-services"
+      ]
+    },
+    {
+      "id": "agg:view:work-and-careers",
+      "label": "Work and careers",
+      "root_concept_ids": [
+        "agg:topic:work-and-careers"
+      ],
+      "initial_child_ids": [
+        "agg:topic:labour-markets",
+        "agg:topic:workers-rights",
+        "agg:topic:workplace-culture",
+        "agg:topic:professional-development",
+        "agg:topic:skills-and-training",
+        "agg:topic:employment-policy",
+        "agg:topic:remote-work",
+        "agg:topic:occupational-safety",
+        "agg:topic:industrial-relations",
+        "agg:topic:recruitment"
+      ]
+    },
+    {
+      "id": "agg:view:food-and-agriculture",
+      "label": "Food and agriculture",
+      "root_concept_ids": [
+        "agg:topic:food-and-agriculture"
+      ],
+      "initial_child_ids": [
+        "agg:topic:agriculture",
+        "agg:topic:food-supply",
+        "agg:topic:food-security",
+        "agg:topic:fisheries",
+        "agg:topic:livestock",
+        "agg:topic:farming-technology",
+        "agg:topic:food-safety",
+        "agg:topic:cooking-and-recipes",
+        "agg:topic:food-culture",
+        "agg:topic:restaurants",
+        "agg:topic:rural-economies"
+      ]
+    },
+    {
+      "id": "agg:view:travel-and-destinations",
+      "label": "Travel and destinations",
+      "root_concept_ids": [
+        "agg:topic:travel-and-destinations"
+      ],
+      "initial_child_ids": [
+        "agg:topic:travel-news",
+        "agg:topic:destinations",
+        "agg:topic:tourism-industry",
+        "agg:topic:transport-for-travellers",
+        "agg:topic:hotels-and-hospitality",
+        "agg:topic:responsible-travel",
+        "agg:topic:outdoor-travel",
+        "agg:topic:cultural-travel",
+        "agg:topic:travel-accessibility"
+      ]
+    },
+    {
+      "id": "agg:view:lifestyle-and-wellbeing",
+      "label": "Lifestyle and wellbeing",
+      "root_concept_ids": [
+        "agg:topic:lifestyle-and-wellbeing"
+      ],
+      "initial_child_ids": [
+        "agg:topic:fitness",
+        "agg:topic:home-and-interiors",
+        "agg:topic:gardening",
+        "agg:topic:fashion",
+        "agg:topic:beauty",
+        "agg:topic:relationships",
+        "agg:topic:parenting",
+        "agg:topic:hobbies",
+        "agg:topic:pets",
+        "agg:topic:everyday-wellbeing"
+      ]
+    },
+    {
+      "id": "agg:view:media-and-internet-culture",
+      "label": "Media and internet culture",
+      "root_concept_ids": [
+        "agg:topic:media-and-internet-culture"
+      ],
+      "initial_child_ids": [
+        "agg:topic:journalism",
+        "agg:topic:press-freedom",
+        "agg:topic:media-industry",
+        "agg:topic:misinformation-and-verification",
+        "agg:topic:digital-culture",
+        "agg:topic:creator-economy",
+        "agg:topic:social-platforms",
+        "agg:topic:advertising",
+        "agg:topic:publishing",
+        "agg:topic:public-service-media"
+      ]
+    }
+  ],
+  "facet_dimensions": [
+    "subject",
+    "named_entity",
+    "place",
+    "language",
+    "format",
+    "story_type"
+  ],
+  "formats": [
+    "read",
+    "radio",
+    "newsroom",
+    "clips"
+  ],
+  "browse_examples": [
+    {
+      "path": [
+        "agg:topic:sports",
+        "agg:topic:football-soccer",
+        "agg:competition:premier-league",
+        "agg:team:manchester-city-men"
+      ],
+      "follow_target": "agg:team:manchester-city-men",
+      "scope": "all-competitions",
+      "note": "Selecting a leaf does not follow siblings, ancestors, or only the competition in this browsing path."
+    },
+    {
+      "path": [
+        "agg:topic:sports",
+        "agg:topic:football-soccer",
+        "agg:competition:alder-community-league-demo",
+        "agg:team:juniper-athletic-demo"
+      ],
+      "follow_target": "agg:team:juniper-athletic-demo",
+      "scope": "all-competitions",
+      "note": "Use for positive fictional news fixtures; do not invent reporting about real clubs."
+    }
+  ]
+}

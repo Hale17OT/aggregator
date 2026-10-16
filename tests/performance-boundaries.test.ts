@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {writeFile,readFile,unlink,mkdir} from 'node:fs/promises';import {resolve} from 'node:path';import {verifiedAsset,hash} from '../packages/programme/src/store.js';import type {Programme,ProgrammeAsset} from '../packages/contracts/src/programme.js';
+
+test('immutable byte verification cache rejects same-size changed content and missing files',async()=>{
+ const data=Buffer.from('local performance integrity fixture'),id=hash(data),asset:ProgrammeAsset={id,hash:id,storageKey:id+'.json',bytes:data.length,type:'source-map',mime:'application/json',availability:'available',permissions:{display:true,transform:true,audio:false,broadcast:true},provenance:'Isolated integrity test only',engine:'none',voice:'none',modelRevision:'test'};
+ const p={assets:[asset]} as Programme,path=resolve('.cache/programmes/assets',asset.storageKey);await mkdir(resolve('.cache/programmes/assets'),{recursive:true});let prior:Buffer|undefined;try{prior=await readFile(path);}catch{/* No prior fixture. */}
+ try{await writeFile(path,data);assert.ok(await verifiedAsset(p,id,true));assert.ok(await verifiedAsset(p,id,true));await writeFile(path,Buffer.alloc(data.length,120));assert.equal(await verifiedAsset(p,id,true),null);await writeFile(path,data);assert.ok(await verifiedAsset(p,id,true));await unlink(path);assert.equal(await verifiedAsset(p,id,true),null);}finally{if(prior)await writeFile(path,prior);else await unlink(path).catch(()=>{});}
+});

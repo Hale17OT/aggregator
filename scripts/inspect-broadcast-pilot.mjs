@@ -1,0 +1,9 @@
+/* global document */
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { chromium } from 'playwright';
+const latest=JSON.parse(await readFile('.cache/broadcast/latest-duo-pilot.json','utf8'));
+const out=resolve('output/playwright/broadcast-pilot');await mkdir(out,{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+try{const page=await browser.newPage({viewport:{width:1280,height:720}});await page.goto(pathToFileURL(join(latest.out,'programme.mp4')).href);await page.locator('video').evaluate(v=>{v.controls=false;v.style.cssText='width:1280px;height:720px;position:fixed;inset:0';v.volume=.5;v.play();});const samples=[];for(const target of [1,8,13,18,24,32,39,46,53]){await page.waitForFunction(t=>document.querySelector('video').currentTime>=t,target,{timeout:15000});const state=await page.locator('video').evaluate(v=>({time:v.currentTime,paused:v.paused,ended:v.ended,readyState:v.readyState,width:v.videoWidth,height:v.videoHeight,decoded:v.getVideoPlaybackQuality().totalVideoFrames,dropped:v.getVideoPlaybackQuality().droppedVideoFrames}));await page.screenshot({path:join(out,`playing-${target}.png`)});samples.push(state);console.log(`Pilot playback ${state.time.toFixed(2)}s: ${state.decoded} decoded frames`);}await page.waitForFunction(()=>document.querySelector('video').ended,null,{timeout:10000});await writeFile(resolve('docs/engineering/broadcast-pilot-playback.json'),JSON.stringify({at:new Date().toISOString(),pilot:latest.out,fullContinuousPlayback:'PASS',samples,audio:'AAC decoded/unmuted; direct auditory judgement unavailable',visualAcceptance:'Agent inspection only; owner acceptance pending'},null,2));}finally{await browser.close();}

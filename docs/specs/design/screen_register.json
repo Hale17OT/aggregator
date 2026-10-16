@@ -1,0 +1,263 @@
+[
+  {
+    "id": "SC01",
+    "name": "Editorial home / For you",
+    "route": "/",
+    "access": "Public",
+    "content": "Lead story, latest list, topic navigation, edition time, source-count labels.",
+    "action": "Open article; change desk; authenticated For you.",
+    "states": "Loading, partial-feed failure, stale edition, no follows."
+  },
+  {
+    "id": "SC02",
+    "name": "Topic hub and story trail",
+    "route": "/topics/:slug",
+    "access": "Public",
+    "content": "Desk scope, follow control, ongoing-story grouping, filtered articles.",
+    "action": "Open article or follow topic.",
+    "states": "Empty topic, not found, follow failure, renamed slug."
+  },
+  {
+    "id": "SC03",
+    "name": "Search results",
+    "route": "/search",
+    "access": "Public",
+    "content": "Query, topic/date/source-type filters, result count and snippets.",
+    "action": "Search, refine, clear, open result.",
+    "states": "Typing, loading, zero results, invalid date range, unavailable search."
+  },
+  {
+    "id": "SC04",
+    "name": "Canonical article",
+    "route": "/articles/:slug",
+    "access": "Public",
+    "content": "Headline, deck, review/cutoff/version labels, variants, cited narrative, full bottom sources, history, related stories.",
+    "action": "Read; inspect source; save; share; report.",
+    "states": "New-version notice, video unavailable, rights withdrawal, partial enhancements failure."
+  },
+  {
+    "id": "SC05",
+    "name": "Evidence view",
+    "route": "Article + #claim-:id or #sources",
+    "access": "Public",
+    "content": "Claim, sources, evidence-role labels, disagreement, permitted excerpt, source link and back-reference.",
+    "action": "Open original or return to exact claim.",
+    "states": "Excerpt not licensed, missing author/date, unavailable original, disputed claim."
+  },
+  {
+    "id": "SC06",
+    "name": "History and historical article",
+    "route": "/articles/:id/history",
+    "access": "Public",
+    "content": "Chronological material changes, version details, correction notes.",
+    "action": "Read current or safe previous version.",
+    "states": "Historical warning, redacted version, restored story, unavailable text."
+  },
+  {
+    "id": "SC07",
+    "name": "Source directory",
+    "route": "/sources",
+    "access": "Public",
+    "content": "Approved sources, topic/type filters and methodology link.",
+    "action": "Inspect a source profile.",
+    "states": "Empty filter, source suspended, metadata unavailable."
+  },
+  {
+    "id": "SC08",
+    "name": "Source profile",
+    "route": "/sources/:slug",
+    "access": "Public",
+    "content": "Verified identity, review date, topic scope, ownership/limitations, recent public coverage.",
+    "action": "Open original homepage or related synthesis.",
+    "states": "Suspended profile; missing ownership information explicitly disclosed."
+  },
+  {
+    "id": "SC09",
+    "name": "Sign-in and verification",
+    "route": "/sign-in",
+    "access": "Public",
+    "content": "Google and email choices, privacy links, return-action context.",
+    "action": "Authenticate or request/resend link.",
+    "states": "Pending email, invalid/expired link, provider failure, throttled request."
+  },
+  {
+    "id": "SC10",
+    "name": "Optional onboarding",
+    "route": "/onboarding",
+    "access": "Member",
+    "content": "Topic choices, theme preference, skip control.",
+    "action": "Follow topics and finish, or skip.",
+    "states": "No selection, save failure, already-completed onboarding."
+  },
+  {
+    "id": "SC11",
+    "name": "Saved reading",
+    "route": "/saved",
+    "access": "Member",
+    "content": "Private saved list, sort and correction/retraction labels.",
+    "action": "Open or remove bookmark.",
+    "states": "Empty list, optimistic removal rollback, withdrawn saved item."
+  },
+  {
+    "id": "SC12",
+    "name": "Account and reading settings",
+    "route": "/settings",
+    "access": "Member",
+    "content": "Reading preferences, follows, linked identities, sessions, privacy actions.",
+    "action": "Save preferences, revoke session, begin export/deletion.",
+    "states": "Unsaved changes, conflict, storage unavailable, reauthentication required."
+  },
+  {
+    "id": "SC13",
+    "name": "Digest and alert settings",
+    "route": "/settings/notifications",
+    "access": "Member / V1",
+    "content": "Opt-in channels, cadence, timezone, quiet hours, preview, unsubscribe.",
+    "action": "Confirm subscription or stop messages.",
+    "states": "Unverified email, invalid timezone, delivery suppression."
+  },
+  {
+    "id": "SC14",
+    "name": "Report an issue",
+    "route": "Article report dialog or /report",
+    "access": "Public",
+    "content": "Issue type, article/version/claim context, description, optional evidence URL/contact.",
+    "action": "Submit report.",
+    "states": "Invalid input, duplicate, throttled, receipt, offline failure."
+  },
+  {
+    "id": "SC15",
+    "name": "Methodology and editorial policy",
+    "route": "/methodology",
+    "access": "Public",
+    "content": "Sourcing, independence, AI role, review policy, corrections and rights contact.",
+    "action": "Open source directory or report an issue.",
+    "states": "Readable without scripting; anchor navigation."
+  },
+  {
+    "id": "SC16",
+    "name": "Newsroom queue",
+    "route": "/staff/newsroom",
+    "access": "Editor / Publisher",
+    "content": "Assignments, candidate status, risk, blockers, ready-to-review and scheduled work.",
+    "action": "Open a candidate or resume assignment.",
+    "states": "Empty queue, stale assignment, insufficient evidence, service outage."
+  },
+  {
+    "id": "SC17",
+    "name": "Source management",
+    "route": "/staff/sources",
+    "access": "Curator / Rights reviewer",
+    "content": "Sources, endpoint state, approval/rights expiry and health.",
+    "action": "Add source or open governance record.",
+    "states": "Pending review, expired rights, suspended identity, missing credentials."
+  },
+  {
+    "id": "SC18",
+    "name": "Source governance / intake",
+    "route": "/staff/sources/:id",
+    "access": "Curator / Rights reviewer",
+    "content": "Identity, scope, review log, grants, endpoint settings, permissioned input test.",
+    "action": "Approve scope, add grant, run safe intake test, suspend.",
+    "states": "Denied processing, test failure, conflict, required review, secret reference invalid."
+  },
+  {
+    "id": "SC19",
+    "name": "Cluster and origin review",
+    "route": "/staff/clusters/:id",
+    "access": "Editor",
+    "content": "Event timeline, item versions, duplicates, origins and candidate links.",
+    "action": "Split/merge, adjust origins, build evidence pack.",
+    "states": "Possible duplicate event, unknown origin, conflicting dates, stale pack."
+  },
+  {
+    "id": "SC20",
+    "name": "Evidence and article workbench",
+    "route": "/staff/versions/:id",
+    "access": "Editor / Publisher",
+    "content": "Sources/claims pane, draft variants, checks, risk, diff, approvals and preview.",
+    "action": "Edit, validate, submit, approve or publish according to role.",
+    "states": "Unsaved changes, validation failure, stale approval, lock conflict, lost connection."
+  },
+  {
+    "id": "SC21",
+    "name": "Reports, corrections and withdrawal",
+    "route": "/staff/corrections",
+    "access": "Editor / Publisher / Rights reviewer",
+    "content": "Triage queue, affected versions/claims, public change note, purge/deletion state.",
+    "action": "Investigate, correct, withdraw or close report.",
+    "states": "Urgent issue, pending remediation, failed purge, duplicate report, disputed claim."
+  },
+  {
+    "id": "SC22",
+    "name": "Operations and jobs",
+    "route": "/staff/operations",
+    "access": "Operator",
+    "content": "Adapter status, queue age, jobs, dead letters, quotas, kill switches.",
+    "action": "Pause, inspect failure or replay safely.",
+    "states": "Provider outage, quota limit, poison item, deletion overdue."
+  },
+  {
+    "id": "SC23",
+    "name": "Product and quality analytics",
+    "route": "/staff/analytics",
+    "access": "Product / Editor / Operator",
+    "content": "Quality, engagement, source coverage, cost, review time and denominators.",
+    "action": "Filter interval or inspect a metric definition.",
+    "states": "Low sample, no data, delayed pipeline, incomplete interval."
+  },
+  {
+    "id": "SC24",
+    "name": "Staff access and policy controls",
+    "route": "/staff/access",
+    "access": "Administrator",
+    "content": "Role assignments, session revocation, policy versions, audited feature flags.",
+    "action": "Change role or disable feature after reauthentication.",
+    "states": "Forbidden action, missing MFA, stale record, audit failure."
+  },
+  {
+    "id": "SC25",
+    "name": "Privacy request status",
+    "route": "/settings/privacy/:id",
+    "access": "Member",
+    "content": "Export/deletion state, expiry, consequences and secure action.",
+    "action": "Retrieve own export or confirm deletion.",
+    "states": "Pending, ready, expired, failed, canceled before execution."
+  },
+  {
+    "id": "SC26",
+    "name": "System states",
+    "route": "Reusable across routes",
+    "access": "All",
+    "content": "403, 404, withdrawn/410, offline, retryable error and maintenance.",
+    "action": "Retry, navigate safely or read explanation.",
+    "states": "No disclosure of private resource existence; avoid retry loops."
+  },
+  {
+    "id": "SC27",
+    "name": "Suggest a source",
+    "route": "/suggest",
+    "access": "Member / V1",
+    "content": "URL, reason and optional related article.",
+    "action": "Send suggestion to quarantine.",
+    "states": "Duplicate, unsupported URL, submission receipt."
+  },
+  {
+    "id": "SC28",
+    "name": "Collaborative collections",
+    "route": "/collections",
+    "access": "Member / V2",
+    "content": "Private collections, invited collaborators and access settings.",
+    "action": "Create or open collection.",
+    "states": "Invite revoked, expired invite, access denied."
+  },
+  {
+    "id": "SC29",
+    "name": "Paid products",
+    "route": "/plans",
+    "access": "Public / V2",
+    "content": "Future entitlement offer and transparent pricing, only after separate approval.",
+    "action": "No launch action.",
+    "states": "Not included in launch navigation or prototype critical paths."
+  }
+]

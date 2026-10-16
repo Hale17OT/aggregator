@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { fixtureDrafts, createFixtureRepository } from '../packages/test-fixtures/src/index.js';
+import { digest, validateDraft, publicationBlockers, publicProjection, FixtureRepository } from '../packages/domain/src/publication.js';
+const now=new Date('2026-10-12T00:00:00Z');
+test('SC01/SC04: explicit media selection binds approvals but never counts as evidence',()=>{
+  const d=fixtureDrafts()[0]!;const hash=digest(d);assert.ok(d.leadMedia);
+  d.reviews=[{reviewerId:'one',decision:'approve',digest:hash,sequence:1}];d.leadMedia!.caption+=' Changed.';
+  assert.ok(publicationBlockers(d,now).includes('CURRENT_APPROVALS_REQUIRED'));
+  d.sources=d.sources.slice(0,2);assert.ok(validateDraft(d,now).includes('INSUFFICIENT_ITEMS'));
+  const published=createFixtureRepository().get('alderwick-evening-shuttle')!;
+  published.leadMedia!.displayPermitted=false;published.inlineMedia[0]!.media.displayPermitted=false;
+  assert.equal(publicProjection(published,'standard'),null,'Changed media rights invalidate the prior approval');
+  published.reviews=[{reviewerId:'fictional-media-review',decision:'approve',digest:digest(published),sequence:2}];
+  const p=publicProjection(published,'standard')!;assert.equal(p.leadMedia,null);assert.equal(p.inlineMedia.length,1);assert.equal(p.sources.length,4);
+});
+test('F05: missing citation fails and both variants retain all sources',()=>{const d=fixtureDrafts()[0]!;assert.deepEqual(validateDraft(d,now),[]);d.variants.brief[0]!.sourceIds=['nonexistent'];assert.ok(validateDraft(d,now).includes('INVALID_CITATION'));const repo=createFixtureRepository();assert.equal(publicProjection(repo.get('alderwick-evening-shuttle')!,'brief')!.sources.length,4);});
+test('F07/F24: duplicate items and syndicated origins cannot satisfy thresholds',()=>{const d=fixtureDrafts()[0]!;d.sources.forEach(s=>s.originId='one-origin');assert.ok(validateDraft(d,now).includes('INSUFFICIENT_ORIGINS'));d.sources.forEach(s=>s.itemId='same-item');assert.ok(validateDraft(d,now).includes('INSUFFICIENT_ITEMS'));});
+test('F19/F25: revoked or expired rights fail closed',()=>{const d=fixtureDrafts()[0]!;d.sources[0]!.rights.revoked=true;assert.ok(validateDraft(d,now).includes('RIGHTS_INVALID'));d.sources[0]!.rights.revoked=false;d.sources[0]!.rights.expiresAt='2026-01-01T00:00:00Z';assert.ok(validateDraft(d,now).includes('RIGHTS_INVALID'));});
+test('F06: invented or out-of-range timestamps fail',()=>{const d=fixtureDrafts()[0]!;d.sources[3]!.locator!.startMs=200000;assert.ok(validateDraft(d,now).includes('INVALID_LOCATOR'));});
+test('F24: content or evidence changes invalidate approvals',()=>{const d=fixtureDrafts()[0]!;d.reviews=[{reviewerId:'one',decision:'approve',digest:digest(d),sequence:1}];assert.deepEqual(publicationBlockers(d,now),[]);d.deck+=' Changed.';assert.ok(publicationBlockers(d,now).includes('CURRENT_APPROVALS_REQUIRED'));});
+test('F24: latest decision wins and high-risk needs distinct reviewers',()=>{const d=fixtureDrafts()[0]!;d.risk='high';const hash=digest(d);d.reviews=[1,2].map(sequence=>({reviewerId:'one',decision:'approve' as const,digest:hash,sequence}));assert.ok(publicationBlockers(d,now).includes('CURRENT_APPROVALS_REQUIRED'));d.reviews.push({reviewerId:'two',decision:'approve',digest:hash,sequence:3});assert.deepEqual(publicationBlockers(d,now),[]);d.reviews.push({reviewerId:'two',decision:'revoke',digest:hash,sequence:4});assert.ok(publicationBlockers(d,now).includes('CURRENT_APPROVALS_REQUIRED'));});
+test('F24/F27: local publish enforces capability, digest, idempotency; withdrawal suppresses',()=>{const d=fixtureDrafts()[0]!;d.state='in_review';d.reviews=[{reviewerId:'one',decision:'approve',digest:digest(d),sequence:1}];const repo=new FixtureRepository([d]);assert.throws(()=>repo.publish(d.slug,digest(d),0,'key','operator',now),/FORBIDDEN/);assert.throws(()=>repo.publish(d.slug,'stale',0,'key','publisher',now),/STALE/);const result=repo.publish(d.slug,digest(d),0,'key','publisher',now);assert.deepEqual(repo.publish(d.slug,digest(d),0,'key','publisher',now),result);assert.throws(()=>repo.publish(d.slug,'different',0,'key','publisher',now),/IDEMPOTENCY_CONFLICT/);repo.withdraw(d.slug);assert.equal(publicProjection(repo.get(d.slug)!,'brief'),null);});
+test('F03/F17: public projection excludes draft and private fields',()=>{const d=fixtureDrafts()[0]!;assert.equal(publicProjection(d,'standard'),null);const p=publicProjection(createFixtureRepository().get(d.slug)!,'standard')!;const json=JSON.stringify(p);for(const key of ['privateNotes','rights','reviews','originId','reviewed'])assert.ok(!json.includes('"'+key+'"'));});

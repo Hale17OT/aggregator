@@ -1,0 +1,1 @@
+export default defineEventHandler(async (event):Promise<unknown>=>{setResponseHeader(event,'Cache-Control','no-store');return await $fetch<unknown>(`${useRuntimeConfig(event).apiBase}/api/v1/clips`);});

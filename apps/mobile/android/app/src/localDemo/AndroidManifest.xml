@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <application android:networkSecurityConfig="@xml/local_network_security">
+  <activity android:name=".MainActivity">
+   <meta-data android:name="flutter_deeplinking_enabled" android:value="false"/>
+   <intent-filter><action android:name="android.intent.action.VIEW"/><category android:name="android.intent.category.DEFAULT"/><category android:name="android.intent.category.BROWSABLE"/><data android:scheme="aggregator-local" android:host="auth" android:path="/callback"/></intent-filter>
+  </activity>
+ </application>
+</manifest>

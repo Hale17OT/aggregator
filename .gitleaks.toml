@@ -16,3 +16,9 @@ condition = "AND"
 paths = ['''^docs/engineering/flutter-closeout/baseline\.json$''']
 regexTarget = "match"
 regexes = ['''storageKey"\s*:\s*"[a-f0-9]{64}\.(json|mp4|png|svg|vtt|wav|webm)"''']
+[[allowlists]]
+description = "Historical artifact manifests: exact file-path keys mapped to 64-hex SHA256 fingerprints, not API credentials; source contents remain scanned"
+condition = "AND"
+paths = ['''^(docs/engineering/shortform-rebuild/final-artifact\.json|output/targeted-closeout-20261016/baseline/prior-artifact\.json)$''']
+regexTarget = "match"
+regexes = ['''(MediaKey-styles\.p_QWTK3T\.mjs|useApi-CUWMwLLw\.js|MediaKey\.vue|tokens\.json)"\s*:\s*"[a-f0-9]{64}"''']

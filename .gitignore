@@ -17,6 +17,9 @@ playwright-report/
 /docs/engineering/evidence/
 /docs/engineering/flutter-closeout/
 /docs/engineering/shortform-rebuild/
+/docs/engineering/real-news-google-profile/*.json
+!/docs/engineering/real-news-google-profile/acceptance.json
+!/docs/engineering/real-news-google-profile/source-policy-proposal.json
 /docs/engineering/*.json
 !/docs/engineering/dependency-licenses.json
 /scripts/__pycache__/

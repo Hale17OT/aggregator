@@ -1,0 +1,65 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {withDisposableDatabase} from './disposable-database.mjs';
+import {migrations,migrate} from './db-migrations.mjs';
+import pg from 'pg';
+import {randomUUID,randomBytes} from 'node:crypto';
+const checks=[];
+await withDisposableDatabase(async h=>{
+ const db=h.createDatabase('aggregator_identity');migrate(db,migrations('packages/db/migrations'));
+ db.sql("SET ROLE agg_owner;INSERT INTO roles(code,name) VALUES('reader','Reader');");
+ const binding='a'.repeat(64),nonce='b'.repeat(64),proof='c'.repeat(64),csrf='d'.repeat(64);
+ const id='11111111-1111-4111-8111-111111111111',session='22222222-2222-4222-8222-222222222222';
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.start_google_attempt('${id}','native','sign-in','${binding}','${nonce}');`),'t');
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.read_google_attempt('${id}','web','${binding}') IS NULL;`),'t');
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.finish_google_attempt('${id}','native','${binding}','${nonce}','test-subject','fiction@example.test',true,'Reader','${session}','${proof}','${csrf}');`),'t');
+ assert.equal(db.scalar(`SELECT count(*) FROM users WHERE email_normalized IS NOT NULL`),'0');
+ assert.equal(db.scalar(`SELECT count(*) FROM sessions WHERE authentication_method='google' AND assurance='provider-verified' AND mfa_verified_at IS NULL`),'1');
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.finish_google_attempt('${id}','native','${binding}','${nonce}','test-subject','fiction@example.test',true,'Reader','33333333-3333-4333-8333-333333333333','${proof}','${csrf}');`),'f');
+ checks.push('Bound transport and single-use Google session; no email ownership merge or MFA');
+ const webAttempt='55555555-5555-4555-8555-555555555555',webSession='66666666-6666-4666-8666-666666666666';
+ db.sql(`SET ROLE agg_session_runtime;SELECT public.start_google_attempt('${webAttempt}','web','sign-in','${binding}','${'f'.repeat(64)}');`);
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.finish_google_attempt('${webAttempt}','web','${binding}','${'f'.repeat(64)}','test-subject','changed@example.test',true,'Reader','${webSession}','${'3'.repeat(64)}','${csrf}');`),'t');
+ assert.equal(db.scalar('SELECT count(*) FROM public.users'),'1');
+ assert.equal(db.scalar('SELECT count(DISTINCT user_id) FROM public.sessions'),'1');
+ const uid=db.scalar('SELECT id FROM public.users LIMIT 1');
+ db.sql(`UPDATE public.sessions SET created_at=clock_timestamp()-interval '30 minutes' WHERE id='${session}'`);
+ assert.equal(db.scalar(`SET ROLE agg_member;SELECT set_config('aggregator.user_id','${uid}',false);SELECT public.start_google_attempt('77777777-7777-4777-8777-777777777777','native','reauthenticate','${binding}','${'1'.repeat(64)}','${session}');`).split('\n').at(-1),'t');
+ db.sql(`UPDATE public.sessions SET authentication_method='captured-mail',assurance='local-demo' WHERE id='${webSession}'`);
+ assert.equal(db.scalar(`SET ROLE agg_member;SELECT set_config('aggregator.user_id','${uid}',false);SELECT public.start_google_attempt('88888888-8888-4888-8888-888888888888','web','link','${binding}','${'2'.repeat(64)}','${webSession}');`).split('\n').at(-1),'f');
+ checks.push('Same provider subject reuses member across transports; older active Google session can initiate reauthentication; local-mail linking denied');
+ const id2='44444444-4444-4444-8444-444444444444';
+ db.sql(`SET ROLE agg_session_runtime;SELECT public.start_google_attempt('${id2}','web','sign-in','${binding}','${'e'.repeat(64)}');SELECT public.cancel_google_attempt('${id2}','web','${binding}');`);
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.read_google_attempt('${id2}','web','${binding}') IS NULL;`),'t');
+ for(const role of ['agg_member_login','agg_pipeline_login','agg_outsider']) db.reject(`SET ROLE ${role};SELECT * FROM public.reader_auth_attempts`,undefined,'42501');
+ checks.push('Cancellation and restricted direct table access');
+ const pending='99999999-9999-4999-8999-999999999999';
+ db.sql(`SET ROLE agg_session_runtime;SELECT public.start_google_attempt('${pending}','native','sign-in','${binding}','${'9'.repeat(64)}')`);
+ assert.equal(db.scalar(`SET ROLE agg_member;SELECT set_config('aggregator.user_id','${uid}',false);SELECT public.reader_account_action('delete-account','${webSession}')`).split('\n').at(-1),'t');
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.finish_google_attempt('${pending}','native','${binding}','${'9'.repeat(64)}','test-subject','ignored@example.test',true,'Reader','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','${'8'.repeat(64)}','${csrf}')`),'f');
+ assert.equal(db.scalar('SELECT count(*) FROM public.users'),'1');
+ assert.equal(db.scalar('SELECT count(*) FROM public.auth_identities WHERE email_claim IS NOT NULL'),'0');
+ checks.push('Deleted provider subject tombstone rejects an already-open sign-in attempt without recreating the account or retaining its email claim');
+ const clients=[new pg.Client({host:'127.0.0.1',port:h.port,database:'aggregator_identity',user:'agg_bootstrap'}),new pg.Client({host:'127.0.0.1',port:h.port,database:'aggregator_identity',user:'agg_bootstrap'})];
+ const attempts=[randomUUID(),randomUUID()],nonces=[randomBytes(32).toString('hex'),randomBytes(32).toString('hex')],bindings=[randomBytes(32).toString('hex'),randomBytes(32).toString('hex')];
+ try{
+  await Promise.all(clients.map(async(c,i)=>{await c.connect();await c.query('SET ROLE agg_session_runtime');await c.query('SELECT public.start_google_attempt($1,$2,$3,$4,$5)',[attempts[i],i?'native':'web','sign-in',bindings[i],nonces[i]]);}));
+  const results=await Promise.all(clients.map((c,i)=>c.query('SELECT public.finish_google_attempt($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) ok',[attempts[i],i?'native':'web',bindings[i],nonces[i],'concurrent-subject','concurrent@example.test',true,'Concurrent reader',randomUUID(),randomBytes(32).toString('hex'),csrf])));
+  assert(results.every(r=>r.rows[0].ok));
+  assert.equal(db.scalar("SELECT count(*) FROM auth_identities WHERE subject='concurrent-subject'"),'1');
+  assert.equal(db.scalar("SELECT count(*) FROM sessions WHERE user_id=(SELECT user_id FROM auth_identities WHERE subject='concurrent-subject')"),'2');
+  checks.push('Two simultaneous SQL web/native first completions serialize to one provider identity/member and two correctly owned sessions');
+ }finally{await Promise.all(clients.map(c=>c.end()));}
+ const lost=randomUUID(),lostBinding=randomBytes(32).toString('hex'),lostNonce=randomBytes(32).toString('hex');
+ db.sql(`SET ROLE agg_session_runtime;SELECT public.start_google_attempt('${lost}','native','sign-in','${lostBinding}','${lostNonce}');`);
+ db.sql(`CREATE FUNCTION public.test_cancel_google() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN IF NEW.display_name='Canceled signup' THEN UPDATE public.reader_auth_attempts SET consumed_at=clock_timestamp() WHERE id='${lost}'; END IF; RETURN NEW; END $$; CREATE TRIGGER test_cancel_google AFTER INSERT ON public.users FOR EACH ROW EXECUTE FUNCTION public.test_cancel_google();`);
+ assert.equal(db.scalar(`SET ROLE agg_session_runtime;SELECT public.finish_google_attempt('${lost}','native','${lostBinding}','${lostNonce}','canceled-subject','canceled@example.test',true,'Canceled signup','${randomUUID()}','${randomBytes(32).toString('hex')}','${csrf}')`),'f');
+ assert.equal(db.scalar("SELECT count(*) FROM users WHERE display_name='Canceled signup'"),'0');
+ assert.equal(db.scalar("SELECT count(*) FROM auth_identities WHERE subject='canceled-subject'"),'0');
+ db.sql('DROP TRIGGER test_cancel_google ON public.users;DROP FUNCTION public.test_cancel_google();');
+ checks.push('Forced cancellation at final Google attempt recheck rolls back tentative member and provider identity; no session issued');
+});
+writeFileSync('docs/engineering/real-news-google-profile/identity-db.json',JSON.stringify({at:new Date().toISOString(),status:'passed',checks,limits:'Isolated SQL service boundary only; fabricated verified subject is test input, not live Google, HTTP or device proof; concurrent SQL first completion and deterministic recheck fault only.'},null,2));
+console.log(checks.join('\n'));
+
+

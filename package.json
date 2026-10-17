@@ -60,13 +60,14 @@
     "@fontsource/unifrakturmaguntia": "5.3.0",
     "@formkit/auto-animate": "0.10.0",
     "express": "5.3.0",
+    "google-auth-library": "11.3.1",
     "nuxt": "4.6.1",
     "pg": "8.23.1",
     "reka-ui": "2.11.0",
-    "vue": "3.5.43",
-    "zod": "4.6.6",
+    "sax": "1.6.1",
     "ultrahtml": "1.7.0",
-    "sax": "1.6.1"
+    "vue": "3.5.43",
+    "zod": "4.6.6"
   },
   "devDependencies": {
     "@chenglou/pretext": "0.0.9",

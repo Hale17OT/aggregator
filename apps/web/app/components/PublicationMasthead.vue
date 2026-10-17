@@ -21,7 +21,8 @@ onBeforeUnmount(()=>{appearance?.removeEventListener('change',systemChanged);win
   <header class="masthead shell">
     <div class="utility-row"><span>Independent perspectives. Clear sources.</span><NuxtLink class="control control--quiet theme-control" aria-current="false" :to="themeUrl"><span class="control-content"><ControlIcon :name="theme==='light'?'moon':'sun'" />{{ theme==='light'?'Dark theme':'Light theme' }}</span></NuxtLink></div>
     <div class="masthead-name"><NuxtLink class="wordmark" :to="home">The Aggregator</NuxtLink></div>
-    <nav class="topic-nav" aria-label="Formats"><NuxtLink :to="home">Home</NuxtLink><NuxtLink :to="{path:'/radio',query:readerQuery}">Radio</NuxtLink><NuxtLink :to="{path:'/newsroom',query:readerQuery}">Newsroom</NuxtLink><NuxtLink :to="{path:'/clips',query:readerQuery}">Clips</NuxtLink><NuxtLink :to="{path:'/search',query:readerQuery}">Search</NuxtLink><NuxtLink :to="{path:'/library',query:readerQuery}">Member</NuxtLink></nav>
-    <div class="edition-line"><span>Thursday, 8 October 2026</span><span>Fictional development edition · not live news</span></div>
+    <nav class="topic-nav" aria-label="Formats"><NuxtLink :to="home">Home</NuxtLink><NuxtLink :to="{path:'/radio',query:readerQuery}">Radio</NuxtLink><NuxtLink :to="{path:'/newsroom',query:readerQuery}">Newsroom</NuxtLink><NuxtLink :to="{path:'/clips',query:readerQuery}">Clips</NuxtLink><NuxtLink :to="{path:'/search',query:readerQuery}">Search</NuxtLink><NuxtLink :to="{path:'/profile',query:readerQuery}">Profile</NuxtLink></nav>
+    <div class="edition-line"><span>{{ new Date().toLocaleDateString('en-GB',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}) }} · UTC</span><span>Local reader · publisher reports and labelled samples</span></div>
   </header>
 </template>
+

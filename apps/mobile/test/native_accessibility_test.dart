@@ -101,6 +101,10 @@ void main() {
         200,
         scrollable: find.byType(Scrollable).first,
       );
+      // Both wrapped controls must be visible together. Align the first row;
+      // aligning Next at the viewport top can scroll Previous offscreen when
+      // the truthful publisher/sample footer adds content below pagination.
+      await t.ensureVisible(find.text('Previous'));
       await t.pump();
       expect(
         t.takeException(),

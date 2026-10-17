@@ -1,0 +1,583 @@
+{
+  "source": "03_ACCEPTANCE_CHECKLIST.md; requested acceptance_register.json absent on disk",
+  "cases": [
+    {
+      "id": "CFG-01",
+      "criterion": "Actual existing console tab/project and client inventory are inspected; no unauthenticated replacement browser or unrelated project writes.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-02",
+      "criterion": "Web origin and optional redirect bindings match the real app routes and configured security origin; no wildcard/guessed domain.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-03",
+      "criterion": "Android applicationId and signing certificate fingerprint match the delivered flavor; APK file hash is not used as certificate identity.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-04",
+      "criterion": "Android serverClientId and Google token audience use the correct web/backend client.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-05",
+      "criterion": "iOS identifiers/configuration are derived from the existing project; native build/device work is not inferred from console creation.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-06",
+      "criterion": "Only required basic identity scopes and necessary project-specific settings are changed; no billing/IAM/production-consent expansion.",
+      "status": "PASS",
+      "evidence": [
+        "docs/execution/GOOGLE_CONFIGURATION.md; actual existing Console inspection and derived client/certificate configuration; iOS source only"
+      ]
+    },
+    {
+      "id": "CFG-07",
+      "criterion": "Client secrets/tokens/account screenshots are absent from source, frontend/APK, logs, captures and handoff.",
+      "status": "PARTIAL",
+      "evidence": [
+        "See current handoff: actual local checks separated from unverified Google/provider/device gates; secret scan passed after documented historical hash false-positive classification;11high dependency findings remain"
+      ]
+    },
+    {
+      "id": "CFG-08",
+      "criterion": "Original APKs, member data, migration history and 23 renditions/93 original media hashes remain preserved.",
+      "status": "PASS",
+      "evidence": [
+        "preservation-after-r4.json; retained-upgrade-r7.json; original migration checksums, member row digests and23/93 media unchanged"
+      ]
+    },
+    {
+      "id": "AUTH-01",
+      "criterion": "Signature, algorithm, issuer, audience, expiry and actual request binding are verified server-side before app-session issuance.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Implemented verification/attempt/session contracts; unit and isolated SQL evidence. Live Google, comprehensive simultaneous registration and transport-fault tests not completed; old503 remains open"
+      ]
+    },
+    {
+      "id": "AUTH-02",
+      "criterion": "Wrong audience/issuer/signature/nonce, expired and replayed credentials cannot issue or link a session.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Implemented verification/attempt/session contracts; unit and isolated SQL evidence. Live Google, comprehensive simultaneous registration and transport-fault tests not completed; old503 remains open"
+      ]
+    },
+    {
+      "id": "AUTH-03",
+      "criterion": "Second sign-in, logout/sign-in, canceled retry and account switch work within one native process without invalid singleton reinitialization.",
+      "status": "BLOCKED",
+      "evidence": [
+        "Owner interactive real Google login/MFA/consent pending. Basic openid/email/profile is exempt from Testing allowlist; zero test users not itself a blocker. No provider success claimed."
+      ]
+    },
+    {
+      "id": "AUTH-04",
+      "criterion": "Concurrent first Google sign-ins on web/native create one member identity and do not overwrite defaults/preferences.",
+      "status": "PASS",
+      "evidence": [
+        "identity-db.json and google-identity.test.ts; isolated server/SQL checks, no live Google claim"
+      ]
+    },
+    {
+      "id": "AUTH-05",
+      "criterion": "The same Google subject resolves to the same member on both clients using separate protected app sessions.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Implemented verification/attempt/session contracts; unit and isolated SQL evidence. Live Google, comprehensive simultaneous registration and transport-fault tests not completed; old503 remains open"
+      ]
+    },
+    {
+      "id": "AUTH-06",
+      "criterion": "Email/name matching alone cannot merge an existing or fixture member into a real Google account.",
+      "status": "PASS",
+      "evidence": [
+        "identity-db.json and google-identity.test.ts; isolated server/SQL checks, no live Google claim"
+      ]
+    },
+    {
+      "id": "AUTH-07",
+      "criterion": "Explicit provider linking requires proof of the existing account and new Google identity, with uniqueness enforced.",
+      "status": "PARTIAL",
+      "evidence": [
+        "No email-only merge. Captured-mail identity cannot link real Google. Deliberate Google link SQL exists, but connected link/unlink UI and live fresh-proof journey remain incomplete; no last-method removal action exposed"
+      ]
+    },
+    {
+      "id": "AUTH-08",
+      "criterion": "Removing the last functioning login method is rejected; provider disconnect and app logout are distinct.",
+      "status": "PARTIAL",
+      "evidence": [
+        "No email-only merge. Captured-mail identity cannot link real Google. Deliberate Google link SQL exists, but connected link/unlink UI and live fresh-proof journey remain incomplete; no last-method removal action exposed"
+      ]
+    },
+    {
+      "id": "AUTH-09",
+      "criterion": "Google reader sessions cannot satisfy staff/MFA/publisher gates or derive authority from cloud-project roles.",
+      "status": "PASS",
+      "evidence": [
+        "identity-db.json and google-identity.test.ts; isolated server/SQL checks, no live Google claim"
+      ]
+    },
+    {
+      "id": "AUTH-10",
+      "criterion": "Google/JWK calls occur outside database account locks; concurrency/lock-timeout paths fail safely without blind mutation retry.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Implemented verification/attempt/session contracts; unit and isolated SQL evidence. Live Google, comprehensive simultaneous registration and transport-fault tests not completed; old503 remains open"
+      ]
+    },
+    {
+      "id": "AUTH-11",
+      "criterion": "Account disablement/revocation, canceled exchanges and obsolete responses cannot resume protected operations.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Implemented verification/attempt/session contracts; unit and isolated SQL evidence. Live Google, comprehensive simultaneous registration and transport-fault tests not completed; old503 remains open"
+      ]
+    },
+    {
+      "id": "AUTH-12",
+      "criterion": "User-selected display name is preserved; provider email provenance is not fabricated as verified external-email delivery.",
+      "status": "PASS",
+      "evidence": [
+        "identity-db.json and google-identity.test.ts; isolated server/SQL checks, no live Google claim"
+      ]
+    },
+    {
+      "id": "CLIENT-01",
+      "criterion": "Actual GIS web button completes owner-assisted real Google verification and a server-issued app session.",
+      "status": "BLOCKED",
+      "evidence": [
+        "Owner interactive real Google login/MFA/consent pending. Basic openid/email/profile is exempt from Testing allowlist; zero test users not itself a blocker. No provider success claimed."
+      ]
+    },
+    {
+      "id": "CLIENT-02",
+      "criterion": "Web anti-login-CSRF/request binding, cookie attributes and exact origin policy remain enforced.",
+      "status": "PASS",
+      "evidence": [
+        "Existing preauth CSRF/exact Origin checks retained; no owner password/MFA/account-chooser recording"
+      ]
+    },
+    {
+      "id": "CLIENT-03",
+      "criterion": "Native Android button invokes official account selection, not an Aggregator website/Chrome/WebView login flow.",
+      "status": "PASS",
+      "evidence": [
+        "native-google-entry.json: actual normal-main r4 input reached com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity. No Chrome/Aggregator website/WebView. Agent did not select an account or capture provider screen; completion pending owner."
+      ]
+    },
+    {
+      "id": "CLIENT-04",
+      "criterion": "Native account chooser success reaches backend verification and real Profile or first-account interests.",
+      "status": "BLOCKED",
+      "evidence": [
+        "Owner interactive real Google login/MFA/consent pending. Basic openid/email/profile is exempt from Testing allowlist; zero test users not itself a blocker. No provider success claimed."
+      ]
+    },
+    {
+      "id": "CLIENT-05",
+      "criterion": "No account, cancellation, required reauthentication and missing services have usable truthful outcomes without endless loops.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Official Credential Manager adapter installed; captured-code session survives in-place update and app restart. Google selector/cancel/account switch success not owner-verified"
+      ]
+    },
+    {
+      "id": "CLIENT-06",
+      "criterion": "Native session persists in approved secure storage and works after API/app restart; logout does not instantly auto-login.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Official Credential Manager adapter installed; captured-code session survives in-place update and app restart. Google selector/cancel/account switch success not owner-verified"
+      ]
+    },
+    {
+      "id": "CLIENT-07",
+      "criterion": "No password/MFA/CAPTCHA is automated or captured; personal identity screens are not included in review recordings.",
+      "status": "PASS",
+      "evidence": [
+        "Existing preauth CSRF/exact Origin checks retained; no owner password/MFA/account-chooser recording"
+      ]
+    },
+    {
+      "id": "CLIENT-08",
+      "criterion": "iOS official system authentication behavior and build/device evidence are independently reported, including unavailable tests.",
+      "status": "BLOCKED",
+      "evidence": [
+        "Official iOS9.0.0 SDK/config source exists; no macOS/Xcode/iPhone verification"
+      ]
+    },
+    {
+      "id": "EMAIL-01",
+      "criterion": "Native email authentication ends with in-app code entry rather than requiring website confirmation.",
+      "status": "PASS",
+      "evidence": [
+        "native-code-db.json, native-code-http.json, installed r3 app input sequence reached Profile; captured example.test only, no external delivery"
+      ]
+    },
+    {
+      "id": "EMAIL-02",
+      "criterion": "Code verifier, challenge binding, expiry, resend invalidation, attempt limits and rate limits are enforced server-side.",
+      "status": "PASS",
+      "evidence": [
+        "native-code-db.json, native-code-http.json, installed r3 app input sequence reached Profile; captured example.test only, no external delivery"
+      ]
+    },
+    {
+      "id": "EMAIL-03",
+      "criterion": "Concurrent verification consumes a code only once; codes never appear in requesting-app responses or logs.",
+      "status": "PASS",
+      "evidence": [
+        "Separate concurrent SQL redemptions issue exactly one session; HMAC HTTP exchange/code non-disclosure checked. Ambiguous COMMIT transport fault matrix remains separate and incomplete"
+      ]
+    },
+    {
+      "id": "EMAIL-04",
+      "criterion": "Captured-mail testing is distinct from approved external delivery; no unconfigured sender is advertised as operational.",
+      "status": "PASS",
+      "evidence": [
+        "native-code-db.json, native-code-http.json, installed r3 app input sequence reached Profile; captured example.test only, no external delivery"
+      ]
+    },
+    {
+      "id": "PROFILE-01",
+      "criterion": "Both web and Flutter have a discoverable dedicated Profile destination, not only an overflow menu.",
+      "status": "PASS",
+      "evidence": [
+        "Actual web/native Profile and reused contracts; local initials only, no remote avatar fetch/upload"
+      ]
+    },
+    {
+      "id": "PROFILE-02",
+      "criterion": "Profile exposes account, interests, reading/appearance, media, sessions and privacy/data sections using real contracts.",
+      "status": "PASS",
+      "evidence": [
+        "Actual web/native Profile and reused contracts; local initials only, no remote avatar fetch/upload"
+      ]
+    },
+    {
+      "id": "PROFILE-03",
+      "criterion": "Google-connected account fields and member-editable display values have clear independent semantics.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-04",
+      "criterion": "Existing hierarchical interest tiles, team/competition scopes, mutes, skip and onboarding state remain coherent.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-05",
+      "criterion": "Profile preference edits on mobile appear on web, persist across restart and preserve unavailable rendition choices honestly.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-06",
+      "criterion": "Pending/failed/conflicting saves retain drafts and cannot overwrite a newer account or profile revision.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Actual Chrome Profile409 retained Unsaved conflict draft;320x700 geometry no horizontal overflow. Native epoch guards source-reviewed and HTTP stale409 passed; full account-switch race UI matrix incomplete."
+      ]
+    },
+    {
+      "id": "PROFILE-07",
+      "criterion": "Session list/current-device labels are truthful; revoke-other-session actions are owner-scoped and recently authenticated.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-08",
+      "criterion": "Export contains only the requesting member’s permitted data, no tokens/private source payloads, and has bounded delivery/cleanup.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-09",
+      "criterion": "Deletion invalidates sessions and owned data according to policy; tests use disposable members and never the owner’s account.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-10",
+      "criterion": "History clearing cannot be undone by a late playback-progress write; provider restore cannot silently recreate a deleted account.",
+      "status": "PARTIAL",
+      "evidence": [
+        "connected-http.json three actual service passes; native/web display-name observation; isolated deletion/tombstone checks. Google fields/live cross-account races, large export pagination and full concurrent history clear not fully verified; session list capped100 and export refuses boundary"
+      ]
+    },
+    {
+      "id": "PROFILE-11",
+      "criterion": "Avatar handling uses initials or validated provider data, not unrestricted image URLs or sensitive-data upload.",
+      "status": "PASS",
+      "evidence": [
+        "Actual web/native Profile and reused contracts; local initials only, no remote avatar fetch/upload"
+      ]
+    },
+    {
+      "id": "PROFILE-12",
+      "criterion": "Both themes, long names, keyboard/semantics, large text and narrow layouts are inspected; unavailable device/reviewer gates remain open.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Full-viewport desktop Home/native Profile inspected; complete themes/large-text/keyboard/Profile error-state matrix not completed"
+      ]
+    },
+    {
+      "id": "NEWS-01",
+      "criterion": "At least two suitable real providers are attempted through verified terms/permissions; actual successful coverage is reported.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-02",
+      "criterion": "Live intake performs real network requests and durable imports, not only copied fixtures or mocks.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-03",
+      "criterion": "Source permissions separately cover metadata, text/excerpts, reproduction, synthesis, visuals, narration and video.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-04",
+      "criterion": "Article-level exceptions, author/original-source attribution, primary-vs-independent status and media credits are retained.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-05",
+      "criterion": "Unlicensed or restricted providers are disabled with exact reasons; an API key/RSS endpoint is not treated as blanket permission.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-06",
+      "criterion": "Outbound source destination/redirect/DNS/connection checks reject private and metadata targets without disabling local app transport.",
+      "status": "PARTIAL",
+      "evidence": [
+        "live-fetch.test.ts and live-db.json: destination classifier, bounded fetch/parser, concurrent idempotence, A→B→A denial/restoration, raw/body forgery and revocation. Full controlled socket/redirect/rate-limit fault matrix and publisher correction notices not completed"
+      ]
+    },
+    {
+      "id": "NEWS-07",
+      "criterion": "No Google credentials, member cookies, email or private headers are sent to news providers.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-08",
+      "criterion": "Payload type/size/decompression/deadline and safe parser limits reject hostile or incomplete material.",
+      "status": "PARTIAL",
+      "evidence": [
+        "live-fetch.test.ts and live-db.json: destination classifier, bounded fetch/parser, concurrent idempotence, A→B→A denial/restoration, raw/body forgery and revocation. Full controlled socket/redirect/rate-limit fault matrix and publisher correction notices not completed"
+      ]
+    },
+    {
+      "id": "NEWS-09",
+      "criterion": "Conditional requests, provider quotas, 429/Retry-After, bounded retry and idempotent updates are tested.",
+      "status": "PARTIAL",
+      "evidence": [
+        "live-observations.json and intake-1792198033667.json: actual NASA304 and cached durable reuse; Global Voices SOURCE_NETWORK_FAILURE, prior13eligible reports retained. Controlled429/redirect/socket-fault matrix incomplete; no quota bypass."
+      ]
+    },
+    {
+      "id": "NEWS-10",
+      "criterion": "Actual publication/update/fetch dates, canonical IDs and revisions survive restart without dates being refreshed artificially.",
+      "status": "PARTIAL",
+      "evidence": [
+        "live-fetch.test.ts and live-db.json: destination classifier, bounded fetch/parser, concurrent idempotence, A→B→A denial/restoration, raw/body forgery and revocation. Full controlled socket/redirect/rate-limit fault matrix and publisher correction notices not completed"
+      ]
+    },
+    {
+      "id": "NEWS-11",
+      "criterion": "Correction/removal/rights expiry invalidate relevant editions/search/saved projections while keeping proper tombstones.",
+      "status": "PARTIAL",
+      "evidence": [
+        "live-fetch.test.ts and live-db.json: destination classifier, bounded fetch/parser, concurrent idempotence, A→B→A denial/restoration, raw/body forgery and revocation. Full controlled socket/redirect/rate-limit fault matrix and publisher correction notices not completed"
+      ]
+    },
+    {
+      "id": "NEWS-12",
+      "criterion": "Live originals/links and private synthesized drafts have explicit distinct projections; no invented reviews or publication bypass.",
+      "status": "PASS",
+      "evidence": [
+        "REAL_NEWS_SOURCE_RIGHTS_REVIEW.md; actual HTTPS intake reports; exact reviewed text representation projection.13accepted/12held; no synthesis/media grant"
+      ]
+    },
+    {
+      "id": "NEWS-13",
+      "criterion": "Real multi-source candidates concern the same development; mirrors/reprints and an aggregator provider do not inflate independence.",
+      "status": "BLOCKED",
+      "evidence": [
+        "No reviewed synthesis purpose grant or qualifying same-development three-item/two-origin set. Private pipeline remains private; unrelated reports not combined"
+      ]
+    },
+    {
+      "id": "NEWS-14",
+      "criterion": "The live worker is supervised and configurable, not a hidden OS background task or arbitrary-URL public endpoint.",
+      "status": "PASS",
+      "evidence": [
+        "Existing owned worker integration and explicit local config implemented; see final worker health for actual supervised execution"
+      ]
+    },
+    {
+      "id": "READ-01",
+      "criterion": "Web Home and native Home show actually retrieved permitted source items in the existing newspaper composition.",
+      "status": "PASS",
+      "evidence": [
+        "Actual native/web live13collection and source details; connected-http.json typed source save seen cross-client; sample media retained separately and no live Watch/Listen mapping"
+      ]
+    },
+    {
+      "id": "READ-02",
+      "criterion": "Category/search/personalization/pagination operate on the live collection and remain stable and meaningfully tagged.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Live SSR/category/search and shared Science preference checks; actual detail inspection. Complete browser pagination/history/offline/withdrawal journey matrix not completed"
+      ]
+    },
+    {
+      "id": "READ-03",
+      "criterion": "Publisher text, headline-only links, licensed adaptations and Aggregator synthesis are visibly and structurally distinguished.",
+      "status": "PASS",
+      "evidence": [
+        "Actual native/web live13collection and source details; connected-http.json typed source save seen cross-client; sample media retained separately and no live Watch/Listen mapping"
+      ]
+    },
+    {
+      "id": "READ-04",
+      "criterion": "Current real stories are not mixed with invented demo events or relabeled sample programme assets.",
+      "status": "PASS",
+      "evidence": [
+        "Actual native/web live13collection and source details; connected-http.json typed source save seen cross-client; sample media retained separately and no live Watch/Listen mapping"
+      ]
+    },
+    {
+      "id": "READ-05",
+      "criterion": "Source detail/original links and complete applicable attribution work on web/native, including anonymous SSR reading.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Live SSR/category/search and shared Science preference checks; actual detail inspection. Complete browser pagination/history/offline/withdrawal journey matrix not completed"
+      ]
+    },
+    {
+      "id": "READ-06",
+      "criterion": "A real live source item can be saved using its stable typed identity and seen from the other client without fabricated article FKs.",
+      "status": "PASS",
+      "evidence": [
+        "Actual native/web live13collection and source details; connected-http.json typed source save seen cross-client; sample media retained separately and no live Watch/Listen mapping"
+      ]
+    },
+    {
+      "id": "READ-07",
+      "criterion": "No live-story Watch/Listen button plays an unrelated sample; retained recordings remain accurately labeled.",
+      "status": "PASS",
+      "evidence": [
+        "Actual native/web live13collection and source details; connected-http.json typed source save seen cross-client; sample media retained separately and no live Watch/Listen mapping"
+      ]
+    },
+    {
+      "id": "READ-08",
+      "criterion": "Transient provider failures show freshness/empty states, not silent fiction or expired-permission content.",
+      "status": "PARTIAL",
+      "evidence": [
+        "Live SSR/category/search and shared Science preference checks; actual detail inspection. Complete browser pagination/history/offline/withdrawal journey matrix not completed"
+      ]
+    },
+    {
+      "id": "FINAL-01",
+      "criterion": "Integrated Google/Profile/live-news journeys run against actual services; mock security tests are separately labeled.",
+      "status": "PARTIAL",
+      "evidence": [
+        "See current handoff: actual local checks separated from unverified Google/provider/device gates; secret scan passed after documented historical hash false-positive classification;11high dependency findings remain"
+      ]
+    },
+    {
+      "id": "FINAL-02",
+      "criterion": "Retained upgrades pass backup/clone/upgrade/preservation verification before mutation; no reset or checksum rewrite.",
+      "status": "PASS",
+      "evidence": [
+        "preservation-after-r4.json; retained-upgrade-r7.json; original migration checksums, member row digests and23/93 media unchanged"
+      ]
+    },
+    {
+      "id": "FINAL-03",
+      "criterion": "Web/native build and regression commands are recorded for the actual candidate; old failures are not relabeled.",
+      "status": "PARTIAL",
+      "evidence": [
+        "See current handoff: actual local checks separated from unverified Google/provider/device gates; secret scan passed after documented historical hash false-positive classification;11high dependency findings remain"
+      ]
+    },
+    {
+      "id": "FINAL-04",
+      "criterion": "A new main-entry signed-compatible APK is installed in place and its hash verified separately from instrumentation.",
+      "status": "PASS",
+      "evidence": [
+        "New normal lib/main.dart localDemo r4 APK installed-r without data clearing; pulled installed APK matches A60C15ECBAB741E8C228F3093C03595FF9440A6D8E54605BACC251BABB2EFA31"
+      ]
+    },
+    {
+      "id": "FINAL-05",
+      "criterion": "Console changes, current sources/use rights, item/date coverage, app routes and all remaining owner actions are documented safely.",
+      "status": "PARTIAL",
+      "evidence": [
+        "See current handoff: actual local checks separated from unverified Google/provider/device gates; secret scan passed after documented historical hash false-positive classification;11high dependency findings remain"
+      ]
+    },
+    {
+      "id": "FINAL-06",
+      "criterion": "Secret/dependency/license findings and existing performance/human/platform gates remain truthful; no automatic push/deployment.",
+      "status": "PARTIAL",
+      "evidence": [
+        "See current handoff: actual local checks separated from unverified Google/provider/device gates; secret scan passed after documented historical hash false-positive classification;11high dependency findings remain"
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-17T00:46:05.587Z",
+  "scope": "No blanket completion: implementation, local verification and owner acceptance remain separate."
+}

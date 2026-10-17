@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+const web='http://127.0.0.1:3000';
+const checks=[];
+const get=async url=>{const r=await fetch(url);assert.equal(r.status,200,url);return r;};
+const home=await(await get(web+'/')).text();
+assert(home.includes('NASA Names Stephen Cash'));assert(home.includes('Attributed publisher reporting'));assert(home.includes('The Aggregator'));
+checks.push('Anonymous Home SSR contains actual imported reporting and newspaper');
+const category=await(await get(web+'/?topic=science')).text();assert(category.includes('5 matching stories'));
+const search=await(await get(web+'/?topic=science&q=Marshall')).text();assert(search.includes('1 matching stor'));assert(search.includes('NASA Names Stephen Cash'));
+checks.push('Anonymous SSR category/search intersection filters eligible live collection before pagination');
+const article=await(await get(web+'/articles/publisher-29f45459-1969-4eca-a5f5-a1e890b45bca')).text();
+assert(article.includes('nasa.gov'));assert(article.includes('This is not Aggregator synthesis'));assert(!/href="\/(radio|newsroom)[^" ]*programme/.test(article));
+checks.push('Anonymous full publisher text/attribution/original link; no unrelated programme deep link');
+const health=await(await get('http://127.0.0.1:4000/health')).json();assert(health);
+writeFileSync('docs/engineering/real-news-google-profile/reader-http.json',JSON.stringify({at:new Date().toISOString(),checks,limits:'HTTP/SSR checks, not visual, Google or media playback proof'},null,2));console.log(checks);

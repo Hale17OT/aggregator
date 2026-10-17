@@ -2,6 +2,7 @@ import { Pool, type PoolClient, type PoolConfig } from 'pg';
 import { readFileSync, realpathSync } from 'node:fs';
 import { resolve, sep } from 'node:path';
 import { AccessError, type Account, type IdentityRepository, type SessionRecord } from '../../domain/src/identity.js';
+import {publisherProjection,type SourceReaderRow} from '../../domain/src/publisher-reader.js';
 import type { MemberRepository, Bookmark } from '../../domain/src/member.js';
 import type { MemberUnitOfWork } from '../../domain/src/member-unit.js';
 import type { Preferences, PreferencesPatch,ListeningProgress } from '../../contracts/src/member.js';
@@ -28,6 +29,26 @@ const progress=(r:Record<string,unknown>):ListeningProgress=>({programmeId:Strin
 const bookmark=(r:Record<string,unknown>):Bookmark=>({userId:String(r.user_id),articleId:String(r.article_id),savedVersionId:String(r.saved_version_id),createdAt:new Date(r.created_at as string).toISOString()});
 
 export class PostgresMemberRepository implements IdentityRepository,MemberRepository {
+  async sourceBookmarks(userId:string){const current=(await this.client.query('SELECT public.reader_source_items() items')).rows[0].items as SourceReaderRow[];return (await this.client.query('SELECT * FROM public.source_bookmarks WHERE user_id=$1 ORDER BY created_at DESC',[userId])).rows.map(b=>{const source=current.find(s=>s.id===b.item_id);const a=source?publisherProjection(source):null;return {kind:'publisher-source',articleId:b.item_id,savedVersionId:b.saved_version_id,createdAt:b.created_at,status:a?'available':'unavailable',article:a?{id:a.id,versionId:a.versionId,slug:a.slug,headline:a.headline,correction:a.correction}:null};});}
+  async saveSource(userId:string,id:string){const current=(await this.client.query('SELECT public.reader_source_items() items')).rows[0].items as SourceReaderRow[];const row=current.find(s=>s.id===id);if(!row)return null;await this.client.query('INSERT INTO public.source_bookmarks(user_id,item_id,saved_version_id) VALUES($1,$2,$3) ON CONFLICT DO NOTHING',[userId,id,row.versionId]);return {kind:'publisher-source',articleId:id,savedVersionId:row.versionId};}
+  async removeSource(userId:string,id:string){await this.client.query('DELETE FROM public.source_bookmarks WHERE user_id=$1 AND item_id=$2',[userId,id]);}
+  async profile(){return (await this.client.query('SELECT public.reader_profile() value')).rows[0].value;}
+  async exportData(userId:string){
+    const account=await this.profile();
+    // reader_profile intentionally caps sessions at100. Refuse the boundary too,
+    // because that capped projection cannot prove whether more rows exist.
+    if(account.sessions.length>=100)throw new AccessError(413,'EXPORT_PAGINATION_REQUIRED');
+    const result:Record<string,unknown>={format:'aggregator-member-export/1',generatedAt:new Date().toISOString(),account};
+    // Fixed member-owned tables only; no media scan, source payload or token table.
+    for(const table of ['user_preferences','topic_follows','interest_states','bookmarks','source_bookmarks','listening_queues','listening_progress']){
+      const rows=(await this.client.query(`SELECT * FROM public.${table} WHERE user_id=$1 LIMIT 101`,[userId])).rows;
+      if(rows.length>100)throw new AccessError(413,'EXPORT_PAGINATION_REQUIRED');result[table]=rows;
+    }
+    const consents=(await this.client.query('SELECT public.reader_consent_export() value')).rows[0].value;if(consents.length>100)throw new AccessError(413,'EXPORT_PAGINATION_REQUIRED');result.consents=consents;
+    return {...result,notes:'Private member snapshot; at most100 records per collection. Larger exports require pagination and are refused without truncation. No server export file is created. Source bookmarks are references, not restricted publisher payloads.'};
+  }
+  async accountAction(action:'revoke-other'|'delete-account',sessionId:string,target?:string){if(!(await this.client.query('SELECT public.reader_account_action($1,$2,$3) ok',[action,sessionId,target??null])).rows[0].ok)throw new AccessError(403,'RECENT_SIGN_IN_REQUIRED');}
+  async editProfile(revision:number,name:string){if(!(await this.client.query('SELECT public.edit_reader_profile($1,$2) ok',[revision,name])).rows[0].ok)throw new AccessError(409,'REVISION_CONFLICT');return this.profile();}
   private currentAccount?:Account;private selected?:SessionRecord;
   constructor(readonly client:PoolClient){}
   async session(id:string){

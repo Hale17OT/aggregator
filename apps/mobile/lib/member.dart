@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:crypto/crypto.dart';
@@ -52,6 +53,42 @@ class MemberState extends ChangeNotifier {
   StreamSubscription<Uri>? links;
   void Function(String)? onNavigate;
   int authEpoch = 0;
+  bool signingIn = false;
+  Future<void> acceptCodeCredential(String credential, int epoch) async {
+    if (epoch != authEpoch) return;
+    await stored(() async {
+      if (epoch != authEpoch) return;
+      await storage.write(key: 'native-session', value: credential);
+      if (epoch != authEpoch) await storage.delete(key: 'native-session');
+    });
+    if (epoch != authEpoch) return;
+    api.clear();
+    api.credential = credential;
+    final current = await api.request('/api/v1/me/session', member: true);
+    if (epoch != authEpoch) return;
+    session = current;
+    error = null;
+    notifyListeners();
+    try {
+      final prefs = await api.request('/api/v1/me/preferences', member: true);
+      if (epoch != authEpoch) return;
+      applyPreferences(prefs);
+      final interests = await api.request('/api/v1/me/interests', member: true);
+      if (epoch == authEpoch) {
+        onNavigate?.call(
+          interests['status'] == 'not_started' ? '/interests' : '/profile',
+        );
+      }
+    } catch (_) {
+      if (epoch == authEpoch) {
+        error =
+            'Signed in. Preferences or interests could not be loaded; retry them in Profile.';
+        notifyListeners();
+        onNavigate?.call('/profile');
+      }
+    }
+  }
+
   Future<void> storageTail = Future.value();
   Future<void> stored(Future<void> Function() action) {
     final work = storageTail.then((_) => action());
@@ -97,6 +134,64 @@ class MemberState extends ChangeNotifier {
     List<int>.generate(32, (_) => Random.secure().nextInt(256)),
   ).replaceAll('=', '');
   Future<void> signIn() async {
+    if (signingIn) return;
+    signingIn = true;
+    notifyListeners();
+    final epoch = ++authEpoch;
+    final proof = List<int>.generate(
+      32,
+      (_) => Random.secure().nextInt(256),
+    ).map((v) => v.toRadixString(16).padLeft(2, '0')).join();
+    String? attempt;
+    try {
+      final started = await api.request(
+        '/api/v1/native/auth/google/start',
+        method: 'POST',
+        body: {'proof': proof, 'action': 'sign-in'},
+      );
+      attempt = started['id'];
+      if (epoch != authEpoch) return;
+      final token = await const MethodChannel('aggregator/google-identity')
+          .invokeMethod<String>('signIn', {
+            'nonce': started['nonce'],
+            'serverClientId': started['serverClientId'],
+          });
+      if (epoch != authEpoch || token == null) return;
+      final result = await api.request(
+        '/api/v1/native/auth/google/exchange',
+        method: 'POST',
+        body: {'id': attempt, 'proof': proof, 'credential': token},
+      );
+      if (epoch != authEpoch) return;
+      await acceptCodeCredential(result['credential'], epoch);
+    } on PlatformException catch (e) {
+      if (epoch == authEpoch) {
+        error = e.code == 'cancelled'
+            ? 'Sign-in cancelled.'
+            : 'Google sign-in unavailable. Check the account selector and local service.';
+        notifyListeners();
+      }
+    } catch (_) {
+      if (epoch == authEpoch) {
+        error = 'Google sign-in could not finish. Start a new attempt.';
+        notifyListeners();
+      }
+    } finally {
+      if (attempt != null) {
+        try {
+          await api.request(
+            '/api/v1/native/auth/google/cancel',
+            method: 'POST',
+            body: {'id': attempt, 'proof': proof},
+          );
+        } catch (_) {}
+      }
+      signingIn = false;
+      notifyListeners();
+    }
+  }
+
+  Future<void> legacyBrowserSignIn() async {
     final epoch = ++authEpoch;
     try {
       verifier = random();
@@ -237,6 +332,16 @@ class MemberState extends ChangeNotifier {
       failure =
           'Signed out in memory; secure-storage removal failed. Retry sign-out before closing the app.';
     }
+    try {
+      await const MethodChannel(
+        'aggregator/google-identity',
+      ).invokeMethod<void>('signOut');
+    } catch (_) {
+      failure = [
+        ?failure,
+        'Google selector state could not be cleared; your Google account was not removed.',
+      ].join(' ');
+    }
     if (epoch != authEpoch) return;
     error = failure;
     notifyListeners();
@@ -296,16 +401,24 @@ class _LibraryState extends State<LibraryPage> {
             child: const Text('Clear local sign-in again'),
           ),
         const Text(
-          'Sign in through the local captured mailbox to keep stories and interests across the web and this app. This does not deliver external email.',
+          'Use Google to keep stories and interests across the web and this app. Google sign-in does not grant editorial or staff access.',
         ),
         const SizedBox(height: 12),
         FilledButton.icon(
-          onPressed: member.signIn,
+          onPressed: member.signingIn ? null : member.signIn,
           icon: const Icon(Icons.login),
-          label: const Text('Sign in in your browser'),
+          label: const Text('Continue with Google'),
+        ),
+        TextButton(
+          onPressed: () => context.push('/sign-in/code'),
+          child: const Text('Local captured-mail code (example.test only)'),
         ),
       ] else ...[
         Text('Signed in as ${member.session!['user']['displayName']}'),
+        OutlinedButton(
+          onPressed: () => context.push('/profile'),
+          child: const Text('Profile'),
+        ),
         Wrap(
           spacing: 12,
           children: [

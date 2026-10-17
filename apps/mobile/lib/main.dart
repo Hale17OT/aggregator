@@ -9,6 +9,8 @@ import 'media.dart';
 import 'reader.dart';
 import 'players.dart';
 import 'member.dart';
+import 'profile.dart';
+import 'code_sign_in.dart';
 import 'preferences.dart';
 import 'listening_sync.dart';
 
@@ -83,6 +85,11 @@ Future<void> main() async {
             ),
           ),
           GoRoute(path: '/library', builder: (c, s) => const LibraryPage()),
+          GoRoute(path: '/profile', builder: (c, s) => const ProfilePage()),
+          GoRoute(
+            path: '/sign-in/code',
+            builder: (c, s) => const CodeSignInPage(),
+          ),
           GoRoute(path: '/interests', builder: (c, s) => const InterestsPage()),
           GoRoute(
             path: '/preferences',
@@ -195,7 +202,15 @@ class ReaderShell extends StatelessWidget {
   static const paths = ['/', '/radio', '/newsroom', '/clips', '/library'];
   @override
   Widget build(BuildContext context) {
-    final index = paths.indexOf(location);
+    final index =
+        [
+          '/profile',
+          '/preferences',
+          '/interests',
+          '/sign-in/code',
+        ].contains(location)
+        ? 4
+        : paths.indexOf(location);
     final shortform = location == '/clips';
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: shortform || Theme.of(context).brightness == Brightness.dark
@@ -206,6 +221,11 @@ class ReaderShell extends StatelessWidget {
         appBar: shortform
             ? null
             : AppBar(
+                leading: IconButton(
+                  tooltip: 'Profile',
+                  onPressed: () => context.push('/profile'),
+                  icon: const Icon(Icons.person_outline),
+                ),
                 title: const Text(
                   'The Aggregator',
                   style: TextStyle(fontFamily: 'Masthead', fontSize: 29),

@@ -23,6 +23,6 @@ export interface ListeningProgress {programmeId:string;renditionKey:string;posit
 export interface ListeningState {revision:number;queue:string[];progress:ListeningProgress[];}
 
 export interface SessionView {
-  user:{id:string;displayName:string}; authenticationMethod:'fixture'|'captured-mail'; assurance:'fixture-only'|'local-demo';
+  user:{id:string;displayName:string}; authenticationMethod:'fixture'|'captured-mail'|'google'; assurance:'fixture-only'|'local-demo'|'provider-verified';
   createdAt:string;expiresAt:string;idleExpiresAt:string;csrfToken:string;
 }

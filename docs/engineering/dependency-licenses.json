@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-16T22:44:45.944Z",
-  "lockSha256": "abad4a133365d8d85ad9a80299be2432e4851b2f9220f81fe10394eecbc1e862",
+  "date": "2026-10-17T00:26:17.954Z",
+  "lockSha256": "2ee4b00e5ff18f97cf3bf0efb5c362dc2001fe4a35635a24b777bf9ebcb85e72",
   "scope": "All locked third-party package records; local private workspaces excluded",
   "entries": [
     {
@@ -5046,6 +5046,24 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "bignumber.js",
+      "version": "9.3.1",
+      "path": "node_modules/bignumber.js",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "https://github.com/MikeMcl/bignumber.js.git",
+      "integrity": "sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENCE.md",
+          "sha256": "def75ba75d6426f1c3f02addf8e175fbe6e0d8a82e541cbdffc16d2bd8fd7d6a"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
       "name": "bindings",
       "version": "1.5.0",
       "path": "node_modules/bindings",
@@ -5198,6 +5216,24 @@
         {
           "file": "LICENSE",
           "sha256": "ddc9158fa20e427bc12fa8e1e6d07c642ed4d2c618607df768b30ae2986b3b7c"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "buffer-equal-constant-time",
+      "version": "1.0.1",
+      "path": "node_modules/buffer-equal-constant-time",
+      "license": "BSD-3-Clause",
+      "selected": "BSD-3-Clause",
+      "obligation": "Retain copyright, conditions and disclaimer; no endorsement.",
+      "source": "git@github.com:goinstant/buffer-equal-constant-time.git",
+      "integrity": "sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE.txt",
+          "sha256": "751d0e80fb5c828f8c3de198cc760e1e05377e47c8263ab6ee2f10cdc19ba658"
         }
       ],
       "noticeStatus": "bundled text retained"
@@ -6103,6 +6139,19 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "data-uri-to-buffer",
+      "version": "4.0.1",
+      "path": "node_modules/data-uri-to-buffer",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git://github.com/TooTallNate/node-data-uri-to-buffer.git",
+      "integrity": "sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==",
+      "installed": true,
+      "licenseFiles": [],
+      "noticeStatus": "metadata only; consult SPDX and package source before redistribution"
+    },
+    {
       "name": "db0",
       "version": "0.3.4",
       "path": "node_modules/db0",
@@ -6528,6 +6577,24 @@
       "installed": true,
       "licenseFiles": [],
       "noticeStatus": "metadata only; consult SPDX and package source before redistribution"
+    },
+    {
+      "name": "ecdsa-sig-formatter",
+      "version": "1.0.11",
+      "path": "node_modules/ecdsa-sig-formatter",
+      "license": "Apache-2.0",
+      "selected": "Apache-2.0",
+      "obligation": "Retain license, relevant notices and change notices; preserve upstream NOTICE if provided.",
+      "source": "git+ssh://git@github.com/Brightspace/node-ecdsa-sig-formatter.git",
+      "integrity": "sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "50a6b24f8defc31a078aa9799a91d776f83948071574854f12473362aee74d0d"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
     },
     {
       "name": "ee-first",
@@ -7083,6 +7150,24 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "extend",
+      "version": "3.0.2",
+      "path": "node_modules/extend",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "https://github.com/justmoon/node-extend.git",
+      "integrity": "sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
       "name": "fast-deep-equal",
       "version": "3.1.3",
       "path": "node_modules/fast-deep-equal",
@@ -7299,6 +7384,24 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "fetch-blob",
+      "version": "3.2.0",
+      "path": "node_modules/fetch-blob",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "https://github.com/node-fetch/fetch-blob.git",
+      "integrity": "sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "a5edccac92c3aa845694dcfaa72a0c098c1ae40d5ca6a37e4e59d778cf8e29bd"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
       "name": "fetchdts",
       "version": "0.2.0",
       "path": "node_modules/fetchdts",
@@ -7497,6 +7600,24 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "formdata-polyfill",
+      "version": "4.0.10",
+      "path": "node_modules/formdata-polyfill",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git+https://jimmywarting@github.com/jimmywarting/FormData.git",
+      "integrity": "sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "435a6437e47e5e479942255680e7fbe5f333d55234ada1c35f6115ca641d5bb4"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
       "name": "forwarded",
       "version": "0.2.0",
       "path": "node_modules/forwarded",
@@ -7595,6 +7716,60 @@
         {
           "file": "LICENSE",
           "sha256": "626c3f57d6c312eb777f144bf8e255ece53a9bd081daf75fb12584584f75791c"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "gaxios",
+      "version": "8.3.1",
+      "path": "node_modules/gaxios",
+      "license": "Apache-2.0",
+      "selected": "Apache-2.0",
+      "obligation": "Retain license, relevant notices and change notices; preserve upstream NOTICE if provided.",
+      "source": "https://github.com/googleapis/google-cloud-node.git",
+      "integrity": "sha512-h4/R7ay7JFXU5kmAkp/Y4Y4Vmm7m83tD579GUgfQQsRRGQ4TzSedyHla6XgTWohQuVffT3ldN4FF6uCqlRGaEA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "node-fetch",
+      "version": "3.3.2",
+      "path": "node_modules/gaxios/node_modules/node-fetch",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "https://github.com/node-fetch/node-fetch.git",
+      "integrity": "sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE.md",
+          "sha256": "3e2c11dcf3f17ab585baab8faba54772d7872f1c6e026022acd4b4006665efb0"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "gcp-metadata",
+      "version": "9.2.1",
+      "path": "node_modules/gcp-metadata",
+      "license": "Apache-2.0",
+      "selected": "Apache-2.0",
+      "obligation": "Retain license, relevant notices and change notices; preserve upstream NOTICE if provided.",
+      "source": "https://github.com/googleapis/google-cloud-node.git",
+      "integrity": "sha512-5/LvxarRKbGCA5LJ+ha2aV1iVm7/aALIW4PzeXnQR5dyXiNMWbeA4UOBnqERInLfH/xSFp0ZREcxodUzxhEw2Q==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
         }
       ],
       "noticeStatus": "bundled text retained"
@@ -7847,6 +8022,42 @@
         {
           "file": "LICENSE-MIT",
           "sha256": "9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "google-auth-library",
+      "version": "11.3.1",
+      "path": "node_modules/google-auth-library",
+      "license": "Apache-2.0",
+      "selected": "Apache-2.0",
+      "obligation": "Retain license, relevant notices and change notices; preserve upstream NOTICE if provided.",
+      "source": "https://github.com/googleapis/google-cloud-node.git",
+      "integrity": "sha512-mQS0R2Ev/DKkzuWSYtDeq15uhDeaWuT2qzLYqJ41LmooxVKHmn5ut3pc6dlHY6wfHW/D7FBmOYjAtkjaD1A7qA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "google-logging-utils",
+      "version": "2.1.0",
+      "path": "node_modules/google-logging-utils",
+      "license": "Apache-2.0",
+      "selected": "Apache-2.0",
+      "obligation": "Retain license, relevant notices and change notices; preserve upstream NOTICE if provided.",
+      "source": "https://github.com/googleapis/google-cloud-node.git",
+      "integrity": "sha512-1R6uiq6XhXW2ZrcGtZpGgVDsYGzSmveVOn8Pp37qe1fbThHZ34e3t3eXj5mVu6PFSVx9fvB1KNVnYgVtq/BRcA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
         }
       ],
       "noticeStatus": "bundled text retained"
@@ -8696,6 +8907,24 @@
       "noticeStatus": "bundled text retained"
     },
     {
+      "name": "json-bigint",
+      "version": "1.0.0",
+      "path": "node_modules/json-bigint",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git@github.com:sidorares/json-bigint.git",
+      "integrity": "sha512-SiPv/8VpZuWbvLSMtTDU8hEfrZWg/mH/nV/b4o0CYbSxu1UIQPLdwKOCIyLQX+VIPO5vrLX3i8qtqFyhdPSUSQ==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "def82c085d05e795fe6a9cb5b70c48e022212355afc0e91d4de047cade28df06"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
       "name": "json-schema-traverse",
       "version": "0.4.1",
       "path": "node_modules/json-schema-traverse",
@@ -8745,6 +8974,42 @@
         {
           "file": "LICENSE.md",
           "sha256": "53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "jwa",
+      "version": "2.0.1",
+      "path": "node_modules/jwa",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git://github.com/brianloveswords/node-jwa.git",
+      "integrity": "sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "jws",
+      "version": "4.0.1",
+      "path": "node_modules/jws",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git://github.com/brianloveswords/node-jws.git",
+      "integrity": "sha512-EKI/M/yqPncGUUh44xz0PxSidXFr/+r0pA70+gIYhjv+et7yxM+s29Y+VGDkovRofQem0fs7Uvf4+YmAdyRduA==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3320319f8a5f42bc4254e65471eca7a5ea4dc8c883c4c24b4868e36b14890bcf"
         }
       ],
       "noticeStatus": "bundled text retained"
@@ -10004,6 +10269,24 @@
         {
           "file": "LICENSE",
           "sha256": "1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "node-domexception",
+      "version": "1.0.0",
+      "path": "node_modules/node-domexception",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git+https://github.com/jimmywarting/node-domexception.git",
+      "integrity": "sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8ec1386f7f078b0c7cd25341cd80f332df902371cda9f40c10ec2b4007b420b7"
         }
       ],
       "noticeStatus": "bundled text retained"
@@ -14550,6 +14833,24 @@
         {
           "file": "LICENSE",
           "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02"
+        }
+      ],
+      "noticeStatus": "bundled text retained"
+    },
+    {
+      "name": "web-streams-polyfill",
+      "version": "3.3.3",
+      "path": "node_modules/web-streams-polyfill",
+      "license": "MIT",
+      "selected": "MIT",
+      "obligation": "Retain copyright and permission notice.",
+      "source": "git+https://github.com/MattiasBuelens/web-streams-polyfill.git",
+      "integrity": "sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==",
+      "installed": true,
+      "licenseFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "81008a3fb78f69f3c4a72a9e005c8582342ab62864371b3ab8e1b6af9041e080"
         }
       ],
       "noticeStatus": "bundled text retained"

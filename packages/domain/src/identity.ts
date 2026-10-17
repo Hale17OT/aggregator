@@ -8,7 +8,7 @@ export class AccessError extends Error {
 export interface Account {id:string;displayName:string;status:'active'|'suspended'|'deleting'|'deleted';roles:Role[];sessionVersion:number;}
 export interface SessionRecord {
   id:string;userId:string;tokenHash:string;createdAt:number;expiresAt:number;lastSeenAt:number;
-  idleTimeoutMs:number;revokedAt:number|null;authenticationMethod:'fixture'|'captured-mail';assurance:'fixture-only'|'local-demo';
+  idleTimeoutMs:number;revokedAt:number|null;authenticationMethod:'fixture'|'captured-mail'|'google';assurance:'fixture-only'|'local-demo'|'provider-verified';
   mfaVerifiedAt:null;accountVersion:number;csrfToken:string;
   transport?:'web'|'native';nativeClientId?:string|null;
 }
@@ -34,7 +34,7 @@ export class IdentityService {
   constructor(private repo:IdentityRepository,private clock:Clock=Date.now){}
   private async current(id:string){
     const session=await this.repo.session(id),now=this.clock();
-    if(!session||session.revokedAt!==null||!((session.authenticationMethod==='fixture'&&session.assurance==='fixture-only')||(session.authenticationMethod==='captured-mail'&&session.assurance==='local-demo'))||session.mfaVerifiedAt!==null||now>=session.expiresAt||now>=session.lastSeenAt+session.idleTimeoutMs||now<session.createdAt)throw new AccessError(401,'UNAUTHENTICATED');
+    if(!session||session.revokedAt!==null||!((session.authenticationMethod==='fixture'&&session.assurance==='fixture-only')||(session.authenticationMethod==='captured-mail'&&session.assurance==='local-demo')||(session.authenticationMethod==='google'&&session.assurance==='provider-verified'))||session.mfaVerifiedAt!==null||now>=session.expiresAt||now>=session.lastSeenAt+session.idleTimeoutMs||now<session.createdAt)throw new AccessError(401,'UNAUTHENTICATED');
     const account=await this.repo.account(session.userId);
     if(!account||account.status!=='active'||account.sessionVersion!==session.accountVersion)throw new AccessError(401,'UNAUTHENTICATED');
     return {session,account,now};

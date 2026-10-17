@@ -1,0 +1,53 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {randomUUID,randomBytes,createHash} from 'node:crypto';
+import {withDisposableDatabase} from './disposable-database.mjs';
+import {migrations,migrate} from './db-migrations.mjs';
+import pg from 'pg';
+const checks=[];
+await withDisposableDatabase(async h=>{
+ const db=h.createDatabase('aggregator_identity');migrate(db,migrations('packages/db/migrations'));
+ db.sql("SET ROLE agg_owner;INSERT INTO roles(code,name) VALUES('reader','Reader');");
+ const hex=()=>randomBytes(32).toString('hex'),binding=hex(),hash=hex(),id=randomUUID();
+ const keyed=i=>createHash('sha256').update(i+hash).digest('hex');
+ const start=(i,email='native-code@example.test')=>db.scalar(`SET ROLE agg_session_runtime;SELECT public.request_native_code('${i}','${email}','${keyed(i)}','${binding}')`);
+ const redeem=(i,value=keyed(i),proof=binding)=>db.scalar(`SET ROLE agg_session_runtime;SELECT public.redeem_native_code('${i}','${value}','${proof}','${randomUUID()}','${hex()}','${hex()}')`);
+ assert.equal(start(id),'t');assert.equal(start(randomUUID()),'f');
+ const raced=randomUUID();assert.equal(start(raced,'recheck-race@example.test'),'t');
+ db.sql(`CREATE FUNCTION public.test_remove_code() RETURNS trigger LANGUAGE plpgsql AS $$ BEGIN IF NEW.email_normalized='recheck-race@example.test' THEN DELETE FROM public.auth_challenges WHERE id='${raced}'; END IF; RETURN NEW; END $$; CREATE TRIGGER test_code_recheck AFTER INSERT ON public.users FOR EACH ROW EXECUTE FUNCTION public.test_remove_code();`);
+ assert.equal(redeem(raced),'f');assert.equal(db.scalar("SELECT count(*) FROM users WHERE email_normalized='recheck-race@example.test'"),'0');
+ db.sql('DROP TRIGGER test_code_recheck ON public.users;DROP FUNCTION public.test_remove_code();');
+ checks.push('Forced final challenge disappearance rolls back tentative user insert while rejecting redemption (isolated deterministic recheck fault, not a full concurrent deletion race)');
+ assert.equal(redeem(id,keyed(id),hex()),'f');assert.equal(redeem(id),'t');assert.equal(redeem(id),'f');
+ assert.equal(db.scalar("SELECT count(*) FROM sessions WHERE transport='native' AND assurance='local-demo' AND mfa_verified_at IS NULL"),'1');
+ const limited=randomUUID();assert.equal(start(limited,'limited@example.test'),'t');for(let i=0;i<5;i++)assert.equal(redeem(limited,hex()),'f');assert.equal(redeem(limited),'f');
+ const expired=randomUUID();assert.equal(start(expired,'expired@example.test'),'t');db.sql(`UPDATE auth_challenges SET expires_at=clock_timestamp()-interval '1 second' WHERE id='${expired}'`);assert.equal(redeem(expired),'f');
+ const old=randomUUID(),rotated=randomUUID();assert.equal(start(old,'rotate@example.test'),'t');db.sql(`UPDATE auth_challenges SET created_at=clock_timestamp()-interval '61 seconds' WHERE id='${old}'`);assert.equal(start(rotated,'rotate@example.test'),'t');assert.equal(redeem(old),'f');assert.equal(redeem(rotated),'t');
+ db.reject('SET ROLE agg_member;SELECT * FROM public.auth_challenges',undefined,'42501');
+  const user=db.scalar("SELECT id FROM users WHERE email_normalized='native-code@example.test'"),session=db.scalar(`SELECT id FROM sessions WHERE user_id='${user}'`);
+  const other=db.scalar("SELECT id FROM users WHERE email_normalized='rotate@example.test'"),otherSession=db.scalar(`SELECT id FROM sessions WHERE user_id='${other}'`);
+  const action=(kind,authorize=session)=>db.scalar(`SET ROLE agg_member;SELECT set_config('aggregator.user_id','${user}',false);SELECT public.reader_account_action('${kind}','${authorize}')`).split('\n').at(-1);
+  assert.equal(action('delete-account',otherSession),'f');
+  db.sql(`UPDATE sessions SET created_at=clock_timestamp()-interval '16 minutes' WHERE id='${session}'`);
+  assert.equal(action('delete-account'),'f');
+  db.sql(`UPDATE sessions SET created_at=clock_timestamp()-interval '1 minute' WHERE id='${session}'`);
+  assert.equal(action('revoke-other'),'t');
+  assert.equal(action('delete-account'),'t');
+  assert.equal(db.scalar(`SELECT status||':'||(email_normalized IS NULL)::text FROM users WHERE id='${user}'`),'deleted:true');
+  assert.equal(db.scalar(`SELECT count(*) FROM sessions WHERE user_id='${user}'`),'0');
+  assert.equal(db.scalar(`SELECT count(*) FROM user_preferences WHERE user_id='${user}'`),'0');
+  assert.equal(db.scalar(`SELECT status FROM users WHERE id='${other}'`),'active');
+  checks.push('Disposable account deletion: wrong-owner and stale-session denied; owned sessions/preferences erased, anonymous tombstone retained, other member intact');
+ const concurrent=randomUUID();assert.equal(start(concurrent,'concurrent-code@example.test'),'t');
+ const clients=[new pg.Client({host:'127.0.0.1',port:h.port,database:'aggregator_identity',user:'agg_bootstrap'}),new pg.Client({host:'127.0.0.1',port:h.port,database:'aggregator_identity',user:'agg_bootstrap'})];
+ try{
+  await Promise.all(clients.map(async c=>{await c.connect();await c.query('SET ROLE agg_session_runtime');}));
+  const results=await Promise.all(clients.map(c=>c.query('SELECT public.redeem_native_code($1,$2,$3,$4,$5,$6) ok',[concurrent,keyed(concurrent),binding,randomUUID(),hex(),hex()])));
+  assert.deepEqual(results.map(r=>r.rows[0].ok).sort(),[false,true]);
+  assert.equal(db.scalar("SELECT count(*) FROM sessions WHERE user_id=(SELECT id FROM users WHERE email_normalized='concurrent-code@example.test')"),'1');
+  checks.push('Two separate concurrent code-redemption transactions issue exactly one native session');
+ }finally{await Promise.all(clients.map(c=>c.end()));}
+ checks.push('Native binding, atomic single use, 60-second resend limit, five-attempt exhaustion, expiry, rotation and restricted challenge access passed');
+});
+writeFileSync('docs/engineering/real-news-google-profile/native-code-db.json',JSON.stringify({status:'passed',at:new Date().toISOString(),checks,limits:'Isolated SQL tests, not external email delivery or device completion'},null,2));console.log(checks.join('\n'));
+

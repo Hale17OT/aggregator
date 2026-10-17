@@ -248,7 +248,7 @@ class _HomeState extends State<HomePage> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Fictional sources and local synthetic media. No live news ingestion.',
+              'Publisher reports retain their original attribution. Radio, Newsroom and Clips use the separate fictional sample catalogue.',
               textAlign: TextAlign.center,
             ),
           ],
@@ -370,6 +370,21 @@ class _ArticleState extends State<ArticlePage> {
                 ),
               ),
               const SizedBox(height: 14),
+              if (a.raw['fixture'] == false) ...[
+                Text(
+                  'By ${a.raw['attribution']['author']} · ${a.raw['attribution']['publisher']}',
+                ),
+                TextButton(
+                  onPressed: () => openOriginal(a.raw['attribution']['url']),
+                  child: const Text('Read the original publisher report'),
+                ),
+                TextButton(
+                  onPressed: () =>
+                      openOriginal(a.raw['attribution']['licenseUrl']),
+                  child: Text(a.raw['attribution']['license']),
+                ),
+                Text(a.raw['attribution']['transformation']),
+              ],
               Text(a.raw['deck'], style: Theme.of(context).textTheme.bodyLarge),
               Wrap(
                 spacing: 8,
@@ -381,15 +396,16 @@ class _ArticleState extends State<ArticlePage> {
                     ),
                     child: const Text('Sources ↓'),
                   ),
-                  TextButton(
-                    onPressed: () => setState(() {
-                      variant = variant == 'standard' ? 'brief' : 'standard';
-                      load();
-                    }),
-                    child: Text(
-                      variant == 'standard' ? 'Read brief' : 'Read standard',
+                  if (a.raw['fixture'] == true)
+                    TextButton(
+                      onPressed: () => setState(() {
+                        variant = variant == 'standard' ? 'brief' : 'standard';
+                        load();
+                      }),
+                      child: Text(
+                        variant == 'standard' ? 'Read brief' : 'Read standard',
+                      ),
                     ),
-                  ),
                   TextButton.icon(
                     onPressed: () => save(a),
                     icon: const Icon(Icons.bookmark_add_outlined),
@@ -397,7 +413,8 @@ class _ArticleState extends State<ArticlePage> {
                   ),
                 ],
               ),
-              FormatLinks(a, key: ValueKey(a.raw['versionId'])),
+              if (a.raw['fixture'] == true)
+                FormatLinks(a, key: ValueKey(a.raw['versionId'])),
               if (widget.section != null &&
                   !a.blocks.any((b) => b['id'] == widget.section))
                 const Text(

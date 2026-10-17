@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,readdirSync,statSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const sha=p=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const files=[...new Set(execFileSync('git',['ls-files','-co','--exclude-standard'],{encoding:'utf8'}).trim().split('\n'))].filter(p=>/^(apps|packages|scripts)\//.test(p)||/^(package.*json|eslint.*|tsconfig.*)$/.test(p)).sort();
+const source=files.filter(p=>statSync(p).isFile()).map(path=>({path,sha256:sha(path)}));
+const walk=p=>readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(p+'/'+e.name):[p+'/'+e.name]);
+const build=walk('apps/web/.output').sort().map(path=>({path,sha256:sha(path)}));
+const apk='output/real-news-google-profile-20261017/main/aggregator-real-news-google-profile-r4.apk';
+const value={at:new Date().toISOString(),gitHead:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),uncommitted:true,sourceDigest:createHash('sha256').update(JSON.stringify(source)).digest('hex'),buildDigest:createHash('sha256').update(JSON.stringify(build)).digest('hex'),source,build,apk,apkSha256:sha(apk),installedSha256:sha('output/real-news-google-profile-20261017/main/installed-r4.apk'),entry:'lib/main.dart',flavor:'localDemo',mode:'debug normal app; not instrumentation/profile/release',migrations:21};
+writeFileSync('docs/engineering/real-news-google-profile/final-artifact.json',JSON.stringify(value,null,2));console.log({sourceDigest:value.sourceDigest,buildDigest:value.buildDigest,apkSha256:value.apkSha256});

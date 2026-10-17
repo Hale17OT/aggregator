@@ -47,6 +47,9 @@ android {
 }
 
 dependencies {
+    implementation("androidx.credentials:credentials:1.5.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.5.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
     constraints {
         // The installed integration_test SDK requests vulnerable 28.1-android.
         // Keep this repair local to the app graph; never rewrite the global SDK.

@@ -1,0 +1,55 @@
+# Agent source-rights and fetch review —17 October2026
+
+This is an agent recommendation from the saved parsed feed records and official policy pages viewed today. It creates NO rights grant, editorial approval or publication authorization. Not a factual verification of article claims. No account/DB mutation or external message. Conditional candidates require correct extraction, item/version-bound reviewed policy, attribution and service projection before use. Images, audio, video, narration and synthesis are outside every recommendation below.
+
+## Current policy references
+
+[Global Voices republication guidelines](https://globalvoices.org/about/global-voices-attribution-policy/) apply CC-BY to GV-created content unless otherwise stated; preserve top author/original link, licence link and modification notice. Third-party media needs separate permission. Partner notices require conservative upstream review rather than assuming transfer. No contact or notification was sent.
+
+[NASA media-use guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/) allows factual informational use with acknowledgement and no endorsement implication, subject to third-party exceptions. This is not a blanket licence for everything on a NASA domain or for promotional logos/personality use. Text-only candidates below are conservative inferences from NASA-hosted original reporting; no independent legal or human approval is claimed.
+
+## Global Voices: exact saved-item decisions
+
+- https://globalvoices.org/2026/10/16/how-an-extremist-network-articulated-a-hoax-linking-brazils-president-lula-to-child-abuse-on-x/ — HOLD full text: Aos Fatos original, Pública partnership and translation; upstream reuse terms not established. Credit original author/publisher and translator separately.
+- https://globalvoices.org/2026/10/16/hong-kong-police-launch-ai-powered-national-security-platform-for-school-pupils/ — HOLD full text: Hong Kong Free Press partner republication, not independently established GV-created text rights.
+- https://globalvoices.org/2026/10/15/perus-indigenous-people-in-cutivireni-and-oviri-take-the-front-line-against-amazon-wildfires/ — HOLD pending contributor provenance: Cool Earth authored report about its own initiative; no blanket independent-reporting classification. Photo permission does not transfer.
+- https://globalvoices.org/2026/10/15/how-authoritarian-states-are-building-an-international-market-for-digital-surveillance/ — CONDITIONAL text-only candidate: named GV author; retain Daria Dergacheva and analysis framing, original links and attribution; no images or quoted external documents as standalone assets.
+- https://globalvoices.org/2026/10/14/norways-telenor-telecom-faces-lawsuit-for-giving-user-data-to-myanmars-junta/ — CONDITIONAL text-only candidate: named GV author Mong Palatino; preserve allegation/legal attribution, not independently confirmed synthesis.
+- https://globalvoices.org/2026/10/14/in-kyrgyzstan-persons-with-disabilities-are-collecting-proof-of-physical-barriers-to-hold-the-government-accountable/ — CONDITIONAL text-only candidate: named GV author Nurbek Bekmurzaev; permission-marked images excluded; interview/project associations do not create extra origins.
+- https://globalvoices.org/2026/10/13/after-flood-disasters-nepal-needs-clear-numbers-on-aid-and-a-reconstruction-plan/ — CONDITIONAL text-only candidate after caption cleanup: Susmita Aryal; many permission-marked photographs and their captions must be excluded without distorting the story.
+- https://globalvoices.org/2026/10/13/poetry-book-promotes-chabacano-asias-only-spanish-based-creole-language/ — HOLD full text: includes verse by Jayline Gonzales-Barredo. GV reporting licence does not independently establish rights to reproduce the embedded poem.
+- https://globalvoices.org/2026/10/12/what-african-elections-can-learn-from-the-borana-gadaa-system/ — HOLD full text: Diba Kosi Bilinga original at Peace News Network on20 July2026; October GV repost is not new original publication.
+- https://globalvoices.org/2026/10/12/bangladesh-malaysia-recruitment-reforms-revive-old-questions-over-the-cost-of-migration/ — CONDITIONAL text-only candidate: named GV author Maksuda Akter; retain attributed analysis and underlying links.
+- https://globalvoices.org/2026/10/11/when-free-speech-has-a-price-youth-voices-in-mozambique/ — CONDITIONAL text-only candidate AFTER credit repair: original author Tirso Sitoe, English translator Liam Anderson. Current author field identifies translator only.
+- https://globalvoices.org/2026/10/10/how-ecuador-is-fighting-to-keep-industrial-trans-fats-off-the-food-shelf/ — CONDITIONAL text-only candidate: named GV author Carlos E. Flores; permission-marked image excluded.
+- https://globalvoices.org/2026/10/09/trumps-agreements-on-reciprocal-trade-arts-threaten-equitable-access-to-the-internet-in-global-south/ — HOLD full text: EngageMedia original by Prapasiri Nan Suttisome; edited republication needs upstream rights review.
+- https://globalvoices.org/2026/10/09/subsea-cables-and-oil-pipelines-the-infrastructure-linking-ai-empire-and-occupation/ — CONDITIONAL text-only candidate AFTER credit repair: article says By Alli Armijo, not merely Guest Contributor; GV Spotlight analysis, third-party fair-use map excluded.
+- https://globalvoices.org/2026/10/08/alibaba-sues-pentagon-to-denounce-being-classified-as-a-chinese-military-affiliate/ — CONDITIONAL text-only candidate: named GV author Oiwan Lam; preserve allegations and attributed legal context.
+
+## NASA: exact saved-item decisions
+
+- https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/ — CONDITIONAL text-only primary NASA release after removing contact/share/navigation boilerplate; retain actual byline and source attribution.
+- https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/ — HOLD as initial full-story candidate: image-centric short caption, US Navy image credit. No Navy image rights were reviewed; do not imply a substantial independent article.
+- https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/ — CONDITIONAL text-only NASA profile after removing related-story/exploration cards; no employee likeness or endorsement implication.
+- https://science.nasa.gov/missions/hubble/nasas-hubble-spies-spirals-edge/ — CONDITIONAL NASA text only after stripping Hubble exploration cards; inspect NASA/ESA third-party credits separately, no imagery permitted here.
+- https://science.nasa.gov/image-article/apod-2026-october-16-chasing-the-international-space-station/ — HOLD full text/AV: APOD service with named academic editors and Eric Holland video; third-party/academic text ownership not independently established.
+- https://science.nasa.gov/earth/earth-observatory/isaias-dims-the-gulf-coast/ — CONDITIONAL NASA text after removing newsletter/exploration/related material and preserving actual story byline; primary source, not independent origin count.
+- https://science.nasa.gov/directorates/smd/planetary-science-division/nasa-to-help-unlock-mysteries-of-mars-moons-in-upcoming-mission/ — CONDITIONAL NASA mission text after removing other article cards; JAXA partnership is not evidence of a second independently reviewed reporting item.
+- https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/ — CONDITIONAL NASA text after removing unrelated story cards; Scientific Visualization Studio media not licensed by this text-only recommendation.
+- https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/ — CONDITIONAL NASA text after removing exploration navigation; retain Penelope Lauren Garcia-Galan credit and original link.
+- https://www.nasa.gov/general/nasa-to-conduct-low-altitude-flights-over-texas-farmland/ — CONDITIONAL text-only AFTER credit repair: body explicitly credits Sharon Teitelbaum, Ames; feed author Gianine Figliozzi is insufficient as reporting byline.
+
+## Extraction and attribution findings
+
+Saved GV text retains image captions including fair-use/used-with-permission credits even though a text-only projection would omit the picture. Remove them structurally and record transformations, not by deleting arbitrary matching prose. Generic feed author may be translator, editor or Guest Contributor. Preserve the original contributor, translator, publisher and original publication date when identified. NASA bodies contain Share, Details, Related Terms, Keep Exploring and unrelated article headlines; those must not become evidence or reader article content. The saved parser output is not yet accepted as clean article text.
+
+## live-fetch.mjs source findings
+
+1. The IPv6 classification accepts all2000::/3 except three narrow ranges. It therefore permits2001:2::/48 benchmarking and3fff::/20 documentation, contrary to the requested special-use deny boundary. Review against the [IANA registry](https://www.iana.org/assignments/iana-ipv6-special-registry/); test actual classified addresses and reject unneeded special-purpose prefixes conservatively. No network exploit was attempted.
+2. permittedUrl enforces exact host but has no provider endpoint/path constraint. A feed URL or redirect can visit any path on the allowed host. Add provider-scoped path policy at the actual fetch boundary; host-only validation does not implement the stated domain/path requirement.
+3. HTTP429 becomes SOURCE_HTTP_429 and loses Retry-After. There is no per-source quota/backoff in this module. Preserve bounded retry metadata for the worker and verify caller-level quotas before enabling polling; this is an implementation gap, not evidence of abusive requests.
+4. The custom DNS lookup pins a vetted answer and TLS remains enabled, which is stronger than URL-only checks. It does not assert socket.remoteAddress against that selected answer; add connection-bound verification/test evidence for the runbook requirement. All-address rejection is conservative. IPv4-mapped/ULA/link-local IPv6 are already excluded by the global-range predicate.
+5. Response type is checked only after the entire bounded body is buffered; reject disallowed types/status before reading where possible. Compressed responses are denied and body bytes/deadline/redirect count are bounded. Verify truncated-body behavior with a controlled server before claiming complete-evidence safety; no test was run here.
+6. DNS timeout race leaves the lookup alive and timer uncleared after success. Bound concurrency and clear timers; no unbounded real-source workload was exercised. Redirects drop conditional validators, so incremental caller behavior needs testing.
+
+Security findings are source-inspected, not harness passes. These recommendations do not establish independent reporting origins or truth; NASA remains a primary institutional source and partner mirrors count once. Private synthesis stays subject to evidence and human review gates.

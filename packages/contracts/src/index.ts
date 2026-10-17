@@ -40,4 +40,11 @@ export const publicArticleSchema=draftSchema.pick({id:true,versionId:true,slug:t
   variant:z.enum(['standard','brief']),blocks:z.array(blockSchema),sources:z.array(publicSourceSchema),
   claims:z.array(claimSchema.omit({reviewed:true})), disclosure:z.string(),
 });
-export type PublicArticle=z.infer<typeof publicArticleSchema>;
+export const publisherArticleSchema=publicArticleSchema.extend({
+ fixture:z.literal(false),contentKind:z.literal('publisher-original'),
+ blocks:z.array(blockSchema.extend({claimIds:z.array(id).max(0)})),
+ claims:z.array(claimSchema.omit({reviewed:true})).max(0),
+ attribution:z.object({publisher:z.string(),author:z.string(),url:z.url(),license:z.string(),licenseUrl:z.url(),sourceType:z.string(),transformation:z.string()}),
+});
+export type PublisherArticle=z.infer<typeof publisherArticleSchema>;
+export type PublicArticle=z.infer<typeof publicArticleSchema>|PublisherArticle;

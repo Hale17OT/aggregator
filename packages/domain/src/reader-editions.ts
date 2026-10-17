@@ -7,17 +7,20 @@ import { AccessError } from './identity.js';
 import { deskSlug } from './discovery.js';
 import assertions from '../../test-fixtures/reader-subjects.json' with {type:'json'};
 // Exact authored revision associations; a corrected/new revision does not inherit tags silently.
-export function subjects(a:PublicArticle){return assertions.find(x=>x.articleId===a.id&&x.versionId===a.versionId)?.material||[];}
+export function subjects(a:PublicArticle){
+ if(!a.fixture)return a.topic==='Science'?['agg:topic:science-and-space']:a.topic==='World'?['agg:topic:world-affairs']:[];
+ return assertions.find(x=>x.articleId===a.id&&x.versionId===a.versionId)?.material||[];
+}
 type Reason=NonNullable<ReturnType<typeof relevance>>;
 interface Snapshot {scope:string;catalogue:string;owner:string;mode:string;revision:number;cutoff:string;expires:number;slots:{id:string;version:string;reason:Reason|null}[];}
 const snapshots=new Map<string,Snapshot>();
-export function edition(repo:PublicationRepository,input:{token?:string;page?:number;mode?:string;owner?:string;interests?:Interests;q?:string;topic?:string}){
+export function edition(repo:PublicationRepository,input:{token?:string;page?:number;mode?:string;owner?:string;interests?:Interests;q?:string;topic?:string;available?:PublicArticle[];collection?:string}){
  const q=(input.q??'').trim().toLocaleLowerCase('en'),topic=input.topic??'';
  if(q.length>120||topic.length>120)throw new AccessError(422,'INVALID_INPUT');
- const scope=JSON.stringify([q,topic]),terms=q.split(/\s+/).filter(Boolean);
+ const scope=JSON.stringify([q,topic,input.collection||'sample']),terms=q.split(/\s+/).filter(Boolean);
  const page=input.page??1,mode=input.mode??'editorial',owner=input.owner??'public';if(!Number.isInteger(page)||page<1||page>100||!['editorial','following'].includes(mode))throw new AccessError(422,'INVALID_INPUT');
  if(mode==='following'&&!input.interests)throw new AccessError(401,'UNAUTHENTICATED');
- const now=Date.now(),available=repo.list().map(d=>publicProjection(d,'brief')).filter(a=>a!==null);
+ const now=Date.now(),available=input.available??repo.list().map(d=>publicProjection(d,'brief')).filter(a=>a!==null);
  const catalogue=createHash('sha256').update(JSON.stringify([taxonomyRevision,available.map(a=>[a.id,a.versionId]).sort()])).digest('hex');
  let token=input.token,s=token?snapshots.get(token):undefined;
  if(token&&(!s||s.expires<now))throw new AccessError(410,'EDITION_EXPIRED');

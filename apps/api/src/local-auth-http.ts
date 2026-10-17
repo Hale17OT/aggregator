@@ -12,9 +12,9 @@ const redeemSchema=z.object({token:z.string().regex(/^[a-f0-9-]{36}\.[a-f0-9]{64
 const nonce=()=>randomBytes(32).toString('hex');
 
 // Narrow SMTP client: fixed loopback destination, no relay config, no arbitrary headers.
-export async function capturedMail(email:string,link:string){
+export async function capturedMail(email:string,link:string,nativeCode=false){
  if(!/^[a-z0-9._+-]{1,64}@example\.test$/.test(email))throw new Error('Fictional destination required');
- const commands=['EHLO aggregator.example.test','MAIL FROM:<reader@aggregator.example.test>',`RCPT TO:<${email}>`,'DATA',`From: The Aggregator <reader@aggregator.example.test>\r\nTo: ${email}\r\nSubject: Confirm your local reader sign-in\r\nContent-Type: text/plain; charset=utf-8\r\n\r\nFictional local mailbox capture only. Open in the same browser that requested it.\r\n${link}\r\nThis link expires in 15 minutes. GET preview does not sign you in.\r\n.`, 'QUIT'];
+ const commands=['EHLO aggregator.example.test','MAIL FROM:<reader@aggregator.example.test>',`RCPT TO:<${email}>`,'DATA',`From: The Aggregator <reader@aggregator.example.test>\r\nTo: ${email}\r\nSubject: Confirm your local reader sign-in\r\nContent-Type: text/plain; charset=utf-8\r\n\r\n${nativeCode?'Local captured mailbox only. Complete sign-in in the initiating app.':'Fictional local mailbox capture only. Open in the same browser that requested it.'}\r\n${link}\r\n${nativeCode?'This code expires in 10 minutes; enter it only in the initiating app.':'This link expires in 15 minutes. GET preview does not sign you in.'}\r\n.`, 'QUIT'];
  await new Promise<void>((resolve,reject)=>{
   const socket=createConnection({host:'127.0.0.1',port:1025});let buffer='',step=0,finished=false;
   const fail=()=>{if(!finished){finished=true;socket.destroy();reject(new Error('Local mailbox unavailable'));}};
@@ -65,3 +65,4 @@ export function localAuthRouter(unit:PostgresMemberUnit,profile:CookieProfile,se
  }catch(e){next(e);}});
  return router;
 }
+

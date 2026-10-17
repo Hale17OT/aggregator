@@ -6,6 +6,13 @@ import type { Interests,InterestsPatch } from '../../contracts/src/interests.js'
 
 export interface Bookmark {userId:string;articleId:string;savedVersionId:string;createdAt:string;}
 export interface MemberRepository {
+  profile?():Promise<unknown>;
+  exportData?(userId:string):Promise<unknown>;
+  editProfile?(revision:number,name:string):Promise<unknown>;
+  accountAction?(action:'revoke-other'|'delete-account',sessionId:string,target?:string):Promise<void>;
+  sourceBookmarks?(userId:string):Promise<unknown[]>;
+  saveSource?(userId:string,id:string):Promise<unknown|null>;
+  removeSource?(userId:string,id:string):Promise<void>;
   interests?(userId:string):Promise<Interests>;
   updateInterests?(userId:string,patch:InterestsPatch):Promise<Interests>;
   preferences(userId:string):Promise<Preferences>;

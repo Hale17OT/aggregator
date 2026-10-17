@@ -1,4 +1,5 @@
 import express, { type Request, type Response, type NextFunction } from 'express';
+import {z} from 'zod';
 import { randomUUID } from 'node:crypto';
 import { AccessError, IdentityService } from '../../../packages/domain/src/identity.js';
 import { MemberService } from '../../../packages/domain/src/member.js';
@@ -27,11 +28,12 @@ function credential(req:Request,profile:CookieProfile){
   const matches=(req.headers.cookie||'').split(';').map(s=>s.trim()).filter(s=>s.startsWith(profile.name+'='));
   if(matches.length!==1)return undefined;return matches[0].slice(profile.name.length+1);
 }
-export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepository,profile:CookieProfile,clock?:Clock,transport:'web'|'native'='web'){
+export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepository,profile:CookieProfile,clock?:Clock,transport:'web'|'native'='web',liveReader?:()=>Promise<import('../../../packages/contracts/src/index.js').PublicArticle[]>){
   const router=express.Router();
   router.use(express.json({limit:'8kb',strict:true}));
   router.use(async(req,res,next)=>{
     try{
+      const liveAvailable=['/me/edition','/me/interest-preview'].includes(req.path)&&liveReader?await liveReader():undefined;
       // No response is sent until the complete unit of work has committed.
       const result=await unit.run(async(identityRepo,memberRepo)=>{
         const identity=new IdentityService(identityRepo,clock),members=new MemberService(identity,memberRepo,articles,clock);
@@ -41,7 +43,7 @@ export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepositor
         const token=native?req.get('Authorization')?.match(/^Bearer ([a-f0-9-]{36}\.[a-f0-9]{64})$/)?.[1]:credential(req,profile);
         const context=await identity.authenticate(token,transport);
         if(Object.keys(req.query).length&&req.path!=='/me/edition')throw new AccessError(422,'INVALID_INPUT');
-        if(req.path==='/me/edition'&&req.method==='GET'){if(Object.keys(req.query).some(k=>!['page','edition','q','topic'].includes(k))||Object.values(req.query).some(v=>typeof v!=='string'||v.length>120))throw new AccessError(422,'INVALID_INPUT');await identity.authorize(context,'preferences:read');if(!memberRepo.interests)throw new AccessError(503,'SERVICE_UNAVAILABLE');return {data:edition(articles,{owner:context.userId,interests:await memberRepo.interests(context.userId),mode:'following',q:typeof req.query.q==='string'?req.query.q:undefined,topic:typeof req.query.topic==='string'?req.query.topic:undefined,page:Number(req.query.page||1),token:typeof req.query.edition==='string'?req.query.edition:undefined})};}
+        if(req.path==='/me/edition'&&req.method==='GET'){if(Object.keys(req.query).some(k=>!['page','edition','q','topic'].includes(k))||Object.values(req.query).some(v=>typeof v!=='string'||v.length>120))throw new AccessError(422,'INVALID_INPUT');await identity.authorize(context,'preferences:read');if(!memberRepo.interests)throw new AccessError(503,'SERVICE_UNAVAILABLE');return {data:edition(articles,{available:liveAvailable,collection:liveAvailable?'live':'sample',owner:context.userId,interests:await memberRepo.interests(context.userId),mode:'following',q:typeof req.query.q==='string'?req.query.q:undefined,topic:typeof req.query.topic==='string'?req.query.topic:undefined,page:Number(req.query.page||1),token:typeof req.query.edition==='string'?req.query.edition:undefined})};}
         if(!['GET','HEAD','OPTIONS'].includes(req.method)){
           if(!native){if(req.get('Origin')!==profile.origin||req.get('Sec-Fetch-Site')==='cross-site')throw new AccessError(403,'CSRF_REJECTED');
           await identity.verifyCsrf(context,req.get('X-CSRF-Token'));}
@@ -49,6 +51,17 @@ export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepositor
         }
         const empty=()=>{if(!emptyMutationSchema.safeParse(req.body).success)throw new AccessError(422,'INVALID_INPUT');};
         const policy=(capability:string)=>identity.authorize(context,capability);
+        if(req.path==='/me/export'&&req.method==='GET'){
+          await policy('preferences:read');if(!memberRepo.exportData)throw new AccessError(503,'SERVICE_UNAVAILABLE');return {data:await memberRepo.exportData(context.userId)};
+        }
+        if(req.path==='/me/account-action'&&req.method==='POST'){
+          await policy('preferences:write');const parsed=z.object({action:z.enum(['revoke-other','delete-account']),target:z.uuid().optional(),confirmation:z.string()}).strict().safeParse(req.body);
+          if(!parsed.success||parsed.data.confirmation!==(parsed.data.action==='delete-account'?'DELETE MY AGGREGATOR ACCOUNT':'REVOKE OTHER SESSIONS')||parsed.data.action==='delete-account'&&parsed.data.target)throw new AccessError(422,'INVALID_INPUT');
+          if(!memberRepo.accountAction)throw new AccessError(503,'SERVICE_UNAVAILABLE');await memberRepo.accountAction(parsed.data.action,context.sessionId,parsed.data.target);
+          return {status:204,logout:parsed.data.action==='delete-account'};
+        }
+        if(req.path==='/me/profile'&&req.method==='GET'){await policy('preferences:read');if(!memberRepo.profile)throw new AccessError(503,'SERVICE_UNAVAILABLE');return {data:await memberRepo.profile()};}
+        if(req.path==='/me/profile'&&req.method==='PATCH'){await policy('preferences:write');if(!memberRepo.editProfile)throw new AccessError(503,'SERVICE_UNAVAILABLE');const parsed=z.object({revision:z.number().int().nonnegative(),displayName:z.string().trim().min(1).max(80).refine(value=>Array.from(value).every(c=>c.charCodeAt(0)>=32&&c.charCodeAt(0)!==127))}).strict().safeParse(req.body);if(!parsed.success)throw new AccessError(422,'INVALID_INPUT');return {data:await memberRepo.editProfile(parsed.data.revision,parsed.data.displayName)};}
         if(req.path==='/me/session'&&req.method==='GET'){await policy('session:inspect');return {data:await identity.inspect(context)};}
         if(req.path==='/auth/logout'&&req.method==='POST'){empty();await policy('session:logout');await identity.logout(context);return {status:204,logout:true};}
         if(req.path==='/me/preferences'&&req.method==='GET'){await policy('preferences:read');return {data:await members.preferences(context)};}
@@ -60,7 +73,7 @@ export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepositor
         }
         if(req.path==='/me/interest-preview'&&req.method==='POST'){
           await policy('preferences:read');const p=interestsPatch.safeParse(req.body);if(!p.success)throw new AccessError(422,'INVALID_INPUT');try{validateRules(p.data.rules);}catch{throw new AccessError(422,'INVALID_INPUT');}
-          return {data:articles.list().map(d=>publicProjection(d,'brief')).filter(a=>a!==null).filter(a=>!p.data.hiddenStories.includes(a.id)).flatMap(a=>{const reason=relevance(p.data.rules,subjects(a));return reason?[{id:a.id,slug:a.slug,headline:a.headline,reason}]:[];}).slice(0,24)};
+          return {data:(liveAvailable??articles.list().map(d=>publicProjection(d,'brief')).filter(a=>a!==null)).filter(a=>!p.data.hiddenStories.includes(a.id)).flatMap(a=>{const reason=relevance(p.data.rules,subjects(a));return reason?[{id:a.id,slug:a.slug,headline:a.headline,reason}]:[];}).slice(0,24)};
         }
         if(req.path==='/me/interests'&&req.method==='PUT'){
           await policy('preferences:write');if(!memberRepo.updateInterests)throw new AccessError(503,'SERVICE_UNAVAILABLE');
@@ -69,7 +82,7 @@ export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepositor
           return {data:await memberRepo.updateInterests(context.userId,p.data)};
         }
         if(req.path==='/me/preferences'&&req.method==='PATCH'){await policy('preferences:write');return {data:await members.updatePreferences(context,req.body)};}
-        if(req.path==='/me/bookmarks'&&req.method==='GET'){await policy('bookmarks:read');return {data:await members.bookmarks(context)};}
+        if(req.path==='/me/bookmarks'&&req.method==='GET'){await policy('bookmarks:read');return {data:[...await members.bookmarks(context),...await memberRepo.sourceBookmarks?.(context.userId)??[]]};}
         if(req.path==='/me/listening'&&req.method==='GET'){
           await policy('preferences:read');if(!memberRepo.listening)throw new AccessError(503,'SERVICE_UNAVAILABLE');
           const state=await memberRepo.listening(context.userId),ready=await programmes(articles);const ids=new Set(ready.map(p=>p.programmeId));
@@ -95,8 +108,8 @@ export function memberRouter(unit:MemberUnitOfWork,articles:PublicationRepositor
         const match=req.path.match(/^\/me\/bookmarks\/([^/]+)$/);
         if(match&&['PUT','DELETE'].includes(req.method)){
           empty();await policy('bookmarks:write');
-          if(req.method==='PUT')return {data:await members.save(context,match[1])};
-          await members.remove(context,match[1]);return {status:204};
+          if(req.method==='PUT'){if(!articles.list().some(a=>a.id===match[1])&&memberRepo.saveSource){const saved=await memberRepo.saveSource(context.userId,match[1]);if(saved)return {data:saved};}return {data:await members.save(context,match[1])};}
+          await members.remove(context,match[1]);await memberRepo.removeSource?.(context.userId,match[1]);return {status:204};
         }
         if(req.path==='/staff'||req.path.startsWith('/staff/'))await policy('staff:unavailable');
         throw new AccessError(404,'NOT_FOUND');
@@ -114,4 +127,6 @@ export function memberError(error:unknown,_req:Request,res:Response,_next:NextFu
   if(failure.status===503)res.setHeader('Retry-After','1');
   res.status(failure.status).json({error:{code:failure.code,message:'Request could not be completed.',requestId:randomUUID()}});
 }
+
+
 

@@ -1,3 +1,17 @@
+# Canonical current summary — 17 October 2026 real news / Google / Profile
+
+Working local delivery; full phase acceptance is NOT complete. Current scope and remaining gates: [REAL_NEWS_GOOGLE_PROFILE_DELIVERY](execution/REAL_NEWS_GOOGLE_PROFILE_DELIVERY.md), [acceptance register](engineering/real-news-google-profile/acceptance.json). Historical STOP/next-task paragraphs below are not current instructions. Staff/MFA remains paused; no commit/push/deployment, paid calls, external email or media regeneration occurred.
+
+Actual Console project Aggregator (resonant-prism-511822-m0): correct Web, Android and existing-bundle iOS clients created. Testing and zero test users rechecked. Real web/native Google login/consent remains pending. Basic-identity-only scopes are exempt from the Testing allowlist; zero test users is not itself a blocker. Owner contact fields only if provider/Console requires them. Official GIS/Credential Manager/server verification are implemented; the actual installed Android button reached Google Play services native account/security UI, now awaiting owner action; no real Google success or same-owner cross-client provider proof claimed. iOS9.0.0 source/config only, unbuilt on Windows.
+
+Retained PostgreSQL55441 now has0001–0021, applied only after private backup, populated clone/fresh/reapply/rollback and eight-member-table preservation checks. Startup verifies the exact ledger without seeding or SQL mutation.0020/0021 roll back tentative code/Google registration writes on rejected final rechecks. Isolated concurrent Google first completions resolve one member; simultaneous code redemption issues exactly one session. Deletion/tombstone tests used disposable members only.
+
+13 actual permitted publisher reports (8 Global Voices,5 NASA) are durable and visible in web/native Home, category/search and full article flows;12items withheld. Exact reviewed representation permission enforced at import and SQL projection. Publisher reporting is not Aggregator synthesis. Changed unreviewed known items fail closed; private drafts stay private. Existing worker supports explicit local conservative polling; no hidden OS job. No live story routes to unrelated sample audio/video.
+
+Dedicated Profile, durable shared preferences/interests, typed live-source saves, local in-app code completion, owner-scoped sessions/privacy actions work. Three connected HTTP journeys passed repeatedly; actual native code entry reached Profile; web edit appeared on native; real web409 retained its draft at320px without horizontal overflow. Full link/unlink, large-export pagination, provider fault and accessibility/device matrix remain incomplete. Original intermittent503/media/performance failures remain open.
+
+Normal main-entry localDemo r4 APK installed in place: output/real-news-google-profile-20261017/main/aggregator-real-news-google-profile-r4.apk; SHA256 a60c15ecbab741e8c228f3093c03595ff9440a6d8e54605bacc251babb2efa31, installed pull matches. All23renditions/93original assets, original APKs and baseline member rows preserved. Root47tests/Flutter59tests, typecheck/lint/analyzer/build and secret scan passed;11high dependency findings remain. Current demo already supervised at127.0.0.1:3000, API4000, captured mailbox8025. Reuse it; no duplicate start. Physical-device/TalkBack/listening/Figma/iOS/owner acceptance/release gates remain unverified.
+
 # Source-control handoff — 17 October 2026
 
 Owner-authorized source checkpoint preparation is recorded in [SOURCE_CHECKPOINT](engineering/SOURCE_CHECKPOINT.md). This operation permits one source commit/push only; deployment and runtime/media upload remain unauthorized. Product state and open defects remain the targeted closeout below. Generated evidence links are local-only and absent from the repository. No new feature work or staff/MFA resumption is authorized.
@@ -263,6 +277,8 @@ Web: http://127.0.0.1:3000 ; API: http://127.0.0.1:4000/health . No credentials 
 ```
 
 `test:identity:db` builds and runs the complete database-backed API/browser suite; `test:db` runs schema/role checks. Both use installed PostgreSQL 18 binaries, create a fresh workspace cluster on 127.0.0.1:55440 and stop it afterward. Optional PG_BIN selects a PostgreSQL 18 binary directory, never an existing database. `test:identity` builds and starts its own isolated test servers and requires Chrome; no fixture session credentials are printed. Other browser commands require running dev servers and Chrome. Standard checks: `test`, `run typecheck`, `run lint`, `run build`, `run worker:check`. See [README](../README.md).
+
+
 
 
 

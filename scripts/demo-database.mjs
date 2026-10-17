@@ -5,18 +5,22 @@ import { randomUUID } from 'node:crypto';
 import { writeFileSync,readFileSync,realpathSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import assert from 'node:assert/strict';
 import { createFixtureRepository } from '../packages/test-fixtures/src/index.ts';
 
 export async function startDemoDatabase({keepRunning=true}={}){
  return withDisposableDatabase(async h=>{
-  // Native reader upgrade was backup/clone tested; retain the exact twelve-migration profile.
+  // Reader/Google upgrades were backup/clone tested through0021.
   // No future migration is implicitly authorized by startup.
-  const memberMigrations=migrations('packages/db/migrations').filter(m=>m.name<'0013');
-  if(memberMigrations.length!==12)throw new Error('Unexpected retained member migration profile');
-  const db=h.createDatabase('aggregator_identity');migrate(db,memberMigrations);
+  const memberMigrations=migrations('packages/db/migrations').filter(m=>m.name<'0022');
+  if(memberMigrations.length!==21)throw new Error('Unexpected retained member migration profile');
+  const db=h.createDatabase('aggregator_identity');
+  if(h.existing){const ledger=JSON.parse(db.scalar("SELECT json_agg(row_to_json(m) ORDER BY name) FROM (SELECT name,checksum FROM schema_migrations) m"));assert.deepEqual(ledger,memberMigrations.map(({name,checksum})=>({name,checksum})));}
+  else migrate(db,memberMigrations);
   const target={purpose:'aggregator-retained-demo-pg18',data:h.data,host:'127.0.0.1',port:h.port,database:'aggregator_identity',systemIdentifier:h.systemIdentifier};
   const path=join(h.data,'runtime-target.json');writeFileSync(path,JSON.stringify(target,null,2));
   h.verify(target.database);
+  if(h.existing)return {path,target,existing:true}; // No seeding or SQL mutation on retained startup.
   const pool=new Pool({host:target.host,port:target.port,database:target.database,user:'agg_bootstrap',password:'',ssl:false});
   const c=await pool.connect();try{
    await c.query('BEGIN');await c.query('SET LOCAL ROLE agg_owner');
@@ -43,3 +47,4 @@ export function stopDemoDatabase(){
  if(control.status!==0||control.stdout.match(/Database system identifier:\s+(\d+)/)?.[1]!==owner.systemIdentifier)throw new Error('Target ownership mismatch');
  const result=spawnSync(exe('pg_ctl'),['-D',owner.data,'-m','fast','-w','stop'],{stdio:'ignore',windowsHide:true});if(result.status!==0)throw new Error('Owned demo database did not stop');
 }
+
